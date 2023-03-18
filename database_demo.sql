@@ -37,18 +37,12 @@ Id int primary key not null,
 product_id int ,
 Description text,
 Created_at datetime,
-Updated_at datetime ,
-FOREIGN KEY (product_id) REFERENCES product(Id)
-);
-
-create table image(
-Id int primary key not null,
-Product_id int,
-picture1 varchar(500),
+Updated_at datetime,
+picture1 varchar(200),
 picture2 varchar(200),
 picture3 varchar(200),
 picture4 varchar(200),
-FOREIGN KEY (Product_id) REFERENCES product(Id)
+FOREIGN KEY (product_id) REFERENCES product(Id)
 );
 
 create table feedback(
