@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylePage1.css">
+    <link rel="stylesheet" href="styleHomepage.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -25,7 +25,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarScroll">
                         <a class="navbar-brand" href="displayUI.html" style="text-decoration: none;">
-                            <img src="brainFuck.jpg" alt="suckAssJobs.FukU" width="40px" class="rounded-pill">
+                            <img src="Images/brainFuck.jpg" alt="suckAssJobs.FukU" width="40px" class="rounded-pill">
                             Venus Handicrafts
                         </a>
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll nav-tabs" style="--bs-scroll-height: 100px;">
@@ -86,13 +86,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item rong" data-bs-interval="10000">
-        <img src="coconutP.jpg" class="d-block w-100 cao" alt="img1">
+        <img src="Images/coconutP.jpg" class="d-block w-100 cao" alt="img1">
       </div>
       <div class="carousel-item  active  rong" data-bs-interval="2000">
-        <img src="product1.jpg" class="d-block w-100 cao " alt="img2">
+        <img src="Images/product1.jpg" class="d-block w-100 cao " alt="img2">
       </div>
       <div class="carousel-item rong">
-        <img src="vietnam-handicraft-bamboo-products.jpg" class="d-block w-100 cao" alt="img3">
+        <img src="Images/vietnam-handicraft-bamboo-products.jpg" class="d-block w-100 cao" alt="img3">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -122,7 +122,7 @@
         <a href="">Read more</a>   
     </div>
     <div class="col-md-5">
-        <img  src="ceremal.jpg" alt="alter" width="650px" >
+        <img  src="Images/ceremal.jpg" alt="alter" width="650px" >
     </div>
 </div>        
 </div>
@@ -167,7 +167,7 @@
     </div>
     <div class="col-md-4">
         <a href="https://trustseal.indiamart.com/members/venushandicrafts" target="_blank">
-            <img src="trustseal.png" alt="seal.png" width="60px" height="60px">
+            <img src="Images/trustseal.png" alt="seal.png" width="60px" height="60px">
         </a>
         <br>
         <span>IndiaMART Certification</span>
@@ -185,7 +185,7 @@
 <!-- Card products 1 -->
     <div class="col-md-4">
         <div class="card h-100" style="width: 18rem;">
-            <img src="ngocXanh.jpg" class="card-img-top" alt="crystals">
+            <img src="Images/ngocXanh.jpg" class="card-img-top" alt="crystals">
             <div class="card-body">
               <h5 class="card-title">Chunky Boi crystals</h5>
               <p class="card-text">
@@ -203,7 +203,7 @@
 <!-- Card products 2 -->
     <div class="col-md-4">
         <div class="card h-100" style="width: 18rem;">
-            <img src="chuoiNgoc.jpg" class="card-img-top" alt="error">
+            <img src="Images/chuoiNgoc.jpg" class="card-img-top" alt="error">
             <div class="card-body">
               <h5 class="card-title">Color Beeds</h5>
               <p class="card-text">
@@ -221,7 +221,7 @@
 <!-- Card products 3 -->
     <div class="col-md-4">
         <div class="card h-100" style="width: 18rem;">
-            <img src="metal.jpg" class="card-img-top" alt="metal">
+            <img src="Images/metal.jpg" class="card-img-top" alt="metal">
             <div class="card-body">
               <h5 class="card-title">Metal accessories</h5>
               <p class="card-text">
