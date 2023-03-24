@@ -1,0 +1,98 @@
+/* body{  */
+    
+    /* background-repeat: no-repeat;  */
+    /* =>để ko lặp lại hình(do hệ thống auto nhân đôi hình) */
+    /* background-size: auto; */
+    /* => có thể để "auto" hoặc đặt là height = ? và width = ?; */
+    /* background-image: url(https://img5.thuthuatphanmem.vn/uploads/2021/11/22/hinh-nen-soi-co-don-full-hd-cho-may-tinh_101125888.jpg); */
+ /* }  */
+/* header{
+    width: 100%;
+    overflow: auto;
+    background-color: red;
+    height: 90px;
+} */
+#subBody{
+    padding: 10px;
+}
+
+footer{
+    height: 100px;
+    /* width: 100%; */
+    padding: 30px;
+    background-color: aqua;
+}
+
+.navbar{
+    padding: 10px;
+    background-color: rgb(94, 225, 225);
+    
+}
+
+h1{
+    text-decoration-color: darkgrey;
+    text-decoration-line: underline;
+    text-align: center;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+    text-decoration-color: blueviolet;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:active{
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+
+
+/* modify của ảnh "About Us" */
+.cao{
+    height: 480px;
+}
+.rong{
+    width: 1000px;
+    object-fit: cover;
+ }
+
+
+
+/* nền cho phần "About Us" */
+ .bg-indigo{
+    background-color: #ffffff;
+    padding: 55px 50px;
+    text-indent: 20px;
+    text-align:justify;
+ }
+ 
+.col-md-4{
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* cho desktop */
+  @media screen and (min-width: 1024px){
+    .dropdown:hover > .dropdown-menu{
+        display: block;
+     }
+  }
+
+/* cho mobile phone */
+/* @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+    
+} */
+
+/* cho màn hình Table(Ipad) */
+ @media screen and (max-width: 768px) {
+    .col-md-4{
+        -ms-text-size-adjust: 100%;
+    }
+ }
+
+ 
