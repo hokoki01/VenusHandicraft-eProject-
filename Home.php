@@ -24,7 +24,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarScroll">
-                        <a class="navbar-brand" href="displayUI.html" style="text-decoration: none;">
+                        <a class="navbar-brand" href="Home.php" style="text-decoration: none;">
                             <img src="Images/brainFuck.jpg" alt="suckAssJobs.FukU" width="40px" class="rounded-pill">
                             Venus Handicrafts
                         </a>
@@ -258,7 +258,7 @@
 
             <footer>
             <p class="float-end">
-                <a href="displayUI.html">Back to top</a>
+                <a href="Home.php">Back to top</a>
             </p>
             <p>
                 © 2017–2021 Company, Inc. · 
