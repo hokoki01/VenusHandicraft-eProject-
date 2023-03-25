@@ -11,12 +11,13 @@
     <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <!-- link để tải icon --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  
 </head>
 
 <body>
     
 <!-- Navigation Bar  -->
-        <nav class="navbar navbar-expand-md  fixed-top justify-content-end">
+        <nav class="navbar navbar-expand-sm  fixed-top justify-content-end">
                 <div class="container-fluid">
                     <!-- bootstrap "container-fluid" sẽ cho content ở full màn hình  -->
             <!-- thanh mở menu -->
@@ -252,24 +253,58 @@
 </div>
 </div>
 
+<div class="row">
+<div class="col-md-12" style="background-color: aquamarine; color:black; padding:10px;">
+  <h2><strong>Get in touch with us</strong></h2>
+</div>
+</div>
 
+<div class="row">
 
+  <div class="col-md-2">  
+  <h3>Our Company</h3>
+  <a href="">About Us</a>
+  <br>
+  <a href="">Our Products</a>
+  <br>
+  <a href="">Contact Us</a>
+  <br>
+  <a href="">Sitemap</a>
+  </div>
 
+  <div class="col-md-5">
+  <h3>Reach Us</h3>
+  <a href="https://www.google.co.in/maps/dir//28.65493400,77.23116800"><h4><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill ICON" viewBox="0 0 16 16">
+  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>Venus Handicrafts</h4></a>
+  <span>1972/73, Shop No.2, Captain Tapan kapoor market, katra kushal rai, kinari bazaar, Chandni Chowk, Delhi-110006, India</span>
+  <br>
+  <span><a href="https://www.google.co.in/maps/dir//28.65493400,77.23116800"><i class="bi bi-sign-turn-right-fill DICON"></i>Get Directions</a></span>
+  <p><i class="bi bi-telephone-inbound-fill"></i>01234***</p>
+  </div>
 
-            <footer>
-            <p class="float-end">
+<div class="col-md-5">
+  <h3>Our Location</h3>
+<div  id="googleMap" style="height: 400px;width: 100%;"></div>
+</div >
+
+</div>
+
+<div class="row">
+<div class="col-md-">
+
+</div>
+</div>
+<!-- <p class="float-end">
                 <a href="Home.php">Back to top</a>
             </p>
             <p>
                 © 2017–2021 Company, Inc. · 
                 <a href="#">Privacy</a>
                 <a href="#">Terms</a>
-            </p>
-        </footer>
-
-
-
-            
+            </p>            -->
     
 </body>
+<!-- GEOlocation API google sorce -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="GEOlocation.js"></script>
 </html>

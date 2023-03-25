@@ -95,4 +95,13 @@ a:active{
     }
  }
 
- 
+ /* edit icon */
+.ICON{
+  color: rgb(237, 5, 5);  
+}
+.DICON{
+    color: blue;
+}
+
+
+
