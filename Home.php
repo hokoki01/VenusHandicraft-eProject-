@@ -2,309 +2,507 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styleHomepage.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!-- link để tải icon --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styleHomepage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet"> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- link để tải icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
 
 <body>
-    
-<!-- Navigation Bar  -->
-        <nav class="navbar navbar-expand-sm  fixed-top justify-content-end">
-                <div class="container-fluid">
-                    <!-- bootstrap "container-fluid" sẽ cho content ở full màn hình  -->
-            <!-- thanh mở menu -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarScroll">
-                        <a class="navbar-brand" href="Home.php" style="text-decoration: none;">
-                            <img src="Images/brainFuck.jpg" alt="suckAssJobs.FukU" width="40px" class="rounded-pill">
-                            Venus Handicrafts
-                        </a>
-                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll nav-tabs" style="--bs-scroll-height: 100px;">
-                <!-- navbar-1 -->
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                <!-- navbar-2 -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Our Products
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Iron</a></li>
-                                    <li><a class="dropdown-item" href="#">Glass</a></li>
-                                    <!-- <li><hr class="dropdown-divider"></li> -->
-                                    <li><a class="dropdown-item" href="#">Brass</a></li>
-                                    <li><a class="dropdown-item" href="#">Wood</a></li>
-                                    <li><a class="dropdown-item" href="#">Handicraft Decorative</a></li>
-                                    <li><a class="dropdown-item" href="#">Aluminium</a></li>
-                                </ul>
-                            </li>
-                <!-- navbar-3 -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    About Us
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <!-- <li><hr class="dropdown-divider"></li> -->
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-            <!-- link bình thường -->
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
-                            </li>
-                        </ul>
-            <!-- thanh search bar -->
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+
+  <!-- Navigation Bar  -->
+  <nav class="navbar navbar-expand-lg  fixed-top " style="color: white;">
+    <div class="container-fluid">
+      <!-- bootstrap "container-fluid" sẽ cho content ở full màn hình  -->
+      <a class="navbar-brand" href="Home.php">
+        <i class="bi bi-scissors" style="color:white"></i>
+        <span style="color: white;font-family: bradley hand,cursive;">Venus Handicrafts</span></a>
+      <span style="padding-right:220px"><i class="bi bi-brush" style="color:white"></i></span>
+      <!-- thanh mở menu -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 100px;">
+          <!-- navbar-1 -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Home.php">Home</a>
+          </li>
+          <!-- navbar-2 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Products
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Iron</a></li>
+              <li><a class="dropdown-item" href="#">Glass</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item" href="#">Brass</a></li>
+              <li><a class="dropdown-item" href="#">Wood</a></li>
+              <li><a class="dropdown-item" href="#">Handicraft Decorative</a></li>
+              <li><a class="dropdown-item" href="#">Aluminium</a></li>
+            </ul>
+          </li>
+          <!-- navbar-3 -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <!-- navbar 4 -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+        </ul>
+        <!-- thanh search bar -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Type Here..." aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- slider images -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item c-item" data-bs-interval="10000">
+              <img src="Images/carousel1.jpg" class="d-block w-100 c-img" alt="img1">
+            </div>
+            <div class="carousel-item active c-item" data-bs-interval="2000">
+              <img src="Images/pottery-souvenir-traditional-art.jpg" class="d-block w-100 c-img" alt="img2">
+            </div>
+            <div class="carousel-item c-item">
+              <img src="Images/indian-handicrafts.jpg" class="d-block w-100 c-img" alt="img3">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hidden">
+    <!-- About Us của cty -->
+    <div class="container bg-indigo">
+      <!-- bootstrap "container" sẽ cho content ở giữa màn hình  -->
+      <div class="row ">
+        <div class="col-md-12 ">
+          <h1>About Us</h1>
+          <br>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <br>
+          <p>Incepted in 2003, we, Venus Handicrafts, have achieved a remarkable position in the industry for manufacturing and supplying of a wide assortment of Glass Stones, Claws and Cup Chains, Claws and Cup Chains with Stones, Glass Beads, Plastic Beads and Metal Accessories.
+            These are extremely appreciated for their durability and multipurpose uses. The offered products are fabricated using modern technology in conformity with industrial standards and guidelines and are broadly used in different</p>
+          <!-- link để đọc đc thêm -->
+          <a href="">Read more</a>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="Images/aboutUsImg.jpg" style="height:100%;width:100%;object-fit:cover;" alt="alter" width="650px">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  
+
+  <section class="hidden">
+    <!-- thông tin cơ bản của cty -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <i class="bi bi-briefcase"></i>
+          <br>
+          <strong><span>Nature of Business</span></strong>
+          <br>
+          <span>Exporter and Manufacturer</span>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-buildings"></i>
+          <br>
+          <strong><span>Year of Establishment</span></strong>
+          <br>
+          <span>1960</span>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-person-vcard-fill"></i>
+          <br>
+          <strong><span>Legal Status of Firm</span></strong>
+          <br>
+          <span>Individual - Proprietor</span>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-globe2"></i>
+          <br>
+          <strong><span>Import Export Code(IEC)</span></strong>
+          <br>
+          <span>05030*****</span>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-send-check-fill"></i>
+          <br>
+          <strong><span>GST Number</span></strong>
+          <br>
+          <span>07AAEPZ6229L1Z2</span>
+        </div>
+        <div class="col-md-4">
+          <a href="https://trustseal.indiamart.com/members/venushandicrafts" target="_blank">
+            <img src="Images/trustseal.png" alt="seal.png" width="90px" height="90px">
+          </a>
+          <br>
+          <span>IndiaMART Certification</span>
+          <br>
+          <span>Trust Seal Verifiled</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="hr-blurry" style="width:100%">
+
+<section class="hidden">
+<div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <h3 class="mb-3">Our Products</h3>
+            </div>
+            <div class="col-6 text-right">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+            <i class="bi bi-arrow-left-square" aria-hidden="true"></i>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+            <i class="bi bi-arrow-right-square" aria-hidden="true"></i>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+            <div class="col-12" style="margin:0;padding:0;">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Special title treatment</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </nav>
-
-
-<!-- slider images -->
-<div class="container-fluid">
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item rong" data-bs-interval="10000">
-        <img src="Images/coconutP.jpg" class="d-block w-100 cao" alt="img1">
-      </div>
-      <div class="carousel-item  active  rong" data-bs-interval="2000">
-        <img src="Images/product1.jpg" class="d-block w-100 cao " alt="img2">
-      </div>
-      <div class="carousel-item rong">
-        <img src="Images/vietnam-handicraft-bamboo-products.jpg" class="d-block w-100 cao" alt="img3">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
-
-<!-- About Us của cty -->
-<div class="container-fluid bg-indigo">
-<!-- bootstrap "container" sẽ cho content ở giữa màn hình  -->
-<div class="row">
-    <div class="col-md-12">
-        <h1>About Us</h1>
-        <br>
-    </div>
-    <div class="col-md-5">
-    <br>
-     <p>Incepted in 2003, we, Venus Handicrafts, have achieved a remarkable position in the industry for manufacturing and supplying of a wide assortment of Glass Stones, Claws and Cup Chains, Claws and Cup Chains with Stones, Glass Beads, Plastic Beads and Metal Accessories. 
-        These are extremely appreciated for their durability and multipurpose uses. The offered products are fabricated using modern technology in conformity with industrial standards and guidelines and are broadly used in different</p> 
-<!-- link để đọc đc thêm -->
-        <a href="">Read more</a>   
-    </div>
-    <div class="col-md-5">
-        <img  src="Images/ceremal.jpg" alt="alter" width="650px" >
-    </div>
-</div>        
-</div>
-
-<!-- thông tin cơ bản của cty -->
-<div class="container-fluid">
-<div class="row">
-    <div class="col-md-4">
-        <i class="bi bi-briefcase"></i>
-        <br>
-        <strong><span>Nature of Business</span></strong>
-        <br>
-        <span>Exporter and Manufacturer</span>
-    </div>
-    <div class="col-md-4">
-        <i class="bi bi-buildings"></i>
-        <br>
-        <strong><span>Year of Establishment</span></strong>
-        <br>
-        <span>1960</span>
-    </div>
-    <div class="col-md-4">
-        <i class="bi bi-person-vcard-fill"></i>
-        <br>
-        <strong><span>Legal Status of Firm</span></strong>
-        <br>
-        <span>Individual - Proprietor</span>
-    </div>
-    <div class="col-md-4">
-        <i class="bi bi-globe2"></i>
-        <br>
-        <strong><span>Import Export Code(IEC)</span></strong>
-        <br>
-        <span>05030*****</span>
-    </div>
-    <div class="col-md-4">
-        <i class="bi bi-send-check-fill"></i>
-        <br>
-        <strong><span>GST Number</span></strong>
-        <br>
-        <span>07AAEPZ6229L1Z2</span>
-    </div>
-    <div class="col-md-4">
-        <a href="https://trustseal.indiamart.com/members/venushandicrafts" target="_blank">
-            <img src="Images/trustseal.png" alt="seal.png" width="60px" height="60px">
-        </a>
-        <br>
-        <span>IndiaMART Certification</span>
-        <br>
-        <span>Trust Seal Verifiled</span>
-    </div>
-</div>
-</div>
-
-<div class="container">
-<div class="row">
-    <div class="col-md-12">
-        <h1>Our Products</h1>
-    </div>
-<!-- Card products 1 -->
-    <div class="col-md-4">
-        <div class="card h-100" style="width: 18rem;">
-            <img src="Images/ngocXanh.jpg" class="card-img-top" alt="crystals">
-            <div class="card-body">
-              <h5 class="card-title">Chunky Boi crystals</h5>
-              <p class="card-text">
-                <a href="" class="stretched-link">Crystals</a>
-              </p>
-              <p class="card-text">
-                <a href="#" class="stretched-link text-danger" style="position: relative;">Stretched link will not work here, because <code>position: relative</code> is added to the link</a>
-              </p>
-              <p class="card-text bg-light" style="transform: rotate(0);">
-                This <a href="#" class="text-warning stretched-link">stretched link</a> will only be spread over the <code>p</code>-tag, because a transform is applied to it.
-              </p>
             </div>
-          </div>
-    </div>
-<!-- Card products 2 -->
-    <div class="col-md-4">
-        <div class="card h-100" style="width: 18rem;">
-            <img src="Images/chuoiNgoc.jpg" class="card-img-top" alt="error">
-            <div class="card-body">
-              <h5 class="card-title">Color Beeds</h5>
-              <p class="card-text">
-                <a href="" class="stretched-link">Glass Beeds</a>
-              </p>
-              <p class="card-text">
-                <a href="#" class="stretched-link text-danger" style="position: relative;">Stretched link will not work here, because <code>position: relative</code> is added to the link</a>
-              </p>
-              <p class="card-text bg-light" style="transform: rotate(0);">
-                This <a href="#" class="text-warning stretched-link">stretched link</a> will only be spread over the <code>p</code>-tag, because a transform is applied to it.
-              </p>
-            </div>
-          </div>
-    </div>
-<!-- Card products 3 -->
-    <div class="col-md-4">
-        <div class="card h-100" style="width: 18rem;">
-            <img src="Images/metal.jpg" class="card-img-top" alt="metal">
-            <div class="card-body">
-              <h5 class="card-title">Metal accessories</h5>
-              <p class="card-text">
-                <a href="" class="stretched-link">Metal thinging</a>
-              </p>
-              <p class="card-text">
-                <a href="#" class="stretched-link text-danger" style="position: relative;">Stretched link will not work here, because <code>position: relative</code> is added to the link</a>
-              </p>
-              <p class="card-text bg-light" style="transform: rotate(0);">
-                This <a href="#" class="text-warning stretched-link">stretched link</a> will only be spread over the <code>p</code>-tag, because a transform is applied to it.
-              </p>
-            </div>
-          </div>
-    </div>
-<!-- nút view more cho phần products -->
-<div class="d-grid col-6 mx-auto">
-    <button class="btn btn-primary" type="button">
-        <a href="" style="color: black;">View more products</a>
-    </button>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-12">
-  <h1>Gallary</h1>
-  
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-12" style="background-color: aquamarine; color:black; padding:10px;">
-  <h2><strong>Get in touch with us</strong></h2>
-</div>
-</div>
-
-<div class="row">
-
-  <div class="col-md-2">  
-  <h3>Our Company</h3>
-  <a href="">About Us</a>
-  <br>
-  <a href="">Our Products</a>
-  <br>
-  <a href="">Contact Us</a>
-  <br>
-  <a href="">Sitemap</a>
-  </div>
-
-  <div class="col-md-5">
-  <h3>Reach Us</h3>
-  <a href="https://www.google.co.in/maps/dir//28.65493400,77.23116800"><h4><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill ICON" viewBox="0 0 16 16">
-  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>Venus Handicrafts</h4></a>
-  <span>1972/73, Shop No.2, Captain Tapan kapoor market, katra kushal rai, kinari bazaar, Chandni Chowk, Delhi-110006, India</span>
-  <br>
-  <span><a href="https://www.google.co.in/maps/dir//28.65493400,77.23116800"><i class="bi bi-sign-turn-right-fill DICON"></i>Get Directions</a></span>
-  <p><i class="bi bi-telephone-inbound-fill"></i>01234***</p>
-  </div>
-
-<div class="col-md-5">
-  <h3>Our Location</h3>
-<div  id="googleMap" style="height: 400px;width: 100%;"></div>
-</div >
-
-</div>
-
-<div class="row">
-<div class="col-md-">
-
-</div>
-</div>
-<!-- <p class="float-end">
-                <a href="Home.php">Back to top</a>
-            </p>
-            <p>
-                © 2017–2021 Company, Inc. · 
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-            </p>            -->
+        </div>
     
+
+
+
+
+
+      <!-- nút view more cho phần products -->
+      
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="d-grid col-6 mx-auto">
+              <a href="#" style="color:black"><button class="btn btn-primary " type="button">
+                  View more products
+                </button></a>
+            </div>
+          </div>
+        </div>
+      
+      <!-- kết thúc phần view more -->
+
+</div>
+  </section>
+
+<section class="hidden">
+  <!-- phần kho ảnh -->
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class=" text-center mb-4">
+        Gallaries
+      </h1>
+
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/1.png" alt="Error 404">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/2.jpg" alt="Error 404">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/3.jpg" alt="Error 404">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/4.jpg" alt="Error 404">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/14.jpg" alt="Error 404">
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/15.jpg" alt="Error 404">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- kết thúc kho ảnh -->
+  </section>
+ <hr class="hr-blurry" style="width:100%">
+
+  <!-- Get in touch text -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
+        <h3><strong>Get in touch with us</strong></h3><br>
+        <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
+        <input style="width:400px" type="email" name="userName" placeholder="Type your email here...">
+        <br>
+        
+        <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- test footer -->
+  <footer>
+    <div class="container">
+      <!--Bắt Đầu Nội Dung Giới Thiệu-->
+      <div class="noi-dung about">
+        <h2>About Us</h2>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium dolores alias ipsa vel hic
+          tempore exercitationem ipsam explicabo repudiandae ut consectetur qui, earum at nostrum perspiciatis
+          asperiores necessitatibus facilis esse.
+        </p>
+        <ul class="social-icon">
+          <li><a href=""><i class="bi bi-facebook"></i></a></li>
+          <li><a href=""><i class="bi bi-twitter"></i></a></li>
+          <li><a href=""><i style="color:azure" class="bi bi-instagram"></i></a></li>
+          <li><a href=""><i style="color:azure" class="bi bi-tiktok"></i></a></li>
+        </ul>
+      </div>
+      <!--Kết Thúc Nội Dung Giới Thiệu-->
+      <!--Bắt Đầu Nội Dung Đường Dẫn-->
+      <div class="noi-dung links">
+        <h2>Site Map</h2>
+        <ul class="Olist">
+          <li><a class="dot" href="#">Home</a></li>
+          <li><a class="dot" href="#">About Us</a></li>
+          <li><a class="dot" href="#">Contact Us</a></li>
+          <li><a class="dot" href="#">Our Products</a></li>
+        </ul>
+      </div>
+      <!--Kết Thúc Nội Dung Đường Dẫn-->
+      <!--Bắt Đâu Nội Dung Liên Hệ-->
+      <div class="noi-dung contact">
+        <h2>Get in touch with us</h2>
+        <ul class="info">
+          <li>
+<a href="https://www.google.com/maps/place/%C4%90%E1%BA%A3o+B%E1%BA%AFc+Sentinel/@11.5571647,92.2065715,13z/data=!3m1!4b1!4m6!3m5!1s0x30863a35c7c1b4e1:0x22f2e4fd1e2aa9c5!8m2!3d11.5503652!4d92.2335066!16zL20vMDR0anpf"><span><i style="color: red;" class="bi bi-geo-alt-fill"></i></span>
+            <span >
+              1972/73,Shop No.2,Captain Tapan kapoor market,
+              Chandni Chowk, Delhi-110006, India.
+            </span></a>
+          </li>
+          <li>
+            <span><i style="color:#0A7029" class="bi bi-telephone-forward-fill"></i></span>
+            <p><a href="#">+84 123 456 789</a>
+              <br />
+              <a href="#">+84 987 654 321</a>
+            </p>
+          </li>
+          <li>
+            <span><i style="color:#FFC30B" class="bi bi-envelope-at-fill"></i></span>
+            <p><a href="#">username@mail.com</a></p>
+          </li>
+          <!-- <li>
+                      <form class="form">
+                          <input type="email" class="form__field" placeholder="Subscribe Email" />
+                          <button type="button" class="btn btn-primary  uppercase">Send</button>
+                      </form>
+                  </li> -->
+        </ul>
+      </div>
+      <!--Kết Thúc Nội Dung Liên Hệ-->
+    </div>
+  </footer>
 </body>
-<!-- GEOlocation API google sorce -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script src="GEOlocation.js"></script>
+<!-- nút back to the top -->
+<button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+                                              <!-- Messenger Chat plugin Code -->
+                                              <div id="fb-root"></div>
+
+                                              <!-- Your Chat plugin code -->
+                                              <div id="fb-customer-chat" class="fb-customerchat">
+                                              </div>
+
+                                              <script>
+                                                var chatbox = document.getElementById('fb-customer-chat');
+                                                chatbox.setAttribute("page_id", "106521525738447");
+                                                chatbox.setAttribute("attribution", "biz_inbox");
+                                              </script>
+
+                                              <!-- Your SDK code -->
+                                              <script>
+                                                window.fbAsyncInit = function() {
+                                                  FB.init({
+                                                    xfbml            : true,
+                                                    version          : 'v16.0'
+                                                  });
+                                                };
+
+                                                (function(d, s, id) {
+                                                  var js, fjs = d.getElementsByTagName(s)[0];
+                                                  if (d.getElementById(id)) return;
+                                                  js = d.createElement(s); js.id = id;
+                                                  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                                                  fjs.parentNode.insertBefore(js, fjs);
+                                                }(document, 'script', 'facebook-jssdk'));
+                                              </script>
+
+<!-- files JavaScripts -->
+<script src="JSHomepage.js"></script>
 </html>
+
+
+<!-- google maps -->
+<!-- <div class="col-md-5">
+  <h3>Our Location</h3>
+  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dhxgJud_QnSwU2fxYDfaPVQskNyM5Ok&ehbc=2E312F" width="640" height="480"></iframe>
+</div > -->
