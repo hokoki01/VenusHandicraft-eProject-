@@ -1,70 +1,83 @@
-/* body{  */
+/* body{
+    background-image: url("https://previews.123rf.com/images/alekseynikolayew/alekseynikolayew1702/alekseynikolayew170200126/72611546-textura-de-mimbre-tejida-simple-fondo-marr%C3%B3n-claro-tejido-imitaci%C3%B3n-de-mimbre-o-de-sauce.jpg");
     
-    /* background-repeat: no-repeat;  */
-    /* =>để ko lặp lại hình(do hệ thống auto nhân đôi hình) */
-    /* background-size: auto; */
-    /* => có thể để "auto" hoặc đặt là height = ? và width = ?; */
-    /* background-image: url(https://img5.thuthuatphanmem.vn/uploads/2021/11/22/hinh-nen-soi-co-don-full-hd-cho-may-tinh_101125888.jpg); */
- /* }  */
-/* header{
-    width: 100%;
-    overflow: auto;
-    background-color: red;
-    height: 90px;
 } */
-#subBody{
-    padding: 10px;
-}
 
-footer{
-    height: 100px;
-    /* width: 100%; */
-    padding: 30px;
-    background-color: aqua;
-}
 
+
+/* Styling for navbar */
 .navbar{
     padding: 10px;
-    background-color: rgb(94, 225, 225);
+    background-color: #010101;
+
+}
+
+nav .navbar-nav li a{
+    color: white !important;
+    font-family: bradley hand,cursive;
+}
+
+ul.dropdown-menu > li > a {
+    color:#282828 !important;
     
 }
 
+/* .dropdown-menu a:hover{
+    background-color: #282828;
+    
+} */
+
+
+
+/* ============================ */
 h1{
     text-decoration-color: darkgrey;
     text-decoration-line: underline;
+}
+
+h1,h2,h3,h4{
+    font-family: bradley hand,cursive;
+}
+
+
+.col-md-12{
     text-align: center;
 }
-a:link{
-    text-decoration: none;
+
+.hidden .carousel-control-prev {
+    left: -110;
+    border-bottom: 0;
+    font-size: 40px;
+    color: blue;
 }
-a:visited{
-    text-decoration: none;
-    text-decoration-color: blueviolet;
+.hidden .carousel-control-next {
+    right: -110px;
+    border-bottom: 0;
+    font-size: 40px;
+    color: blue;
 }
-a:hover{
-    text-decoration: underline;
-}
-a:active{
-    text-decoration: underline;
-    text-decoration-color: red;
-}
+/* ============================= */
+
+
 
 
 
 /* modify của ảnh "About Us" */
-.cao{
+.c-item{
     height: 480px;
 }
-.rong{
-    width: 1000px;
+.c-img{
+    height: 100%;
     object-fit: cover;
- }
+}
+
+
 
 
 
 /* nền cho phần "About Us" */
  .bg-indigo{
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     padding: 55px 50px;
     text-indent: 20px;
     text-align:justify;
@@ -76,23 +89,333 @@ a:active{
 }
 
 
-/* cho desktop */
+
+
+
+/* cho desktop + di chuột hiện ra bảng dropdowm */
   @media screen and (min-width: 1024px){
     .dropdown:hover > .dropdown-menu{
         display: block;
+
      }
   }
 
-/* cho mobile phone */
-/* @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
-    
-} */
+
 
 /* cho màn hình Table(Ipad) */
  @media screen and (max-width: 768px) {
-    .col-md-4{
-        -ms-text-size-adjust: 100%;
-    }
+   
  }
 
- 
+
+
+
+ /* edit cho logo */
+.ICON{
+  color: rgb(237, 5, 5);  
+}
+.DICON{
+    color: blue;
+}
+.bi-briefcase,.bi-buildings,.bi-person-vcard-fill,.bi-globe2,.bi-send-check-fill{
+    font-size: 40px;
+    color: #1d1d19;
+}
+
+
+
+/* hiệu ứng của các đg link */
+a:link{
+    text-decoration: none;
+}
+/* a:visited{
+    text-decoration: none;
+    text-decoration-color: blueviolet;
+} */
+a:hover{
+    text-decoration: none;
+}
+a:active{
+    /* text-decoration: underline; */
+    text-decoration-color: red;
+    
+}
+
+
+
+  
+
+/* Animation */
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 40vh;
+    
+}
+
+.hidden{
+    opacity: 50%;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+    
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .hidden {
+      transition: all 1s;
+    }
+  }
+
+
+
+
+
+/* cho mobile phone */
+/* @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+    .footer{
+        padding: 40px;
+    }
+} */
+
+
+
+
+
+
+  /* nút có hiệu ứng Back to the top */
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+/* phần css của footer */
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .container .noi-dung{
+    margin-right: 30px;
+}
+
+footer  .container .noi-dung.about{
+    width:40%;
+}
+footer .container .noi-dung.about h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/* underline for text */
+footer .container .noi-dung.about h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 140px;
+    height: 2px;
+    background: #e6cc00;
+}
+
+footer .container .noi-dung.about p{
+    color: #999;
+}
+
+.social-icon{
+    margin-top: 20px;
+    display: flex;
+}
+
+.social-icon li {
+    list-style: none;
+}
+/* style for icon */
+.social-icon li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+/* hover cho icon */
+.social-icon li a:hover{
+    background: #e6cc00;
+}
+
+.social-icon li a .fa{
+    color: #fff;
+    font-size: 20px;
+}
+
+.links h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.links h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+.links h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 135px;
+     height: 2px;
+     background: #e6cc00;
+ }
+.links{
+    position: relative;
+    width: 25%;
+ }
+ /* stylling bullet */
+ .links ul li{
+     list-style:lower-greek; 
+     color:#dfff00;  
+ }
+ .links ul li a{
+     color: #999;
+     text-decoration: none;
+     margin-bottom: 10px;
+     display: inline-block;
+     
+ }
+ /* màu khi di chuyển chuột cho link sitemap */
+.links ul li a:hover{
+     color: #f2f213;
+ }
+
+.contact h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/* style for contact form */
+.contact h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 300px;
+    height: 2px;
+    background: #e6cc00;
+}
+
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact .info li span{
+    color: #999;
+}
+
+.contact .info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin-top:16px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+.btn--primary {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 8px 24px;
+}
+.btn--primary:hover {
+    background: #f00;
+}
+.btn--primary:active {
+    background: #f00;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+/* .form__field {
+    width: 90%;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 8px 4px;
+} */
+
+@media  (max-width: 768px){
+    footer{
+        padding: 40px;
+        
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .container .noi-dung{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .container, .noi-dung.about, .links, .contact{
+        width: 100%;
+    }
+}
