@@ -1,137 +1,102 @@
 <?php
 include 'header.php';
+session_start();
+require 'connect_db.php';
 ?>
-<style>
-  .row.content {
-    height: auto;
-  }
+<!doctype html>
+<html lang="en">
 
-  .sidenav {
-    background-color: #f1f1f1;
-    height: auto;
-  }
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  footer {
-    background-color: #555;
-    color: white;
-    /* padding: 15px; */
-  }
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  @media screen and (max-width: 767px) {
-    .sidenav {
-      height: auto;
-      /* padding: 15px; */
-    }
-
-    .row.content {
-      height: auto;
-    }
-  }
-
-  .add {
-    text-align: right;
-  }
-
-  table {
-    border: 1 solid black;
-  }
-</style>
+  <title>Product CRUD</title>
 </head>
-<style>
-  .col-container {
-    display: table;
-    width: 100%;
-  }
 
-  .col {
-    display: table-cell;
-    padding: 16px;
-    width: 50%;
-  }
+<body>
 
-  .pading {
-    /* padding-top: 5% ; */
-    padding-left: 10%;
-    padding-right: 10%;
+  <div class="container mt-4">
 
-  }
-</style>
+    <?php include('message.php'); ?>
 
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h4>Product Details
+              <a href="add_new_product.php" class="btn btn-primary float-end">Add Students</a>
+            </h4>
+          </div>
+          <div class="card-body">
 
-<?php
-        include 'connect_db.php';
-        $result = mysqli_query($connect, "SELECT * FROM product");
-        $i = 1;
-        while ($row = mysqli_fetch_array($result)) {
-            $i++;
-        }
-        $product = $i
-        ?>
-<div class="pading">
-<div class="col-container">
-      <div class="col" style="background:green">
-        <h2>PRODUCTS</h2>
-        <p>
-          <?php echo "$product"; ?>
-        </p>
-      </div>
+            <table class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Category</th>
+                  <th>Title</th>
+                  <th>Image</th>
+                  <th>Description</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                $query = "SELECT * FROM product";
+                $query_run = mysqli_query($connect, $query);
 
-      <div class="col" style="background:yellow">
-        <h2>contact</h2>
-        <p>0</p>
+                if (mysqli_num_rows($query_run) > 0) {
+                  foreach ($query_run as $product) {
+                    ?>
+                    <tr>
+                      <td>
+                        <?= $product['Id']; ?>
+                      </td>
+                      <td>
+                        <?= $product['Category_id']; ?>
+                      </td>
+                      <td>
+                        <?= $product['Title']; ?>
+                      </td>
+                      <td>
+                        <?=
+                          $image = $product['Image'];
+                        echo "<img src='image_DTB/$image' class='img-responsive' style='width:20%' alt='Image'>"; ?>
+                      </td>
+                      <td>
+                        <?= $product['Description']; ?>
+                      </td>
+                      <td>
+                        <a href="product_view.php?Id=<?= $product['Id']; ?>" class="btn btn-info btn-sm">View</a>
+                        <a href="edit_product.php?Id=<?= $product['Id']; ?>" class="btn btn-success btn-sm">Edit</a>
+                        <form action="code.php" method="POST" class="d-inline">
+                          <button type="submit" name="delete_student" value="<?= $product['Id']; ?>"
+                            class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                      </td>
+                    </tr>
+                    <?php
+                  }
+                } else {
+                  echo "<h5> No Record Found </h5>";
+                }
+                ?>
+
+              </tbody>
+            </table>
+
+          </div>
+        </div>
       </div>
     </div>
-  <body>
-    <table class="table">
-      <thead>
-        <a href="add_new_product.php"><button type="button" class="btn btn-success"
-            style="float : right ; margin: 15px;">add new product</button></a>
-        <tr>
-          <th>product_code</th>
-          <th>image</th>
-          <th>title</th>
-          <th>Description</th>
-          <th>Option</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        include 'connect_db.php';
-        $result = mysqli_query($connect, "SELECT * FROM product");
-        $i = 1;
-        while ($row = mysqli_fetch_array($result)) {
-          ?>
-          <tr>
-            <td>
-              <?php echo $row["Id"]; ?>
-            </td>
-            <td>
-              <?php
-              $image = $row["Image"];
-              echo "<img src='image_DTB/$image' class='img-responsive' style='width:200%' alt='Image'>";
-              ?>
-            </td>
-            <td>
-              <?php echo $row["Title"]; ?>
-            </td>
-            <td>
-              <?php echo $row["Description"]; ?>
-            </td>
-            <td>
-              <a href="edit_product.php"><button>Edit</button></a>
-            </td>
-            <td><a href="delete_product.php"><button>Delete</button></a>
-            </td>
-            <?php
-            $i++;
-        }
+  </div>
 
-        $product = $i
-        ?>
-        </tr>
-      </tbody>
-    </table>
-</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
