@@ -19,7 +19,7 @@
 
   <!-- Navigation Bar  -->
   <nav class="navbar navbar-expand-lg  fixed-top " style="color: white;">
-    <div class="container-fluid">
+    <!-- <div class="container-fluid"> -->
       <!-- bootstrap "container-fluid" sẽ cho content ở full màn hình  -->
       <a class="navbar-brand" href="Home.php">
         <i class="bi bi-scissors" style="color:white"></i>
@@ -65,14 +65,14 @@
           <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
       </div>
-    </div>
+    <!-- </div> -->
   </nav>
 
 
   <!-- slider images -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
+ 
+    
+      
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
           <div class="carousel-indicators">
@@ -81,7 +81,7 @@
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
 
-          <div class="carousel-inner">
+          <div class="carousel-inner c-content">
             <div class="carousel-item c-item" data-bs-interval="10000">
               <img src="Images/carousel1.jpg" class="d-block w-100 c-img" alt="img1">
             </div>
@@ -103,9 +103,9 @@
           </button>
 
         </div>
-      </div>
-    </div>
-  </div>
+      
+    
+ 
 
   <section class="hidden">
     <!-- About Us của cty -->
@@ -209,7 +209,7 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="row">
+                            <div class="row"> 
 
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
@@ -217,7 +217,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
                                         </div>
 
                                     </div>
@@ -228,7 +228,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-primary" style="background-color: #66FF00">Go somewhere</a>
                                         </div>
                                     </div>
                                 </div>
@@ -238,7 +238,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-primary" style="background-color: #ff7f00">Go somewhere</a>
                                         </div>
                                     </div>
                                 </div>
@@ -254,7 +254,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-primary" style="background-color:#9800D3">Go somewhere</a>
                                         </div>
 
                                     </div>
@@ -265,7 +265,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-info">Go somewhere</a>
                                         </div>
                                     </div>
                                 </div>
@@ -275,7 +275,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-warning" >Go somewhere</a>
                                         </div>
                                     </div>
                                 </div>
@@ -291,7 +291,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-danger" style="border:none;">Go somewhere</a>
                                         </div>
 
                                     </div>
@@ -302,7 +302,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <a href="#" class="btn btn-success" >Go somewhere</a>
                                         </div>
                                     </div>
                                 </div>
@@ -312,6 +312,7 @@
                                         <div class="card-body">
                                             <h4 class="card-title">Special title treatment</h4>
                                             <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                            <a href="#" class="btn btn-secondary" style="background-color: black">Go somewhere</a>
                                         </div>
                                     </div>
                                 </div>
@@ -464,37 +465,6 @@
 <button type="button" class="btn btn-warning btn-floating btn-lg" id="btn-back-to-top">
   <i class="bi bi-arrow-up"></i>
 </button>
-
-                                              <!-- Messenger Chat plugin Code -->
-                                              <div id="fb-root"></div>
-
-                                              <!-- Your Chat plugin code -->
-                                              <div id="fb-customer-chat" class="fb-customerchat">
-                                              </div>
-
-                                              <script>
-                                                var chatbox = document.getElementById('fb-customer-chat');
-                                                chatbox.setAttribute("page_id", "106521525738447");
-                                                chatbox.setAttribute("attribution", "biz_inbox");
-                                              </script>
-
-                                              <!-- Your SDK code -->
-                                              <script>
-                                                window.fbAsyncInit = function() {
-                                                  FB.init({
-                                                    xfbml            : true,
-                                                    version          : 'v16.0'
-                                                  });
-                                                };
-
-                                                (function(d, s, id) {
-                                                  var js, fjs = d.getElementsByTagName(s)[0];
-                                                  if (d.getElementById(id)) return;
-                                                  js = d.createElement(s); js.id = id;
-                                                  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-                                                  fjs.parentNode.insertBefore(js, fjs);
-                                                }(document, 'script', 'facebook-jssdk'));
-                                              </script>
 
 <!-- files JavaScripts -->
 <script src="JSHomepage.js"></script>
