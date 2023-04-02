@@ -1,0 +1,155 @@
+database
+
+
+create database Handicrafts;
+use Handicrafts;
+
+create table admin (
+Id int PRIMARY KEY AUTO_INCREMENT,
+email varchar(200),
+name varchar (50),
+password varchar (30)
+);
+
+
+create table user (
+Id int PRIMARY KEY AUTO_INCREMENT,
+Fullname varchar (50),
+Email varchar(150),
+Phone varchar(20),
+Address varchar(200)
+);
+
+create table category( 
+Id int PRIMARY KEY AUTO_INCREMENT,
+category_name varchar(300)
+);
+
+insert into category values 
+(1,'wood'),
+(2,'Iron'),
+(3,'Glass'),
+(4,'Aluminium'),
+(5,'Brass'),
+(6,'Decorative')
+;
+
+create table product( 
+Id int PRIMARY KEY AUTO_INCREMENT,
+Category_id int ,
+Title varchar(350) ,
+Image varchar(500),
+Description text,
+FOREIGN KEY (Category_id) REFERENCES category(Id)
+);
+
+
+
+insert into product values
+	(1,'Trac wooden cigar pipe 4 sizes','1.png','wooden pipe and Trac wooden Cigar pipe bring elegant, luxurious and unique beauty. Trac wooden pipe and Trac wooden cigar are made of natural Trac wood material, with hardness. and durable, ensure the safety'),
+	(1,'High quality incense wooden tea tray with kneeling shape','2.jpg','The Huong wooden tea tray is carefully completed by Hanoi Fine Arts. From the selection of incense to the finishing stage with varnish, everything is meticulously done. Agarwood is a precious wood with sharp quality, smooth wood grain, beautiful wood grain. The tea tray is made entirely from natural, unadulterated incense wood.'),
+	(1,'High-grade pink mussel shell inlaid pen','3.jpg','Pearl inlaid pen was born as a result of the process of hard work and creativity. At each stage, we will feel the talented and skillful hands of the artisan. '),
+	(1,'HMS Victory wooden boat model for desk','4.jpg','HMS Victory wooden boat model for desks, office swarms. Finished from High Perfume Wood, with details meticulously crafted to scale like a real boat. Details such as stairs, sails, lifeboats, decks, undercarriages, etc. It is also made very delicately to create a very beautiful Victory ship model'),
+	(1,'Small wooden flowerpot','5.jpg','Small wooden flowerpot is made of natural mother-of-pearl wood used for flower arrangement, decoration or decor. New and modern style, Bright colors are very beautiful, Solid wood material is waterproof, Safe products for health'),
+	(1,'Thap Dieu Quan Mai chiseled mahogany wood has a sharp bong','6.jpg','Falling apricots also has another beautiful name, collapsing ten birds with apricots. This is the most elaborate wooden crate model of all types because most of its production time is spent on chisels carved into the wood.'),
+	(1,'Luc Binh (Loc Binh) High Red Oak','7.jpg','Wooden Luc Binh, also known as wooden Loc Binh, is used for decorative purposes, expressing the nobility and luxury of the owner. Big mouth to suck fortune and luck; belly swells to hold possessions and possessions; Narrow neck to protect property, luck, fortune.'),
+	(1,'EUROPEAN WOODEN bowl','8.jpg','European-style wooden cup: The cup is made of European-style ACACIA wood. The product has been tested for food safety. Suitable for any kitchen space. The cup is meticulously made, not scratched. Products have been exported to Europe and America.'),
+	(2,'DeepCraft Handpainted Aluminium Traditional Colourfull Home Decor Rajasthani Tea Kettle Decorative Showpiece','9.jpg','Enjoy the colourful world of Rajasthan, India, with this rare hand painted tea kettle on your table! Have you ever experienced pure happiness every time you pour yourself a cup of tea? This beautifully hand painted tea kettle does that! This one is minutely painted in a Mughal art of India.'),
+    (2,'Garden Iron Handicraft Card Decoration','10.jpg','Material: wrought iron, acrylicColor: flower pot, dwarf red, dwarf'),
+    (2,'Metal Iron Handmade Rajasthani Musician Set','11.jpg','This Set of 4 Women Musician Doll or Lady is perfectly suitable for Gifting your loved ones, family members, relatives on festivals and occasions like 1st birthday, Anniversary, Baby Shower, Birthday, Bridal Shower, Confirmation, Engagement, First Communion, Graduation, Housewarming, Moving, Prom, Retirement, Wedding, Couple s Gift, gifts for her, gifts for him, Christmas, Cinco De Mayo, Diwali, Easter, Fathers Day, Halloween, Hanukkah, Independence Day, Kwanzaa, Lunar New year, Mothers Day, New Year, Passover, St. Patricks Day, Thanksgiving, Valentines Day, Veterans Day, etc.'),
+    (2,'Couple Metal Wall Hanging Wall Decor Home Decor- Luxury Indian handicrafts Gift','12.jpg','This bohemian wrought iron Framed Musician Couple is suitable for your house and perfect for Wall decor And you can gift it to your loved ones. This beautifully crafted Musicians are made of high purity metal. This handmade musician couple frame gives elegant and stylish look to your house.'),
+    (2,'Gandhanra Antique Tibetan Thokcha Amulet','13.jpg','This is collect from Tibet, a old badge or pandent, made of thokcha (Cold Iron or meteoric iron), the shape is Tibetan Ladder of Heaven, used the copper inlaid and carved craftsmanship.Each step has copper wires inlaid on the thunder iron body, and the back has exquisite patterns.'),
+    (2,'Iron Handmade Wrought Iron Bansuri Ganesha Wall Hanging Decorative Showpiece','14.jpg','Bring goodluck and ward off all your Vighnas with this auspious wall hanging having lord Ganesha. It is made from Wrought Iron which reflects the artistic brilliance and it adds elegance to your decor. Style your home and office with this Bansuri Ganesha Wall Hanging; sure to be admired by your guests. It serves as a great gift, especially around religious celebrations and festivities. This wall hanging has been made by skilled artisans from the house of eCraftIndia using various traditional techniques.'),
+    (2,'Handpainted metal Barcelos rooster','15.jpg','Portuguese Barcelos rooster, Portuguese Home Decor, artistic metal handicraft, Hand Painted, Made in Portugal. Vintage handicraft. Original Product from Portugal. Ships from Lisbon, Portugal worldwide.'),
+    (2,'Vintage handmade iron motorcycle','16.jpg','Motorcycle model trimmings Handmade iron material Each detail reflects the designers creativity, and uses nuts, springs and other materials to create a proportionally coordinated motorcycle model Cool metal materials, locomotive parts and components are all available, showing individuality and nostalgic style, reflecting the charm of handcrafts Manual iron welding. Metal texture and luster. Proportional coordination. Retro and old High degree of simulation, reasonable welding of all parts, retaining original texture and stable placement'),
+    (3,'Glass Utensils','17.jpg','Glass has been artistically used to create utensils that include wide array of dishes ranging from pans & bowls to trays & casseroles. '),
+    (3,'Glass Votives','18.jpg','Adding a touch of class to the decor, glass votives are sure to leave the onlookers spellbound with their beauty.'),
+    (3,' Glass Bowls','19.jpg','Glass bowls are hemispherical vessels used for holding food or fluids and may include ice cream bowls, soup bowls, fruit bowls among others. '),
+    (3,' Glass Inkpots','20.jpg','Ideally used for holding ink, glass inkpots are exquisite items created by the craftsmen in traditional designs and patterns.'),
+    (3,'Glass Jars','21.jpg','Designed to perfection, the highly elegant glass jars depict exquisite craftsmanship and are ideally used for holding a variety of thing.'),
+    (3,'Perfume Bottles','22.jpg','Used for storing pleasing perfumes, glass perfume bottles are stunning pieces of art available in eye-catching designs.'),
+    (3,' Glass Wine Sets','23.jpg','Charmingly designed glass wine sets, which include bar decanter, bar dish and bar goblets add a practical appeal to bar decor.'),
+    (3,'Glass Flower Vases','24.jpg','Intricately carved in glass, the glass flower vases are specially used to display plants and flowers together and make exclusive gifts as decorative accents.'),
+    (3,'Glass Goblets','25.jpg','A must-haves for all bars, homes or hotels, glass goblets have sleek and sophisticated designs and are appreciated worldwide for design and functional features'),
+    (3,'Ice Buckets','26.jpg','Glass ice buckets serve as excellent items for chilling champagne or ice storage and are great additions to beverage service.'),
+    (4,'Oil Burners','27.jpg','Designed to perfection, oil burners are an elegant source of lighting that artistically created using iron and add immense beauty to the corners'),
+    (4,'Garden Urns','28.jpg','Garden urns created out of aluminium have perplexing carvings along with splendid designs and have are quite in vogue. '),
+    (4,'Aluminum Flower Vases','29.jpg','Aluminium flower vases create an eye-catching focal point when placed and are available in different sizes to fit all types of flowers. '),
+    (4,'Garden Animals','30.jpg','Attractive garden animals created using aluminium make the garden look more natural and impart the complete feel of a landscape. '),
+    (4,'Wine Chillers','31.jpg','Depicting alluring styles and exquisite designs, brass wine chillers are often lacquered to prevent tarnishing.	'),
+    (4,'Table Candle Holders','32.jpg','Artists who make table candle holders made of brass have drawn inspiration from the traditional designs, while keeping in mind the trends, in vogue. '),
+    (4,'Hooks','33.jpg','Stylish brass hooks are perfect for hanging a variety of things and are available in different finishes and designs. '),
+    (4,'Mirror Frames','34.jpg','Glorifying the cultural richness, brass mirror frames are aesthetically adored for intricate craftsmanship. '),
+    (5,'Votive Candle Holders','35.jpg','Votive candle holders made of brass hold candles that express or symbolize a wish, desire or vow and provide immense elegance to the decor. '),
+    (5,'Key Rings','36.jpg','Gifts with an unmatched regality, brass key rings are perfect accessories to hold the keys in style.'),
+    (5,'Paper Clips','37.jpg','Paper clips are ecstatic mementos richly handcrafted in sparkling brass and add immense sophistication to adorn the study. '),
+    (5,'Ice Tongs','38.jpg','Adding value and class to the evening drinks, brass ice tongs accentuate the enjoyment with their elegance. '),
+    (5,'Brass Napkin Rings','39.jpg','Beautiful designs in various shapes and patterns are created to adorn the brass napkin rings made to look new for a long time. '),
+    (5,' Crystal Napkin Rings','40.jpg','Certain napkin rings are made specifically to be gifted or used on specific occasions, brass napkin rings being one of them.'),
+    (5,'Silver Finish Napkin Rings','41.jpg','Brass napkin rings crafted with unique silver finish are in vogue and look graceful. '),
+    (5,'Magnifying Lens','42.jpg','Time to be smart and stylish using the sophisticated magnifying lens that is crafted to perfection'),
+    (5,'Brass Goblets','43.jpg','The design and finish of brass goblets reflects utmost care and perfection and are created using sophisticated patterns and styles.'),
+    (5,' Wine Chillers','44.jpg','Depicting alluring styles and exquisite designs, brass wine chillers are often lacquered to prevent tarnishing. '),
+    (5,'Hurricane Lamps','45.jpg','Hurricane lamps are skillfully chiseled out in iron and are highly appraised and demanded by the lovers of art as charming decorative pieces. '),
+    (5,'Table Candle Holders','46.jpg','Artists who make table candle holders made of brass have drawn inspiration from the traditional designs, while keeping in mind the trends, in vogue. '),
+    (6,'Candle Holders','47.jpg','Artistically magnificent candle holders offer the light of magic and brightness to the decor and are gifts to be cherished forever.'),
+    (6,' Wall Sconces','48.jpg','An ecstatic collection of wall sconces are perfect representations of gracious beauty to adorn the interiors.'),
+    (6,'Hurricane Lamps','49.jpg','Hurricane lamps are skillfully chiseled out in iron and are highly appraised and demanded by the lovers of art as charming decorative pieces.'),
+    (6,'Picture Frames','50.jpg','Exquisitely hand crafted iron picture frames have designs and patterns that shall render the onlooker spellbound with the distinct elegance. '),
+    (6,'Statues','51.jpg','Brass statues exemplify artistic excellence depicting traditional designs that lend the object a rich effect. '),
+    (6,'Lamp Bases','52.jpg','Lamp bases made of iron are available in a plethora of designs and patterns and bring about a touch of class and sophistication to the lams as well as the corners. '),
+    (6,' Mirror Frames','53.jpg','Glorifying the cultural richness, brass mirror frames are aesthetically adored for intricate craftsmanship.'),
+    (6,' Glass Jars','54.jpg','Designed to perfection, the highly elegant glass jars depict exquisite craftsmanship and are ideally used for holding a variety of thing.'),
+	(6,'Wooden Boxes','55.jpg','Chiseled out of exotic wood, wooden boxes often have intricate carvings and are inlaid with beautiful designs.'),
+	(6,'Stocking Holder','56.jpg','These metal stocking holders are fabricated in various imaginative designs to create a pleasant surroundings on Christmas festival.'),
+	(6,'Wooden Cupboards','57.jpg','Attractive and ornate, decorative wooden cupboards are designed to excel and come in various styles with varying designs, finishes and shapes')
+    ;
+
+create table artist(
+id int PRIMARY KEY AUTO_INCREMENT,
+name varchar(350),
+Biography text,
+Career text,
+Personality text,
+Reviews text,
+Honor text
+);
+insert into artist values
+('Trần Duy Mong','Vốn là người con của làng nghề kim hoàn Kế Môn (xã Điền Môn, huyện Phong Điền, tỉnh Thừa Thiên Huế), nghệ nhân Trần Duy Mong sinh ra và lớn lên trong một gia tộc có truyền thống về nghề kim hoàn. Nhờ đó, ông đã lĩnh hội được nghề của ông cha truyền lại và luôn tận tụy với nghề truyền thống.','Nghệ nhân Trần Duy Mong theo nghề kim hoàn từ năm lên 15 tuổi. Nhờ sự thông minh, nhanh nhẹn, kiên trì, ông đã thành công và vào nghề sớm hơn những người bạn nghề cùng trang lứa. Đến nay, sau 50 năm theo nghề, ông đã trở thành thợ có tay nghề cao (bậc 7/7) và nắm giữ nhiều kỹ năng, kỹ xảo trong lĩnh vực chế tác vàng, bạc, đá quý. Đồng thời, ông cũng tự thiết kế và trực tiếp làm ra nhiều sản phẩm đạt trình độ kỹ thuật, mỹ thuật, có giá trị kinh tế cao.','Nghệ nhân Trần Duy Mong cho biết, trong bối cảnh ngành công nghệ chế tác trang sức phát triển mạnh như hiện nay, nghề kim hoàn truyền thống phải chịu sức ép không hề nhỏ, nhưng ông tin rằng, với vẻ đẹp và sự độc đáo riêng có, kim hoàn truyền thống vẫn sẽ có chỗ đứng riêng nếu biết phát huy thế mạnh.','Với nỗi lòng đau đáu với nghề, nghệ nhân Trần Duy Mong đã phát triển thành công chuỗi cơ sở kinh doanh vàng, bạc, đá quý của mình, góp phần tạo cơ hội công ăn việc làm cho người dân, đào tạo nghề cho lớp thợ kế cận. Đặc biệt, ông đã dày công xây dựng cơ sở Tịnh Tâm kim cổ thành điểm đến tham quan, du lịch, mua bán kim hoàn lớn và độc đáo nhất ở miền Trung. Đến với Tịnh Tâm kim cổ du khách sẽ được chiêm ngưỡng hàng nghìn mẫu hàng trang sức bằng vàng, bạc, đá quý và nhiều mẫu hàng lưu niệm được chế tác tinh xảo bằng vàng, bạc, đồng…','Mặc dù là lão luyện trong nghề nhưng nghệ nhân Trần Duy Mong vẫn không ngừng học tập, rèn giũa nâng cao tay nghề, nhờ đó, ông liên tục giành nhiều giải thưởng lớn tại các kỳ thi uy tín. Trong đó, phải kể đến các tác phẩm điển hình như: "Hài Cung Đình Huế" - Giải Ba Hội thi Sản phẩm thủ công mỹ nghệ Việt Nam lần thứ VI năm 2009; "Quạt Cung Đình" - Giải Đồng tại Hội thi Sản phẩm thủ công mỹ nghệ làm hàng lưu niệm phục vụ du lịch - Huế 2008; "Châm Hoa Lạc Việt" - giải Ba tại Hội thi Sản phẩm thủ công mỹ nghệ làm hàng lưu niệm và quà tặng Huế 2010. Sản phẩm Tranh Đại nội Huế mạ vàng khung kính không gian 3D đạt giải Nhất tại Hội thi Sản phẩm quà tặng lưu niệm Huế năm 2016 do UBND TP. Huế tổ chức.'),
+('Đỗ Văn Cường','Sinh ra trong một gia đình có nghề sản xuất thủ công mỹ nghệ truyền thống từ nhiều đời, do vậy, nghệ nhân Đỗ Văn Cường, chủ Hộ Kinh doanh Đỗ Văn Cường tại làng Thiết Úng, xã Vân Hà, huyện Đông Anh, thành phố Hà Nội đã có hơn hai chục năm kinh nghiệm làm nghề chạm khắc gỗ mỹ nghệ truyền thống. Với bàn tay khéo léo, tài hoa, nghệ nhân Đỗ Văn Cường đã cho ra đời hàng trăm tác phẩm điêu khắc từ gỗ.','Sinh ra trong một gia đình có nghề sản xuất thủ công mỹ nghệ truyền thống từ nhiều đời, do vậy, nghệ nhân Đỗ Văn Cường, chủ Hộ Kinh doanh Đỗ Văn Cường tại làng Thiết Úng, xã Vân Hà, huyện Đông Anh, thành phố Hà Nội đã có hơn hai chục năm kinh nghiệm làm nghề chạm khắc gỗ mỹ nghệ truyền thống. Với bàn tay khéo léo, tài hoa, nghệ nhân Đỗ Văn Cường đã cho ra đời hàng trăm tác phẩm điêu khắc từ gỗ.','Sinh ra trong một gia đình có nghề sản xuất thủ công mỹ nghệ truyền thống từ nhiều đời, do vậy, nghệ nhân Đỗ Văn Cường, chủ Hộ Kinh doanh Đỗ Văn Cường tại làng Thiết Úng, xã Vân Hà, huyện Đông Anh, thành phố Hà Nội đã có hơn hai chục năm kinh nghiệm làm nghề chạm khắc gỗ mỹ nghệ truyền thống. Với bàn tay khéo léo, tài hoa, nghệ nhân Đỗ Văn Cường đã cho ra đời hàng trăm tác phẩm điêu khắc từ gỗ.','Trong quá trình làm nghề, nghệ nhân Đỗ Văn Cường đã tạo ra hàng trăm tác phẩm điêu khắc gỗ, tiêu biểu như các tác phẩm: Hoa sen mùa thu, lan hồ điệp, mít cảnh, cá cảnh, tê giác 1 sừng, lợn phú quý, đài nến hoa sen…','Hiện nay nhu cầu thị trường trang trí nội thất các sản phẩm từ gỗ ngày càng cao để đủ số lượng phục vụ người tiêu dùng, các sản phẩm thông dụng của nghệ nhân Đỗ Văn Cường bắt đầu được áp dụng công nghệ cao để sản xuất hàng loạt. Tuy nhiên, vẫn đảm bảo chất lượng và thẩm mỹ của từng sản phẩm.'),
+('Nguyễn Duy Hưng','Nghệ nhân Nguyễn Duy Hưng, người thầy của hàng nghìn thợ kim hoàn đánh giá về nghề mà ông đeo đuổi nhiều năm qua như vậy. Ông Hưng sinh năm 1967, ngụ tại quận Phú Nhuận, TP. Hồ Chí Minh. Ông hiện là người thợ, đồng thời là người thầy có chuyên môn cao về chế tác được tất cả các dòng hàng nữ trang trên thị trường.','','','',''),
+('','','','','',''),
+('','','','','',''),
+('','','','','',''),
+('','','','','',''),
+('','','','','','')
+;
+
+create table contact(
+Id int PRIMARY KEY AUTO_INCREMENT,
+Firt_name varchar(30),
+Last_name varchar(30),
+Email varchar(150),
+Phone varchar(20),
+Address varchar(200),
+Note varchar(500)
+);
+
+select * from product;
+select * from category;
+
+drop table admin;
+drop table user;
+drop table category;
+drop table product;
+drop table artist;
+drop table contact;
+drop database Handicrafts;
+
+
+
+
+
+
+
+
