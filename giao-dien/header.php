@@ -16,22 +16,26 @@
 <body>
     <nav class="navbar navbar-expand-lg  fixed-top " style="color: white;">
         <div class="container-fluid">
+        <!-- <div class="row">
+        <div class="col-sm-12"> -->
             <a class="navbar-brand" href="Home.php">
-                <i class="bi bi-scissors" style="color:white"></i>
-                <span style="color: white;font-family: bradley hand,cursive;">Venus Handicrafts</span></a>
-            <span style="padding-right:220px"><i class="bi bi-brush" style="color:white"></i></span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                
+                <span style="color: white;font-family: bradley hand,cursive;"><i class="bi bi-scissors" style="color:white"></i>Venus Handicrafts<i class="bi bi-brush" style="color:white"></i></span></a>
+            
+            <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="toggler-icon top-bar"></span>
+                <span class="toggler-icon middle-bar"></span>
+                <span class="toggler-icon bottom-bar"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 100px;">
+
+            <div class="collapse navbar-collapse" id="navbarScroll" >
+                <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 500px;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="Home.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Our Products
                         </a>
                         <ul class="dropdown-menu">
@@ -44,9 +48,30 @@
                         </ul>
                     </li>
                     <style>
-                        li{
-                            padding-right: 50px;
-                        }
+        /* modify cho navbar */
+                      .navbar-nav .nav-item {
+                        padding-right: 40px;
+                      } 
+                      ul.dropdown-menu.show{
+                        margin: 0;
+                        padding: 0;
+                        /* border-radius:0; */
+                      }
+        /* cho phần form Search bar */
+                      .submitBTN{
+                        border-top-right-radius: 30px;
+                        border-bottom-right-radius: 30px;
+                        color: white;
+                        background-color: #FFD300;
+                        border: none;
+                      }
+                      .inputBOX{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        border: solid black 1px;
+                        text-indent: 18px;
+                      }
+                      
                     </style>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -55,11 +80,15 @@
                         <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                 </ul>
-                <form action="header.php" method="get" style="padding-top :15px; ">
-            <input type="text" name="search" />
-            <input type="submit" name="ok" value="search" />
-          </form>
+             
+            <form class="d-flex" action="header.php" method="get" >
+            <input class="inputBOX" style="width:300px" type="text" name="search" placeholder=" Type Here..." />
+            <input class="submitBTN" type="submit" name="ok" value="search" />
+            </form>
+             
             </div>
+        <!-- </div>
+        </div> -->
         </div>
     </nav>
     <div class="pading">

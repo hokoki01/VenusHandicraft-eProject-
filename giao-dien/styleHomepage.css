@@ -7,7 +7,7 @@ body{
 
 /* Styling for navbar */
 .navbar{
-    padding: 10px;
+    
     background-color: #010101;
 
 }
@@ -18,16 +18,137 @@ nav .navbar-nav li a{
 }
 
 ul.dropdown-menu > li > a {
-    color:#282828 !important;
-    
+    color:#ffffff !important;
+    background-color: black;
 }
 
-/* .dropdown-menu a:hover{
-    background-color: #282828;
-    
-} */
+.dropdown-menu a:hover{
+    background-color: #FFD300;
+    color: #010101 !important;
+}
+nav.navbar.navbar-expand-lg.fixed-top{
+    padding: 15px;
+}
+
+ /* add underline animation for navbar link */
+    .nav-link{
+        position: relative;
+    }
+    .nav-link:hover,
+    .nav-link:focus{
+        color:#f7b948 !important;
+
+    }
+    .nav-link::after{
+        content: ''; /*dùng để add thêm nội dung của cái muốn thêm*/
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 2px;
+        background-color: #f7b948 !important;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s;
+        pointer-events: none;
+    }
+    .nav-link:hover::after,
+    .nav-link:focus::after{
+        transform-origin: left;
+        transform: scaleX(1);
+
+    }
+/* ================================== */
 
 
+
+
+/* customize for collapse navbar */
+.navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    position: absolute;
+    top: 20px;
+    transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+    top: inherit;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    top: inherit;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    top: inherit;
+    transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+    background: linear-gradient( 263deg, rgba(252,74,74,1) 0%, rgba(0,212,255,1) 100% );
+}
+/* ======================================================== */
 
 
 /* styling for text font,etc */
@@ -112,7 +233,9 @@ h1,h2,h3,h4{
   @media screen and (min-width: 1024px){
     .dropdown:hover > .dropdown-menu{
         display: block;
-
+        /* border-radius:0; */
+        margin: 0;
+        padding: 0;
      }
   }
 
@@ -126,7 +249,7 @@ h1,h2,h3,h4{
 
 
 
- /* edit cho logo */
+ /* edit cho ICON */
 .ICON{
   color: rgb(237, 5, 5);  
 }
@@ -193,7 +316,7 @@ section{
       transition: all 1s;
     }
   }
-
+/* ================================= */
 
 
 
@@ -217,6 +340,8 @@ section{
     right: 20px;
     display: none;
   }
+
+
 
 /* phần css của footer */
 footer{
@@ -354,6 +479,7 @@ footer .container .noi-dung.about p{
     width: 300px;
     height: 2px;
     background: #e6cc00;
+    margin:0;
 }
 
 .contact{

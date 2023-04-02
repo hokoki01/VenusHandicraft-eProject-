@@ -31,10 +31,10 @@
             <h2>Get in touch with us</h2>
             <ul class="info">
                 <li>
-                    <span><i class="bi bi-geo-alt-fill"></i></span>
-                    <span>
+                    
+                    <span><i class="bi bi-geo-alt-fill">
                     1972/73,Shop No.2,Captain Tapan kapoor market, 
-                    Chandni Chowk, Delhi-110006, India.
+                    Chandni Chowk, Delhi-110006, India.</i>
                    </span>
                 </li>
                 <li>

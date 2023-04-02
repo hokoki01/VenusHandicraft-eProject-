@@ -3,11 +3,7 @@ include 'header.php';
 ?>
 
 <!-- slider images -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
             aria-label="Slide 1"></button>
@@ -35,11 +31,8 @@ include 'header.php';
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-
       </div>
-    </div>
-  </div>
-</div>
+ 
 
 <section class="hidden">
   <!-- About Us của cty -->
@@ -50,7 +43,7 @@ include 'header.php';
         <h1>About Us</h1>
         <br>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12 ">
         <br>
         <p>Incepted in 2003, we, Venus Handicrafts, have achieved a remarkable position in the industry for
           manufacturing and supplying of a wide assortment of Glass Stones, Claws and Cup Chains, Claws and Cup Chains
@@ -61,7 +54,7 @@ include 'header.php';
         <!-- link để đọc đc thêm -->
         <a href="">Read more</a>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12 ">
         <img src="Images/aboutUsImg.jpg" style="height:100%;width:100%;object-fit:cover;" alt="alter" width="650px">
       </div>
     </div>
@@ -336,7 +329,7 @@ include 'header.php';
     <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
       <h3><strong>Get in touch with us</strong></h3><br>
       <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
-      <input style="width:400px" type="email" name="userName" placeholder="Type your email here...">
+      <input style="width:300px" type="email" name="userName" placeholder="Type your email here...">
       <br>
 
       <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
@@ -357,10 +350,10 @@ include 'header.php';
         asperiores necessitatibus facilis esse.
       </p>
       <ul class="social-icon">
-        <li><a href=""><i class="bi bi-facebook"></i></a></li>
-        <li><a href=""><i class="bi bi-twitter"></i></a></li>
-        <li><a href=""><i style="color:azure" class="bi bi-instagram"></i></a></li>
-        <li><a href=""><i style="color:azure" class="bi bi-tiktok"></i></a></li>
+        <li><a href="https://www.facebook.com/zuck/"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="https://twitter.com/finkd?lang=en"><i class="bi bi-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/zuck/?hl=en"><i style="color:azure" class="bi bi-instagram"></i></a></li>
+        <li><a href="https://www.tiktok.com/@finkd"><i style="color:azure" class="bi bi-tiktok"></i></a></li>
       </ul>
     </div>
     <!--Kết Thúc Nội Dung Giới Thiệu-->
@@ -368,10 +361,10 @@ include 'header.php';
     <div class="noi-dung links">
       <h2>Site Map</h2>
       <ul class="Olist">
-        <li><a class="dot" href="#">Home</a></li>
-        <li><a class="dot" href="#">About Us</a></li>
-        <li><a class="dot" href="#">Contact Us</a></li>
-        <li><a class="dot" href="#">Our Products</a></li>
+        <li><a  href="Home.php">Home</a></li>
+        <li><a  href="">About Us</a></li>
+        <li><a  href="contact.php">Contact Us</a></li>
+        <li><a  href="product.php">Our Products</a></li>
       </ul>
     </div>
     <!--Kết Thúc Nội Dung Đường Dẫn-->
@@ -410,36 +403,6 @@ include 'header.php';
   <i class="bi bi-arrow-up"></i>
 </button>
 
-<!-- Messenger Chat plugin Code -->
-<div id="fb-root"></div>
-
-<!-- Your Chat plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "106521525738447");
-  chatbox.setAttribute("attribution", "biz_inbox");
-</script>
-
-<!-- Your SDK code -->
-<script>
-  window.fbAsyncInit = function () {
-    FB.init({
-      xfbml: true,
-      version: 'v16.0'
-    });
-  };
-
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 
 <!-- files JavaScripts -->
 <script src="JSHomepage.js"></script>
@@ -447,8 +410,3 @@ include 'header.php';
 </html>
 
 
-<!-- google maps -->
-<!-- <div class="col-md-5">
-  <h3>Our Location</h3>
-  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dhxgJud_QnSwU2fxYDfaPVQskNyM5Ok&ehbc=2E312F" width="640" height="480"></iframe>
-</div > -->
