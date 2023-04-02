@@ -1,7 +1,7 @@
-/* body{
+  /*body{ 
     background-image: url("https://previews.123rf.com/images/alekseynikolayew/alekseynikolayew1702/alekseynikolayew170200126/72611546-textura-de-mimbre-tejida-simple-fondo-marr%C3%B3n-claro-tejido-imitaci%C3%B3n-de-mimbre-o-de-sauce.jpg");
     
-} */
+}  
 
 
 
@@ -77,7 +77,7 @@ h1,h2,h3,h4{
 
 /* nền cho phần "About Us" */
  .bg-indigo{
-    /* background-color: #ffffff; */
+    /* background-image: "th.jpg" ; */
     padding: 55px 50px;
     text-indent: 20px;
     text-align:justify;
