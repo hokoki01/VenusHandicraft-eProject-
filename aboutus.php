@@ -12,11 +12,13 @@
   <!-- link để tải icon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
-<body>
-    <div>
-        <h1>About us</h1>
-        <br>
-    </div>
+<body>  
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 col-sm-12" >
+        <h1>About us</h1> 
+    </div>   
+    <div class="col-md-12 col-sm-12">
     <div class="paragraph" style="text-align:left;">
         <font size="3">
             "VENUS Handicraft is a well-known certified company. Established is  1972, VENUS Handicraft
@@ -33,6 +35,8 @@
         </font>
         <br>
     </div>
+    </div>
+        <div class="col-md-12 col-sm-12">
     <div class="paragraph" style="text-align:left;">
         <font size="3">
         The company manufactures a wide range of products which are made by
@@ -41,6 +45,9 @@
         With the wide experience of more than 36 years - the products are
         distinguished in the market for their superior quality and elegant design.
         </font>
+        </div>
+    </div>
+    </div>
     </div>
 </body>
 </html>
