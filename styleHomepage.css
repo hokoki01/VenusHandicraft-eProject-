@@ -9,7 +9,10 @@ body{
 .navbar{
     padding: 10px;
     background-color: #010101;
-
+    bottom:  670px;
+}
+header{
+    position: fixed;
 }
 
 nav .navbar-nav li a{
