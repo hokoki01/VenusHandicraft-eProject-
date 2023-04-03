@@ -51,32 +51,18 @@ include 'header.php';
                         box-sizing: border-box;
                     }
 
-                    input {
+                    /* input {
                         width: 100%;
                         padding: 12px 20px;
                         margin: 8px 0;
                         box-sizing: border-box;
-                    }
+                    } */
 
                     label {
                         padding: 12px 12px 12px 0;
                         display: inline-block;
                     }
 
-
-                    input[type=submit] {
-                        background-color: #04AA6D;
-                        color: white;
-                        padding: 12px 20px;
-                        border: none;
-                        border-radius: 4px;
-                        cursor: pointer;
-                        float: right;
-                    }
-
-                    input[type=submit]:hover {
-                        background-color: #45a049;
-                    }
 
                     .container {
                         border-radius: 5px;
@@ -116,7 +102,7 @@ include 'header.php';
                         padding-left : 30% ;
                     }
 
-                    button {
+                    /* button {
                         background-color: #04AA6D;
                         color: white;
                         padding: 12px 20px;
@@ -124,7 +110,7 @@ include 'header.php';
                         border-radius: 4px;
                         cursor: pointer;
                         margin-left: 45%;
-                    }
+                    } */
 
                     h2 {
                         text-align: center;
@@ -133,23 +119,24 @@ include 'header.php';
                 <form method="post" action="contact.php">
                     <h2>liên hệ với chúng tôi</h2>
                     <label for="Firt_name">Firt name : </label></td>
-                    <input type="text" Id="Firt_name" placeholder="Firt_name" name="Firt_name" required>
+                    <input type="text" Id="Firt_name" placeholder="Firt_name" name="Firt_name" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Last_name">Last name : </label>
-                    <input type="text" Id="Last_name" placeholder="Last_name" name="Last_name" required>
+                    <input type="text" Id="Last_name" placeholder="Last_name" name="Last_name" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Email">Email : </label>
-                    <input type="text" Id="Email" placeholder="Email" name="Email" required>
+                    <input type="text" Id="Email" placeholder="Email" name="Email" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Phone">Phone : </label>
-                    <input type="number" Id="Phone" placeholder="Phone" name="Phone" required>
+                    <input type="number" Id="Phone" placeholder="Phone" name="Phone" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Address">Address : </label>
-                    <input type="text" Id="Address" placeholder="Address" name="Address" required>
+                    <input type="text" Id="Address" placeholder="Address" name="Address" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Note">Note : </label>
-                    <input name="Note" id="Note" placeholder="Note" required></input>
-                    <input type="submit" values="send" style="background-color: #04AA6D;color: white;padding: 12px 20px;border: none;border-radius: 4px;cursor: pointer;margin-left: 45%;">
+                    <input name="Note" id="Note" placeholder="Note" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;"></input>
+                    <input type="submit" values="send" style="background-color: #04AA6D;color: white;padding-left: 12px 20px;border: none;border-radius: 4px;cursor: pointer;text-align:center; width:100%;height:40px;">
                 </form>
             </div>
         </div>
     </div>
 </body>
+<br><br>
 
 <?php
 include 'footer.php';

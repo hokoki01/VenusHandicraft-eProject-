@@ -41,6 +41,7 @@
                             <li><a class="dropdown-item" href="product_wood.php">Wood</a></li>
                             <li><a class="dropdown-item" href="product_decorative.php">Handicraft Decorative</a></li>
                             <li><a class="dropdown-item" href="product_aluminium.php">Aluminium</a></li>
+                            <li><a class="dropdown-item" href="product.php">All Product</a></li>
                         </ul>
                     </li>
                     <style>
@@ -73,7 +74,7 @@
         echo "Yeu cau nhap du lieu vao o trong";
       } else {
         include 'connect_db.php';
-        $sql = "SELECT * FROM product where Id = $search";
+        $sql = "SELECT * FROM product where Title LIKE '%$search%'";
         $result = mysqli_query($connect, $sql);
         include 'show_product.php';
       }

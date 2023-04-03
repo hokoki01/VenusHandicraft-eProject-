@@ -47,7 +47,7 @@ include 'header.php';
     <!-- bootstrap "container" sẽ cho content ở giữa màn hình  -->
     <div class="row ">
       <div class="col-md-12 ">
-        <h1>About Us</h1>
+        <h1>Handicrafts</h1>
         <br>
       </div>
       <div class="col-md-6 col-sm-12">
@@ -304,22 +304,22 @@ include 'header.php';
       <div class="container mt-4">
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/1.png" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/1.png" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/2.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/2.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/3.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/3.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/4.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/4.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/14.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/14.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/15.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/15.jpg" alt="Error 404">
           </div>
         </div>
       </div>
@@ -336,10 +336,23 @@ include 'header.php';
     <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
       <h3><strong>Get in touch with us</strong></h3><br>
       <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
-      <input style="width:400px" type="email" name="userName" placeholder="Type your email here...">
+
+      <form class="form" method="post" action="footer.php">
+        <input type="text" class="form__field"
+          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter name" required />
+        <input type="email" class="form__field"
+          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter Email" required />
+        <input type="number" class="form__field"
+          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter phone" required />
+        <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
+      </form>
+
       <br>
 
-      <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
+
     </div>
   </div>
 </div>
@@ -369,9 +382,9 @@ include 'header.php';
       <h2>Site Map</h2>
       <ul class="Olist">
         <li><a class="dot" href="#">Home</a></li>
-        <li><a class="dot" href="#">About Us</a></li>
-        <li><a class="dot" href="#">Contact Us</a></li>
-        <li><a class="dot" href="#">Our Products</a></li>
+        <li><a class="dot" href="about.php">About Us</a></li>
+        <li><a class="dot" href="contact.php">Contact Us</a></li>
+        <li><a class="dot" href="product.php">Our Products</a></li>
       </ul>
     </div>
     <!--Kết Thúc Nội Dung Đường Dẫn-->
@@ -445,10 +458,3 @@ include 'header.php';
 <script src="JSHomepage.js"></script>
 
 </html>
-
-
-<!-- google maps -->
-<!-- <div class="col-md-5">
-  <h3>Our Location</h3>
-  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dhxgJud_QnSwU2fxYDfaPVQskNyM5Ok&ehbc=2E312F" width="640" height="480"></iframe>
-</div > -->
