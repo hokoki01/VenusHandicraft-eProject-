@@ -63,9 +63,8 @@ require 'connect_db.php';
                         <?= $product['Title']; ?>
                       </td>
                       <td>
-                        <?=
-                          $image = $product['Image'];
-                        echo "<img src='image_DTB/$image' class='img-responsive' style='width:20%' alt='Image'>"; ?>
+                        
+                        <img src='image_DTB/<?=$image = $product['Image'];?>' class='img-responsive' style='width:20%' alt='Image'>
                       </td>
                       <td>
                         <?= $product['Description']; ?>

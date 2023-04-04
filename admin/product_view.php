@@ -54,9 +54,8 @@ include 'connect_db.php';
                                 <div class="mb-3">
                                     <label>Product Image</label>
                                     <td>
-                                        <?=
-                                            $image = $product['Image'];
-                                        echo "<img src='image_DTB/$image' class='img-responsive' style='width:20%' alt='Image'>"; ?>
+                                        
+                                        <img src='image_DTB/<?=$image = $product['Image'];?>' class='img-responsive' style='width:20%' alt='Image'>"; 
                                     </td>
                                 </div>
                                 <div class="mb-3">

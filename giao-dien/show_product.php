@@ -20,6 +20,7 @@ while ($row = mysqli_fetch_array($result)) {
     $i++;
 }
 ?>
+
 <style>
     button {
         background-color: #04AA6D;

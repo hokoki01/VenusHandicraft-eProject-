@@ -68,7 +68,7 @@
     <style>
         body {
 
-            background-image: url(image/nen_login.jpg);
+            background-image: url(image_DTB/nen.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             padding-right: 100px;
