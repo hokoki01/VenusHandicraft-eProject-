@@ -52,7 +52,7 @@
           </li>
           <!-- navbar-3 -->
           <li class="nav-item">
-            <a class="nav-link" href="#">About Us</a>
+            <a class="nav-link" href="aboutus.php">About Us</a>
           </li>
           <!-- navbar 4 -->
           <li class="nav-item">
@@ -113,7 +113,7 @@
       <!-- bootstrap "container" sẽ cho content ở giữa màn hình  -->
       <div class="row ">
         <div class="col-md-12 ">
-          <h1>About Us</h1>
+          <h1>Handicraft</h1>
           <br>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -121,7 +121,7 @@
           <p>Incepted in 2003, we, Venus Handicrafts, have achieved a remarkable position in the industry for manufacturing and supplying of a wide assortment of Glass Stones, Claws and Cup Chains, Claws and Cup Chains with Stones, Glass Beads, Plastic Beads and Metal Accessories.
             These are extremely appreciated for their durability and multipurpose uses. The offered products are fabricated using modern technology in conformity with industrial standards and guidelines and are broadly used in different</p>
           <!-- link để đọc đc thêm -->
-          <a href="">Read more</a>
+          <a href="aboutus.php">Read more</a>
         </div>
         <div class="col-md-6 col-sm-12">
           <img src="Images/aboutUsImg.jpg" style="height:100%;width:100%;object-fit:cover;" alt="alter" width="650px">
