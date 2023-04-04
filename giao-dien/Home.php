@@ -281,7 +281,7 @@ include 'header.php';
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <div class="d-grid col-6 mx-auto">
-          <a href="#" style="color:black"><button class="btn btn-primary " type="button">
+          <a href="product.php" style="color:black"><button class="btn btn-primary " type="button">
               View more products
             </button></a>
         </div>
@@ -334,19 +334,19 @@ include 'header.php';
 <div class="container">
   <div class="row">
     <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
-      <h3><strong>Get in touch with us</strong></h3><br>
+      <h3><strong>you want to update news about us</strong></h3><br>
       <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
 
-      <form class="form" method="post" action="footer.php">
+      <form class="form" method="post" action="Home.php">
         <input type="text" class="form__field"
           style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
-          placeholder="Enter name" required />
+          placeholder="Enter name" required name="name" />
         <input type="email" class="form__field"
           style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
-          placeholder="Enter Email" required />
+          placeholder="Enter Email" required  name="email"/>
         <input type="number" class="form__field"
           style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
-          placeholder="Enter phone" required />
+          placeholder="Enter phone" required name="phone" />
         <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
       </form>
 
@@ -356,7 +356,30 @@ include 'header.php';
     </div>
   </div>
 </div>
+<?php
+include 'connect_db.php';
+$name = $email = $phone = $Address = $Note = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST["name"])) {
+    $name = $_POST['name'];
+  }
+  if (isset($_POST["email"])) {
+    $email = $_POST['email'];
+  }
+  if (isset($_POST["Email"])) {
+    $Email = $_POST['Email'];
+  }
+  if (isset($_POST["phone"])) {
+    $phone = $_POST['phone'];
+  }
+  $sql = "INSERT INTO user (name,email,phone) VALUES ('$name', '$email','$phone')";
 
+  if (mysqli_query($connect, $sql)) {
+    echo "thêm dữ liệu thành công";
+    header('location : Home.php');
+  }
+}
+?>
 
 
 <!-- test footer -->

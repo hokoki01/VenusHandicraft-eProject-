@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styleIndex.css">
     <link rel="stylesheet" href="styleHomepage.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -45,9 +46,11 @@
                         </ul>
                     </li>
                     <style>
-                        li{
+                        li {
                             padding-right: 50px;
+                            
                         }
+                        
                     </style>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -57,27 +60,79 @@
                     </li>
                 </ul>
                 <form action="header.php" method="get" style="padding-top :15px; ">
-            <input type="text" name="search" />
-            <input type="submit" name="ok" value="search" />
-          </form>
+                    <input type="text" name="search" style="border-radius: 15px 50px 30px;background: #a44170;background: green;" required/>
+                    <i class="fa fa-search"><input type="submit" name="ok" value="search" style="border-radius: 15px ;background: yellow;"/></i>
+
+                </form>
             </div>
         </div>
     </nav>
     <div class="pading">
-    <div class="center">
+        <div class="center">
+        </div>
 
-    </div>
-    <?php
-    if (isset($_REQUEST['ok'])) {
-      $search = addslashes($_GET['search']);
-      if (empty($search)) {
-        echo "Yeu cau nhap du lieu vao o trong";
-      } else {
-        include 'connect_db.php';
-        $sql = "SELECT * FROM product where Title LIKE '%$search%'";
-        $result = mysqli_query($connect, $sql);
-        include 'show_product.php';
-      }
-    }
-    ?>
-  </div>
+        <?php
+        if (isset($_REQUEST['ok'])) {
+            $search = addslashes($_GET['search']);
+            if (empty($search)) {
+                echo "Yeu cau nhap du lieu vao o trong";
+            } else {
+                include 'connect_db.php';
+                $sql = "SELECT * FROM product where Title LIKE '%$search%'";
+                $result = mysqli_query($connect, $sql);
+                ?>
+                <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333333;">
+
+
+                    <?php
+                    $i = 0;
+                    while ($row = mysqli_fetch_array($result)) {
+                        ?>
+                        <li
+                            style="display: block;color: white;text-align: center;padding: 16px;text-decoration: none; float: left;">
+                            <a style="display: block;color: white;text-align: center;padding: 16px;text-decoration: none;"
+                                href="product_detail.php?Id=<?= $row['Id']; ?>">
+                                <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
+                                    style='width:390px ; height :250px; border: 5px solid white;' alt='Image'><br><br>
+
+                                <h4>
+                                    <?php echo $row["Title"]; ?>
+                                </h4>
+                            </a>
+                        </li>
+                        <?php
+                        $i++;
+                    }
+
+            }
+        }
+        ?>
+        </ul>
+
+    </div><br><br>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        .button:hover {
+            background-color: #3e8e41
+        }
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>

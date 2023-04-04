@@ -1,98 +1,36 @@
 <?php
 include 'header.php';
-session_start();
 include 'connect_db.php';
 ?>
 
 <body>
-    <style>
-        body {
-            padding-top: 100px;
+    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333333;">
+
+
+        <?php
+
+        $count = 0;
+        $result = mysqli_query($connect, "SELECT * FROM product where Category_id = 2 ");
+        // include 'show_product.php';
+        $i = 0;
+        while ($row = mysqli_fetch_array($result)) {
+            ?>
+            <li style="display: block;color: white;text-align: center;padding: 16px;text-decoration: none; float: left;">
+                <a style="display: block;color: white;text-align: center;padding: 16px;text-decoration: none;"
+                    href="product_detail.php?Id=<?= $row['Id']; ?>">
+                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
+                        style='width:390px ; height :250px; border: 5px solid white;' alt='Image'><br><br>
+
+                    <h4>
+                        <?php echo $row["Title"]; ?>
+                    </h4>
+                </a>
+            </li>
+            <?php
+            $i++;
         }
-    </style>
-    <div class="container">
-        <table class="table table-hover table-bordered">
-            <tbody>
-
-                <div class="row">
-
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=9">
-                            <?php
-
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 9 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=10">
-                            <?php
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 10 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=11">
-                            <?php
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 11 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=12">
-                            <?php
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 12 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=13">
-                            <?php
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 13 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=14">
-                            <?php
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 14 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=15">
-                            <?php
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 15 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                    <div class="col-sm-4">
-                        <a href="product_detail.php?Id=16">
-                            <?php
-                            $count = 0;
-                            $result = mysqli_query($connect, "SELECT *FROM product where Id = 16 and Category_id = 2");
-                            include 'show_product.php';
-                            ?>
-                        </a>
-                    </div>
-                </div>
-            </tbody>
-        </table>
-    </div>
+        ?>
+    </ul>
     <?php
     include 'footer.php';
     ?>

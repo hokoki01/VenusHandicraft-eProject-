@@ -11,12 +11,7 @@ include 'header.php';
             <div class="col-sm-9">
                 <?php
                 include 'connect_db.php';
-                $Firt_name = "";
-                $Last_name = "";
-                $Email = "";
-                $Phone = "";
-                $Address = "";
-                $Note = "";
+                $Firt_name = $Last_name = $Email = $Phone = $Address = $Note = "";
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if (isset($_POST["Firt_name"])) {
                         $Firt_name = $_POST['Firt_name'];
@@ -44,19 +39,14 @@ include 'header.php';
                 }
                 ?>
                 <style>
-                    body{
+                    body {
                         padding-top: 150px;
+                        background-color: peachpuff;
                     }
+
                     * {
                         box-sizing: border-box;
                     }
-
-                    /* input {
-                        width: 100%;
-                        padding: 12px 20px;
-                        margin: 8px 0;
-                        box-sizing: border-box;
-                    } */
 
                     label {
                         padding: 12px 12px 12px 0;
@@ -99,18 +89,8 @@ include 'header.php';
 
                     form {
                         float: right;
-                        padding-left : 30% ;
+                        padding-left: 30%;
                     }
-
-                    /* button {
-                        background-color: #04AA6D;
-                        color: white;
-                        padding: 12px 20px;
-                        border: none;
-                        border-radius: 4px;
-                        cursor: pointer;
-                        margin-left: 45%;
-                    } */
 
                     h2 {
                         text-align: center;
@@ -119,18 +99,25 @@ include 'header.php';
                 <form method="post" action="contact.php">
                     <h2>liên hệ với chúng tôi</h2>
                     <label for="Firt_name">Firt name : </label></td>
-                    <input type="text" Id="Firt_name" placeholder="Firt_name" name="Firt_name" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
+                    <input type="text" Id="Firt_name" placeholder="Firt_name" name="Firt_name" required
+                        style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Last_name">Last name : </label>
-                    <input type="text" Id="Last_name" placeholder="Last_name" name="Last_name" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
+                    <input type="text" Id="Last_name" placeholder="Last_name" name="Last_name" required
+                        style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Email">Email : </label>
-                    <input type="text" Id="Email" placeholder="Email" name="Email" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
+                    <input type="text" Id="Email" placeholder="Email" name="Email" required
+                        style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Phone">Phone : </label>
-                    <input type="number" Id="Phone" placeholder="Phone" name="Phone" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
+                    <input type="number" Id="Phone" placeholder="Phone" name="Phone" required
+                        style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Address">Address : </label>
-                    <input type="text" Id="Address" placeholder="Address" name="Address" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
+                    <input type="text" Id="Address" placeholder="Address" name="Address" required
+                        style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                     <label for="Note">Note : </label>
-                    <input name="Note" id="Note" placeholder="Note" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;"></input>
-                    <input type="submit" values="send" style="background-color: #04AA6D;color: white;padding-left: 12px 20px;border: none;border-radius: 4px;cursor: pointer;text-align:center; width:100%;height:40px;">
+                    <input name="Note" id="Note" placeholder="Note" required
+                        style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;"></input>
+                    <input type="submit" values="send"
+                        style="background-color: #04AA6D;color: white;padding-left: 12px 20px;border: none;border-radius: 4px;cursor: pointer;text-align:center; width:100%;height:40px;">
                 </form>
             </div>
         </div>

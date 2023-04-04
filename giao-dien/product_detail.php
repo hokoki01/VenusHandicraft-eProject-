@@ -18,16 +18,17 @@ include 'header.php';
                     ?>
                     <div class="card-header">
                         <h4>
-                            <?= $product['Title']; ?>
+
                             <a href="Home.php" class="btn btn-danger float-end">BACK</a>
                         </h4>
                     </div>
 
                     <div class="row g-3">
+
                         <div class="col">
 
-                            <img src='image_DTB/<?= $product['Image']; ?>' class='img-responsive' style='width:100%;'
-                                alt='Image'>";
+                            <img src='image_DTB/<?= $product['Image']; ?>' class='img-responsive' style='width:100%;border: 5px solid green;'
+                                alt='Image'>
                         </div>
                         <div class="col">
                             <h5 class="card-title">
@@ -36,12 +37,18 @@ include 'header.php';
                                 <div class="container">
                                     <div class="jumbotron">
                                         <!-- for page header -->
-                                        <h4 style="color: green">THUỘC TÍNH SẢN PHẨM</h4><br>
+                                        <h4 style="color: green">PRODUCT NAME</h4><br>
+                                            <h4 style="color: blue ;">
+                                                <?= $product['Title']; ?>
+
+                                            </h4><br><br>
+                                        
+                                        <h4 style="color: green">PRODUCT ATTRIBUTES</h4><br>
                                         <p style="color: #000">
                                             <?= $product['Description']; ?>
                                         </p>
                                         <br>
-                                        <h4 style="color: green">MỘT SỐ CÁC NGHỆ NHÂN SUẤT SẮC</h4><br>
+                                        <h4 style="color: green">SOME OUTSTANDING ARTISTS</h4><br>
                                         <a
                                             href="https://langngheviet.com.vn/lang-nghe-nghe-nhan/nghe-nhan-do-van-cuong-nguoi-phat-huy-the-manh-lang-nghe-truyen-thong.html35816">
                                             <img src="image_DTB/hkd-do-van-cuong-202022110518235.jpg"
