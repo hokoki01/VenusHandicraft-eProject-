@@ -7,6 +7,7 @@
                tempore exercitationem ipsam explicabo repudiandae ut consectetur qui, earum at nostrum perspiciatis
                asperiores necessitatibus facilis esse.
                </p>
+            
             <ul class="social-icon">
                 <li><a href=""><i class="bi bi-facebook"></i></a></li>
                 <li><a href=""><i class="bi bi-twitter"></i></a></li>

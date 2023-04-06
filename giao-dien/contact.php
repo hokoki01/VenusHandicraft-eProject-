@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 ?>
-</head>
+
 
 <body>
 
@@ -111,12 +111,12 @@ include 'header.php';
                         }
                     }
 
-                    form {
+                    .contactFORMS {
                         float: right;
                         padding-left : 30% ;
                     }
 
-                    button {
+                    /* button {
                         background-color: #04AA6D;
                         color: white;
                         padding: 12px 20px;
@@ -124,13 +124,13 @@ include 'header.php';
                         border-radius: 4px;
                         cursor: pointer;
                         margin-left: 45%;
-                    }
+                    } */
 
                     h2 {
                         text-align: center;
                     }
                 </style>
-                <form method="post" action="contact.php">
+                <form class="contactFORMS" method="post" action="contact.php">
                     <h2>liên hệ với chúng tôi</h2>
                     <label for="Firt_name">Firt name : </label></td>
                     <input type="text" Id="Firt_name" placeholder="Firt_name" name="Firt_name" required>
@@ -143,13 +143,14 @@ include 'header.php';
                     <label for="Address">Address : </label>
                     <input type="text" Id="Address" placeholder="Address" name="Address" required>
                     <label for="Note">Note : </label>
-                    <input name="Note" id="Note" placeholder="Note" required></input>
+                    <input name="Note" id="Note" placeholder="Note" required>
                     <input type="submit" values="send" style="background-color: #04AA6D;color: white;padding: 12px 20px;border: none;border-radius: 4px;cursor: pointer;margin-left: 45%;">
                 </form>
+                
             </div>
         </div>
     </div>
 </body>
 
 <?php
-include 'footer.php';
+include 'footer.php';?>

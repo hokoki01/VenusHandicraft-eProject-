@@ -43,7 +43,7 @@ include 'header.php';
         <h1>About Us</h1>
         <br>
       </div>
-      <div class="col-md-6 col-sm-12 ">
+      <div class="col-md-6 col-sm-12">
         <br>
         <p>Incepted in 2003, we, Venus Handicrafts, have achieved a remarkable position in the industry for
           manufacturing and supplying of a wide assortment of Glass Stones, Claws and Cup Chains, Claws and Cup Chains
@@ -54,7 +54,7 @@ include 'header.php';
         <!-- link để đọc đc thêm -->
         <a href="">Read more</a>
       </div>
-      <div class="col-md-6 col-sm-12 ">
+      <div class="col-md-6 col-sm-12">
         <img src="Images/aboutUsImg.jpg" style="height:100%;width:100%;object-fit:cover;" alt="alter" width="650px">
       </div>
     </div>
@@ -186,8 +186,7 @@ include 'header.php';
 
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+                    <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
                     <div class="card-body">
                       <h4 class="card-title">Special title treatment</h4>
                       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -198,8 +197,7 @@ include 'header.php';
                 </div>
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
+                    <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
                     <div class="card-body">
                       <h4 class="card-title">Special title treatment</h4>
                       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -209,8 +207,7 @@ include 'header.php';
                 </div>
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
+                    <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
                     <div class="card-body">
                       <h4 class="card-title">Special title treatment</h4>
                       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -329,7 +326,7 @@ include 'header.php';
     <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
       <h3><strong>Get in touch with us</strong></h3><br>
       <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
-      <input style="width:300px" type="email" name="userName" placeholder="Type your email here...">
+      <input style="width:400px" type="email" name="userName" placeholder="Type your email here...">
       <br>
 
       <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>

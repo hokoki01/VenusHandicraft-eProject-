@@ -10,9 +10,11 @@ while ($row = mysqli_fetch_array($result)) {
         ?>
 
     </div>
+
     <h4>
         <?php echo $row["Title"]; ?>
-    </h4><br>
+    </h4>
+    <br>
     <div class="panel">
         <p>
             <?php echo $row["Description"]; ?>
