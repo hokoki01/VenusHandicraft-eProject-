@@ -6,7 +6,7 @@ require 'connect_db.php';
 
 
 <div class="container mt-4">
-  <div class="container-fluid">
+  <div class="container-fluid"> 
     <div class="row">
       <div class="col-sm bg-warning text-white p-3">
         <h1>Product</h1>
@@ -64,7 +64,7 @@ require 'connect_db.php';
       <!-- <div class="card">
         <div class="card-header"> -->
       <h4>Product Details
-        <a href="add_new_product.php" class="btn btn-primary float-end">Add Students</a>
+        <a href="add_new_product.php" class="btn btn-primary float-end">Add Product</a>
       </h4>
     </div>
     <!-- <div class="card-body"> -->
