@@ -19,7 +19,7 @@
         <!-- <div class="row">
         <div class="col-sm-12"> -->
             <a class="navbar-brand" href="Home.php">
-                
+      
                 <span style="color: white;font-family: bradley hand,cursive;"><i class="bi bi-scissors" style="color:white"></i>Venus Handicrafts<i class="bi bi-brush" style="color:white"></i></span></a>
             
             <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -64,14 +64,19 @@
                         color: white;
                         background-color: #FFD300;
                         border: none;
+                        width: 40px;
                       }
                       .inputBOX{
                         border-top-left-radius: 20px;
                         border-bottom-left-radius: 20px;
-                        border: solid black 1px;
+                        border: solid black 0px;
                         text-indent: 18px;
+                        padding: 3px;
                       }
-                      
+        /* xoá hiệu ứng border khi ấn vào ô input */
+                      input:focus, textarea:focus, select:focus{
+                        outline: none;
+                      }
                     </style>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -83,7 +88,7 @@
              
             <form class="d-flex" action="header.php" method="get" >
             <input class="inputBOX" style="width:300px" type="text" name="search" placeholder=" Type Here..." />
-            <input class="submitBTN" type="submit" name="ok" value="search" />
+            <button class="submitBTN" type="submit" name="ok"><i class="bi bi-search"></i></button>
             </form>
              
             </div>

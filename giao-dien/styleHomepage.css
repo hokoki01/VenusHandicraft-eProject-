@@ -9,8 +9,9 @@ body{
 .navbar{
     
     background-color: #010101;
-
+    
 }
+
 
 nav .navbar-nav li a{
     color: white !important;
@@ -65,7 +66,7 @@ nav.navbar.navbar-expand-lg.fixed-top{
 
 /* customize for collapse navbar */
 .navbar-toggler {
-    width: 20px;
+    width: 15px;
     height: 20px;
     position: relative;
     transition: .5s ease-in-out;
@@ -447,7 +448,7 @@ footer .container .noi-dung.about p{
     position: relative;
     width: 25%;
  }
- /* stylling bullet */
+ /* stylling bullet của ul */
  .links ul li{
      list-style:lower-greek; 
      color:#dfff00;  
