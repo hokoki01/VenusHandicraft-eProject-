@@ -2,8 +2,8 @@
 include 'header.php';
 include 'connect_db.php';
 ?>
-
-<body>
+<br><br><br>
+<h3>Product Brass</h3>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
         <?php
@@ -19,7 +19,7 @@ include 'connect_db.php';
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
 
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:390px ; height :250px; border: 5px solid orange;' alt='Image'><br><br>
+                        style='width:430px ; height :300px; border: 5px solid orange;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>

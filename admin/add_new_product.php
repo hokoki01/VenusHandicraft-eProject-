@@ -49,7 +49,7 @@ session_start();
                                 <input type="text" name="Description" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <button type="submit" name="save_student" class="btn btn-primary">Save Student</button>
+                                <button type="submit" name="save_student" class="btn btn-primary">Save Product</button>
                             </div>
 
                         </form>

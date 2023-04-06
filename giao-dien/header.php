@@ -132,4 +132,7 @@
             box-shadow: 0 5px #666;
             transform: translateY(4px);
         }
+        h3{
+            text-align: center;
+        }
     </style>
