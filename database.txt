@@ -122,11 +122,9 @@ insert into artist(name,Biography,Career,Personality,Reviews,Honor) values
 
 create table contact(
 Id int PRIMARY KEY AUTO_INCREMENT,
-Firt_name varchar(30),
-Last_name varchar(30),
+Name varchar(30),
 Email varchar(150),
 Phone varchar(20),
-Address varchar(200),
 Note varchar(500)
 );
 

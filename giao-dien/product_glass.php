@@ -4,7 +4,7 @@ include 'connect_db.php';
 ?>
 
 <body>
-    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333333;">
+    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 
         <?php
@@ -15,8 +15,10 @@ include 'connect_db.php';
         $i = 0;
         while ($row = mysqli_fetch_array($result)) {
             ?>
-            <li style = "display: block;color: white;text-align: center;padding: 16px;text-decoration: none; float: left;"> <a style = "display: block;color: white;text-align: center;padding: 16px;text-decoration: none;" href="product_detail.php?Id=<?= $row['Id']; ?>">
-            <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
+            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;"> <a
+                    style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none;"
+                    href="product_detail.php?Id=<?= $row['Id']; ?>">
+                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
                         style='width:390px ; height :250px; border: 5px solid blue;' alt='Image'><br><br>
 
                     <h4>

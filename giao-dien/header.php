@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="UTF-8">
@@ -48,21 +48,20 @@
                     <style>
                         li {
                             padding-right: 50px;
-                            
+
                         }
-                        
                     </style>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                 </ul>
-                <form action="header.php" method="get" style="padding-top :15px; ">
-                    <input type="text" name="search" style="border-radius: 15px 50px 30px;background: #a44170;background: green;" required/>
-                    <i class="fa fa-search"><input type="submit" name="ok" value="search" style="border-radius: 15px ;background: yellow;"/></i>
-
+                <form class="d-flex" action="header.php" method="get">
+                    <input class="form-control me-3"  type="search" placeholder="Search" aria-label="Search"
+                        name="search">
+                    <button class="btn btn-outline-success" type="submit" name="ok" value="search">Search</button>
                 </form>
             </div>
         </div>
@@ -82,8 +81,6 @@
                 $result = mysqli_query($connect, $sql);
                 ?>
                 <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333333;">
-
-
                     <?php
                     $i = 0;
                     while ($row = mysqli_fetch_array($result)) {
@@ -109,7 +106,7 @@
         ?>
         </ul>
 
-    </div><br><br>
+    </div><br>
     <style>
         .button {
             display: inline-block;

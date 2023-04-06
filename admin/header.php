@@ -53,9 +53,31 @@
       } else {
         include 'connect_db.php';
         $sql = "SELECT * FROM product where Id = $search";
+        // $sql = "SELECT * FROM product where Title LIKE '%$search%'";
         $result = mysqli_query($connect, $sql);
-        include 'show_product.php';
-      }
+        ?>
+        <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #333333;">
+            <?php
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {
+                ?>
+                <li
+                    style="display: block;color: white;text-align: center;padding: 16px;text-decoration: none; float: left;">
+                    <a style="display: block;color: white;text-align: center;padding: 16px;text-decoration: none;"
+                        href="product_detail.php?Id=<?= $row['Id']; ?>">
+                        <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
+                            style='width:390px ; height :250px; border: 5px solid white;' alt='Image'><br><br>
+
+                        <h4>
+                            <?php echo $row["Title"]; ?>
+                        </h4>
+                    </a>
+                </li>
+                <?php
+                $i++;
+            }
+
     }
-    ?>
+}
+?>
   </div>

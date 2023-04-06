@@ -154,10 +154,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                      src="image_DTB/wood.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">SẢN PHẨM THỦ CÔNG MỸ NGHỆ DỪA BẾN TRE</h4>
+                      <p class="card-text">Bến Tre được thiên nhiên ưu đãi với cảnh quan sông nước hữu tình, những vườn cây ăn trái sum suê, những làng nghề thủ công truyền thống đã tạo nên sức hút với du khách trong và ngoài nước</p>
 
                     </div>
 
@@ -166,20 +166,20 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                      src="image_DTB/TMTD.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">LÀNG NGHỀ KHAI THÁC THƯƠNG MẠI TỰ DO</h4>
+                      <p class="card-text">bằng việc giảm mạnh thuế suất nhập khẩu, các FTA đã tạo thuận lợi rất lớn cho hàng Việt Nam, trong đó có sản phẩm thủ công mỹ nghệ làng nghề mở rộng xuất khẩu.</p>
 
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" >
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                      src="image_DTB/a.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
+                      <h4 class="card-title">Hội chợ làng nghề ngày nay</h4>
                       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
                     </div>
