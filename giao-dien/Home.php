@@ -3,9 +3,8 @@ include 'header.php';
 ?>
 
 <!-- slider images -->
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
+
+
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
         <div class="carousel-indicators">
@@ -37,9 +36,8 @@ include 'header.php';
         </button>
 
       </div>
-    </div>
-  </div>
-</div>
+
+
 
 <section class="hidden">
   <!-- About Us của cty -->
@@ -59,9 +57,9 @@ include 'header.php';
           fabricated using modern technology in conformity with industrial standards and guidelines and are broadly used
           in different</p>
         <!-- link để đọc đc thêm -->
-        <a href="">Read more</a>
+        <a href="about.php">Read more</a>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12">  
         <img src="Images/aboutUsImg.jpg" style="height:100%;width:100%;object-fit:cover;" alt="alter" width="650px">
       </div>
     </div>

@@ -4,7 +4,7 @@
 include 'connect_db.php';
 include 'header.php';
 ?>
-<h2>liên hệ với chúng tôi</h2>
+<h2>Liên hệ với chúng tôi</h2>
 <div class="container">
     <table class="table table-hover table-bordered">
         <tbody>
