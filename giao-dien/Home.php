@@ -128,7 +128,7 @@ include 'header.php';
 
     <div class="row">
       <div class="col-md-12 col-sm-12">
-        <h3 class="mb-3">Our Products</h3>
+        <h3 class="mb-3">Handicraft villages</h3>
       </div>
       <div class="col-6 text-right">
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
@@ -152,10 +152,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/wood.jpg" >
+                      src="image_DTB/cói.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">Sản phẩm thủ công mỹ nghệ dừa Bến Tre</h4>
-                      <p class="card-text">Bến Tre được thiên nhiên ưu đãi với cảnh quan sông nước hữu tình, những vườn cây ăn trái sum suê, những làng nghề thủ công truyền thống đã tạo nên sức hút với du khách trong và ngoài nước</p>
+                      <h4 class="card-title">Kim Son sedge village</h4>
+                      <p class="card-text">Kim Son sedge village has long been famous for sedge cultivation and sedge making with a history of more than 100 years. Through many ups and downs, Kim Son sedge has increasingly affirmed its position. Products of this most famous traditional craft village in Vietnam are increasingly popular because of their diversity and eye-catching. Currently, Kim Son sedge mats are present in more than 20 countries and territories around the world.</p>
 
                     </div>
 
@@ -164,10 +164,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/TMTD.jpg" >
+                      src="image_DTB/tc.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">Làng nghề khai thác thương mại tự do</h4>
-                      <p class="card-text">Bằng việc giảm mạnh thuế suất nhập khẩu, các FTA đã tạo thuận lợi rất lớn cho hàng Việt Nam, trong đó có sản phẩm thủ công mỹ nghệ làng nghề mở rộng xuất khẩu.</p>
+                      <h4 class="card-title">Phu Yen bottle basket village</h4>
+                      <p class="card-text">Phu Yen's bottle basket has the special feature of using only local ingredients. According to local people, bamboo grown on Phu Yen soil has good water resistance, toughness and has a very good source of oat oil when plastering baskets, helping to maintain product durability.</p>
 
                     </div>
                   </div>
@@ -175,10 +175,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3" >
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/a.jpg">
+                      src="image_DTB/trống.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Hội chợ làng nghề ngày nay</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Doi Tam Drum Village</h4>
+                      <p class="card-text">Doi Tam drum village is very famous because of its 1000-year history of making drums with many famous craftsmen throughout the region. Accordingly, the drum-making profession here is passed down from father to son, generation after generation to preserve and develop the drum-making profession, here, people make all kinds of drums, making thousands of drums each year. drums of all kinds. Doi Tam Drum is famous for its durability, beauty and roundness… that is thanks to the secret of the drum making profession and the enthusiasm of the artisans.</p>
 
                     </div>
                   </div>
@@ -194,8 +194,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/GS.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Gốm sứ bát tràng</h4>
-                      <p class="card-text">Gốm Bát Tràng là sản phẩm hội tụ hồn cốt, tinh hoa văn hóa Việt. Gốm Sứ Bát Tràng từ kiểu dáng, nước men, tích vẽ cho đến những chi tiết đắp nổi đều được người nghệ nhân Bát Tràng dày công nghiên cứu và tạo ra</p>
+                      <h4 class="card-title">Bat Trang ceramics</h4>
+                      <p class="card-text">Bat Trang pottery is a product that converges the soul and quintessence of Vietnamese culture. Bat Trang ceramics, from designs, glazes, drawings to embossed details, are carefully researched and created by Bat Trang artisans.</p>
 
                     </div>
 
@@ -206,8 +206,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/lụa.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Làng lục Vạn Phúc </h4>
-                      <p class="card-text">Làng lụa Vạn Phúc chính là phần cô đặc nhất của Làng lụa Hà Đông xưa, vốn rất nổi tiếng và đã đi vào thơ ca nhạc họa như một nét đẹp văn hóa truyền thống. Đây là một trong những làng nghề lâu đời bậc nhất Việt Nam, nằm bên bờ sông Nhuệ. </p>
+                      <h4 class="card-title">Van Phuc Silk Village </h4>
+                      <p class="card-text">Van Phuc Silk Village is the most concentrated part of the old Ha Dong Silk Village, which is very famous and has gone into poetry, music and painting as a traditional cultural beauty. This is one of the oldest craft villages in Vietnam, located on the banks of the Nhue River. </p>
 
                     </div>
                   </div>
@@ -217,8 +217,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/tranh.png">
                     <div class="card-body">
-                      <h4 class="card-title">Làng tranh dân gian đông hồ - Bắc Ninh</h4>
-                      <p class="card-text">Làng tranh Đông hồ Bắc Ninh từ lâu đã nổi tiếng với những sản phẩm tranh đông hồ có giá trị và đặc sắc. Đây cũng là nơi thu hút hàng ngàn du khách ghé thăm mỗi năm để tìm hiểu đôi nét về làng nghề truyền thống tại Bắc Ninh - làng tranh Đông hồ. </p>
+                      <h4 class="card-title">Dong Ho folk painting village</h4>
+                      <p class="card-text">The East Lake Painting Village in Bac Ninh has long been famous for its valuable and unique products. This is also a place that attracts thousands of tourists every year to learn a little about the traditional craft village in Bac Ninh - Dong Ho painting village. </p>
 
                     </div>
                   </div>
@@ -234,8 +234,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/đá.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Làng đá mỹ nghệ non nước - Đà Nẵng</h4>
-                      <p class="card-text">Đến thăm làng nghề đá Non Nước, bạn không chỉ được khám phá một địa điểm du lịch Đà Nẵng vô cùng hấp dẫn với không gian yên bình dưới chân núi Ngũ Hành Sơn mà còn được chiêm ngưỡng sự tài khéo, công phu của những nghệ nhân.</p>
+                      <h4 class="card-title">Non Nuoc stone art village</h4>
+                      <p class="card-text">Visiting Non Nuoc stone craft village, you not only discover an extremely attractive tourist destination in Da Nang with a peaceful space at the foot of Ngu Hanh Son mountain, but also admire the ingenuity and meticulousness of artisans.</p>
 
                     </div>
 
@@ -246,8 +246,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/nón.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Làng nghề chằm nón lá Thới Tân Cần Thơ</h4>
-                      <p class="card-text">Bên cạnh vẻ đẹp trù phú mà thiên nhiên ban tặng, Cần Thơ còn là nơi được mọi người biết đến bởi sự đa dạng phong phú về các làng nghề truyền thống được lưu truyền từ nhiều thế hệ. Một trong những làng nghề nổi tiếng đó là làng nghề chằm nón lá tại ấp Thới Tân A, huyện Thới Lai, Cần Thơ, với lịch sử hơn lâu đời hơn 70 năm.</p>
+                      <h4 class="card-title">Thoi Tan Can Tho conical hat craft village</h4>
+                      <p class="card-text">Besides the rich beauty that nature offers, Can Tho is also a place known by the rich diversity of traditional craft villages handed down from generations. One of the famous craft villages is the conical hat craft village in Thoi Tan A hamlet, Thoi Lai district, Can Tho, with a long history of more than 70 years.</p>
 
                     </div>
                   </div>
@@ -257,8 +257,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/chiếu.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Làng dệt chiếu Định Yên - Đồng Tháp</h4>
-                      <p class="card-text">Cạnh bờ sông Hậu mênh mang của Đồng bằng sông Cửu Long trù phú có một làng nghề dệt chiếu rất lâu đời và ngôi chợ hơn 100 năm tuổi thuộc huyện Lấp Vò, tỉnh Đồng Tháp. Chợ chiếu Định Yên còn được người dân địa phương gọi là chợ “ma” bởi sinh hoạt khá lạ lùng của nó!</p>
+                      <h4 class="card-title">Dinh Yen mat weaving village - Dong Thap</h4>
+                      <p class="card-text">Next to the vast Hau River of the rich Mekong Delta, there is a very old mat weaving village and a market of more than 100 years old in Lap Vo district, Dong Thap province. Dinh Yen mat market is also known as a "ghost" market by the locals because of its rather strange activities!</p>
                     </div>
                   </div>
                 </div>
