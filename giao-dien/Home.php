@@ -154,7 +154,7 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/wood.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">SẢN PHẨM THỦ CÔNG MỸ NGHỆ DỪA BẾN TRE</h4>
+                      <h4 class="card-title">Sản phẩm thủ công mỹ nghệ dừa Bến Tre</h4>
                       <p class="card-text">Bến Tre được thiên nhiên ưu đãi với cảnh quan sông nước hữu tình, những vườn cây ăn trái sum suê, những làng nghề thủ công truyền thống đã tạo nên sức hút với du khách trong và ngoài nước</p>
 
                     </div>
@@ -166,8 +166,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/TMTD.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">LÀNG NGHỀ KHAI THÁC THƯƠNG MẠI TỰ DO</h4>
-                      <p class="card-text">bằng việc giảm mạnh thuế suất nhập khẩu, các FTA đã tạo thuận lợi rất lớn cho hàng Việt Nam, trong đó có sản phẩm thủ công mỹ nghệ làng nghề mở rộng xuất khẩu.</p>
+                      <h4 class="card-title">Làng nghề khai thác thương mại tự do</h4>
+                      <p class="card-text">Bằng việc giảm mạnh thuế suất nhập khẩu, các FTA đã tạo thuận lợi rất lớn cho hàng Việt Nam, trong đó có sản phẩm thủ công mỹ nghệ làng nghề mở rộng xuất khẩu.</p>
 
                     </div>
                   </div>
@@ -192,10 +192,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+                      src="image_DTB/GS.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Gốm sứ bát tràng</h4>
+                      <p class="card-text">Gốm Bát Tràng là sản phẩm hội tụ hồn cốt, tinh hoa văn hóa Việt. Gốm Sứ Bát Tràng từ kiểu dáng, nước men, tích vẽ cho đến những chi tiết đắp nổi đều được người nghệ nhân Bát Tràng dày công nghiên cứu và tạo ra</p>
 
                     </div>
 
@@ -204,10 +204,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
+                      src="image_DTB/lụa.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Làng lục Vạn Phúc </h4>
+                      <p class="card-text">Làng lụa Vạn Phúc chính là phần cô đặc nhất của Làng lụa Hà Đông xưa, vốn rất nổi tiếng và đã đi vào thơ ca nhạc họa như một nét đẹp văn hóa truyền thống. Đây là một trong những làng nghề lâu đời bậc nhất Việt Nam, nằm bên bờ sông Nhuệ. </p>
 
                     </div>
                   </div>
@@ -215,10 +215,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
+                      src="image_DTB/tranh.png">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Làng tranh dân gian đông hồ - Bắc Ninh</h4>
+                      <p class="card-text">Làng tranh Đông hồ Bắc Ninh từ lâu đã nổi tiếng với những sản phẩm tranh đông hồ có giá trị và đặc sắc. Đây cũng là nơi thu hút hàng ngàn du khách ghé thăm mỗi năm để tìm hiểu đôi nét về làng nghề truyền thống tại Bắc Ninh - làng tranh Đông hồ. </p>
 
                     </div>
                   </div>
@@ -232,10 +232,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
+                      src="image_DTB/đá.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Làng đá mỹ nghệ non nước - Đà Nẵng</h4>
+                      <p class="card-text">Đến thăm làng nghề đá Non Nước, bạn không chỉ được khám phá một địa điểm du lịch Đà Nẵng vô cùng hấp dẫn với không gian yên bình dưới chân núi Ngũ Hành Sơn mà còn được chiêm ngưỡng sự tài khéo, công phu của những nghệ nhân.</p>
 
                     </div>
 
@@ -244,10 +244,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
+                      src="image_DTB/nón.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Làng nghề chằm nón lá Thới Tân Cần Thơ</h4>
+                      <p class="card-text">Bên cạnh vẻ đẹp trù phú mà thiên nhiên ban tặng, Cần Thơ còn là nơi được mọi người biết đến bởi sự đa dạng phong phú về các làng nghề truyền thống được lưu truyền từ nhiều thế hệ. Một trong những làng nghề nổi tiếng đó là làng nghề chằm nón lá tại ấp Thới Tân A, huyện Thới Lai, Cần Thơ, với lịch sử hơn lâu đời hơn 70 năm.</p>
 
                     </div>
                   </div>
@@ -255,10 +255,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
+                      src="image_DTB/chiếu.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Làng dệt chiếu Định Yên - Đồng Tháp</h4>
+                      <p class="card-text">Cạnh bờ sông Hậu mênh mang của Đồng bằng sông Cửu Long trù phú có một làng nghề dệt chiếu rất lâu đời và ngôi chợ hơn 100 năm tuổi thuộc huyện Lấp Vò, tỉnh Đồng Tháp. Chợ chiếu Định Yên còn được người dân địa phương gọi là chợ “ma” bởi sinh hoạt khá lạ lùng của nó!</p>
                     </div>
                   </div>
                 </div>
