@@ -15,18 +15,23 @@
 <body>
   <nav class="navbar navbar-expand-lg  fixed-top " style="color: white;">
     <div class="container-fluid">
+
       <a class="navbar-brand" href="admin.php">
-        <i class="bi bi-scissors" style="color:white"></i>
-        <span style="color: white;font-family: bradley hand,cursive;">Venus Handicrafts</span></a>
-      <span style="padding-right:220px"><i class="bi bi-brush" style="color:white"></i></span>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+              <i class="bi bi-scissors" style="color:white"></i>
+        <span style="color: white;font-family: bradley hand,cursive;">Venus Handicrafts</span>
+              <i class="bi bi-brush" style="color:white"></i></a>
+      
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../giao-dien/Home.php">Home shop</a>
+            <a class="nav-link" aria-current="page" href="../giao-dien/Home.php">Home shop</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="admin.php">Admin Page</a>
