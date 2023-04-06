@@ -6,7 +6,6 @@ include 'header.php';
 
 
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
             aria-label="Slide 1"></button>
@@ -34,7 +33,6 @@ include 'header.php';
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-
       </div>
 
 
@@ -391,10 +389,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         asperiores necessitatibus facilis esse.
       </p>
       <ul class="social-icon">
-        <li><a href=""><i class="bi bi-facebook"></i></a></li>
-        <li><a href=""><i class="bi bi-twitter"></i></a></li>
-        <li><a href=""><i style="color:azure" class="bi bi-instagram"></i></a></li>
-        <li><a href=""><i style="color:azure" class="bi bi-tiktok"></i></a></li>
+        <li><a href="https://www.facebook.com/zuck/"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="https://twitter.com/finkd?lang=en"><i class="bi bi-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/zuck/?hl=en"><i style="color:azure" class="bi bi-instagram"></i></a></li>
+        <li><a href="https://www.tiktok.com/@finkd"><i style="color:azure" class="bi bi-tiktok"></i></a></li>
       </ul>
     </div>
     <!--Kết Thúc Nội Dung Giới Thiệu-->
@@ -444,36 +442,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <i class="bi bi-arrow-up"></i>
 </button>
 
-<!-- Messenger Chat plugin Code -->
-<div id="fb-root"></div>
-
-<!-- Your Chat plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "106521525738447");
-  chatbox.setAttribute("attribution", "biz_inbox");
-</script>
-
-<!-- Your SDK code -->
-<script>
-  window.fbAsyncInit = function () {
-    FB.init({
-      xfbml: true,
-      version: 'v16.0'
-    });
-  };
-
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 
 <!-- files JavaScripts -->
 <script src="JSHomepage.js"></script>

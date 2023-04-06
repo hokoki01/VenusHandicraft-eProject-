@@ -34,11 +34,11 @@
             <h2>Get in touch with us</h2>
             <ul class="info">
                 <li>
-                    <span><i class="bi bi-geo-alt-fill"></i></span>
-                    <span>
-                        1972/73,Shop No.2,Captain Tapan kapoor market,
-                        Chandni Chowk, Delhi-110006, India.
-                    </span>
+                    
+                    <span><i class="bi bi-geo-alt-fill">
+                    1972/73,Shop No.2,Captain Tapan kapoor market, 
+                    Chandni Chowk, Delhi-110006, India.</i>
+                   </span>
                 </li>
                 <li>
                     <span><i class="bi bi-telephone-forward-fill"></i></span>
