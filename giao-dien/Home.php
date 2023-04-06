@@ -332,7 +332,7 @@ include 'header.php';
 <div class="container">
   <div class="row">
     <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
-      <h3><strong>you want to update news about us</strong></h3><br>
+      <h3><strong>You want to update news about us ?</strong></h3><br>
       <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
 
       <form class="form" method="post" action="Home.php">

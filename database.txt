@@ -43,13 +43,13 @@ FOREIGN KEY (Category_id) REFERENCES category(Id)
 
 insert into product(Category_id,Title,Image,Description) values
 	(1,'Trac wooden','1.png','wooden pipe and Trac wooden Cigar pipe bring elegant, luxurious and unique beauty. Trac wooden pipe and Trac wooden cigar are made of natural Trac wood material,'),
-	(1,'incense wooden','2.jpg','The Huong wooden tea tray is carefully completed by Hanoi Fine Arts. From the selection of incense to the finishing stage with varnish'),
+	(1,'Incense wooden','2.jpg','The Huong wooden tea tray is carefully completed by Hanoi Fine Arts. From the selection of incense to the finishing stage with varnish'),
 	(1,'High-grade pink mussel shell inlaid pen','3.jpg','Pearl inlaid pen was born as a result of the process of hard work and creativity. At each stage, we will feel the talented and skillful hands of the artisan. '),
-	(1,'wooden boat model','4.jpg','HMS Victory wooden boat model for desks, office swarms. Finished from High Perfume Wood, with details meticulously crafted to scale like a real boat.'),
-	(1,'wooden flowerpot','5.jpg','Small wooden flowerpot is made of natural mother-of-pearl wood used for flower arrangement, decoration or decor. New and modern style,'),
+	(1,'Wooden boat model','4.jpg','HMS Victory wooden boat model for desks, office swarms. Finished from High Perfume Wood, with details meticulously crafted to scale like a real boat.'),
+	(1,'Wooden flowerpot','5.jpg','Small wooden flowerpot is made of natural mother-of-pearl wood used for flower arrangement, decoration or decor. New and modern style,'),
 	(1,'Thap Dieu Quan Mai','6.jpg','Falling apricots also has another beautiful name, collapsing ten birds with apricots.'),
 	(1,'Luc Binh (Loc Binh) ','7.jpg','Wooden Luc Binh, also known as wooden Loc Binh, is used for decorative purposes, expressing the nobility and luxury of the owner. '),
-	(1,'EUROPEAN WOODEN bowl','8.jpg','European-style wooden cup: The cup is made of European-style ACACIA wood. The product has been tested for food safety'),
+	(1,'European wooden bowl','8.jpg','European-style wooden cup: The cup is made of European-style ACACIA wood. The product has been tested for food safety'),
 	(2,'DeepCraft Handpainted','9.jpg','Enjoy the colourful world of Rajasthan,'),
     (2,'Garden Iron Handicraft ','10.jpg','Material: wrought iron, acrylicColor: flower pot, dwarf red, dwarf'),
     (2,'Rajasthani Musician Set','11.jpg','This Set of 4 Women Musician Doll or Lady is perfectly suitable for Gifting your loved ones'),

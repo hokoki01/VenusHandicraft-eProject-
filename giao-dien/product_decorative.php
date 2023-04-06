@@ -3,7 +3,9 @@ include 'header.php';
 include 'connect_db.php';
 ?>
 <br><br><br>
-<h3>Product Decorative</h3>
+<div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; ">
+    <h2> Decorative products</h2>
+</div>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 
