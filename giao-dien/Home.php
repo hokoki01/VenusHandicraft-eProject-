@@ -3,6 +3,8 @@ include 'header.php';
 ?>
 
 <!-- slider images -->
+
+
       <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -32,7 +34,8 @@ include 'header.php';
           <span class="visually-hidden">Next</span>
         </button>
       </div>
- 
+
+
 
 <section class="hidden">
   <!-- About Us của cty -->
@@ -40,7 +43,7 @@ include 'header.php';
     <!-- bootstrap "container" sẽ cho content ở giữa màn hình  -->
     <div class="row ">
       <div class="col-md-12 ">
-        <h1>About Us</h1>
+        <h1>Handicrafts</h1>
         <br>
       </div>
       <div class="col-md-6 col-sm-12">
@@ -52,9 +55,9 @@ include 'header.php';
           fabricated using modern technology in conformity with industrial standards and guidelines and are broadly used
           in different</p>
         <!-- link để đọc đc thêm -->
-        <a href="">Read more</a>
+        <a href="about.php">Read more</a>
       </div>
-      <div class="col-md-6 col-sm-12">
+      <div class="col-md-6 col-sm-12">  
         <img src="Images/aboutUsImg.jpg" style="height:100%;width:100%;object-fit:cover;" alt="alter" width="650px">
       </div>
     </div>
@@ -123,7 +126,7 @@ include 'header.php';
 
     <div class="row">
       <div class="col-md-12 col-sm-12">
-        <h3 class="mb-3">Our Products</h3>
+        <h3 class="mb-3">Handicraft villages</h3>
       </div>
       <div class="col-6 text-right">
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
@@ -147,10 +150,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                      src="image_DTB/cói.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Kim Son sedge village</h4>
+                      <p class="card-text">Kim Son sedge village has long been famous for sedge cultivation and sedge making with a history of more than 100 years. Through many ups and downs, Kim Son sedge has increasingly affirmed its position. Products of this most famous traditional craft village in Vietnam are increasingly popular because of their diversity and eye-catching. Currently, Kim Son sedge mats are present in more than 20 countries and territories around the world.</p>
 
                     </div>
 
@@ -159,58 +162,21 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                      src="image_DTB/tc.jpg" >
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Phu Yen bottle basket village</h4>
+                      <p class="card-text">Phu Yen's bottle basket has the special feature of using only local ingredients. According to local people, bamboo grown on Phu Yen soil has good water resistance, toughness and has a very good source of oat oil when plastering baskets, helping to maintain product durability.</p>
 
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-3" >
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3d2e8a2039c06dd26db977fe6ac6186a">
+                      src="image_DTB/trống.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-
-                <div class="col-md-4 mb-3">
-                  <div class="card">
-                    <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
-                    <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                    </div>
-
-                  </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                  <div class="card">
-                    <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
-                    <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                  <div class="card">
-                    <img class="img-thumbnail" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
-                    <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Doi Tam Drum Village</h4>
+                      <p class="card-text">Doi Tam drum village is very famous because of its 1000-year history of making drums with many famous craftsmen throughout the region. Accordingly, the drum-making profession here is passed down from father to son, generation after generation to preserve and develop the drum-making profession, here, people make all kinds of drums, making thousands of drums each year. drums of all kinds. Doi Tam Drum is famous for its durability, beauty and roundness… that is thanks to the secret of the drum making profession and the enthusiasm of the artisans.</p>
 
                     </div>
                   </div>
@@ -224,10 +190,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
+                      src="image_DTB/GS.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Bat Trang ceramics</h4>
+                      <p class="card-text">Bat Trang pottery is a product that converges the soul and quintessence of Vietnamese culture. Bat Trang ceramics, from designs, glazes, drawings to embossed details, are carefully researched and created by Bat Trang artisans.</p>
 
                     </div>
 
@@ -236,10 +202,10 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
+                      src="image_DTB/lụa.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Van Phuc Silk Village </h4>
+                      <p class="card-text">Van Phuc Silk Village is the most concentrated part of the old Ha Dong Silk Village, which is very famous and has gone into poetry, music and painting as a traditional cultural beauty. This is one of the oldest craft villages in Vietnam, located on the banks of the Nhue River. </p>
 
                     </div>
                   </div>
@@ -247,10 +213,50 @@ include 'header.php';
                 <div class="col-md-4 mb-3">
                   <div class="card">
                     <img class="img-thumbnail" alt="100%x280"
-                      src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
+                      src="image_DTB/tranh.png">
                     <div class="card-body">
-                      <h4 class="card-title">Special title treatment</h4>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <h4 class="card-title">Dong Ho folk painting village</h4>
+                      <p class="card-text">The East Lake Painting Village in Bac Ninh has long been famous for its valuable and unique products. This is also a place that attracts thousands of tourists every year to learn a little about the traditional craft village in Bac Ninh - Dong Ho painting village. </p>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-thumbnail" alt="100%x280"
+                      src="image_DTB/đá.jpg">
+                    <div class="card-body">
+                      <h4 class="card-title">Non Nuoc stone art village</h4>
+                      <p class="card-text">Visiting Non Nuoc stone craft village, you not only discover an extremely attractive tourist destination in Da Nang with a peaceful space at the foot of Ngu Hanh Son mountain, but also admire the ingenuity and meticulousness of artisans.</p>
+
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-thumbnail" alt="100%x280"
+                      src="image_DTB/nón.jpg">
+                    <div class="card-body">
+                      <h4 class="card-title">Thoi Tan Can Tho conical hat craft village</h4>
+                      <p class="card-text">Besides the rich beauty that nature offers, Can Tho is also a place known by the rich diversity of traditional craft villages handed down from generations. One of the famous craft villages is the conical hat craft village in Thoi Tan A hamlet, Thoi Lai district, Can Tho, with a long history of more than 70 years.</p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <div class="card">
+                    <img class="img-thumbnail" alt="100%x280"
+                      src="image_DTB/chiếu.jpg">
+                    <div class="card-body">
+                      <h4 class="card-title">Dinh Yen mat weaving village - Dong Thap</h4>
+                      <p class="card-text">Next to the vast Hau River of the rich Mekong Delta, there is a very old mat weaving village and a market of more than 100 years old in Lap Vo district, Dong Thap province. Dinh Yen mat market is also known as a "ghost" market by the locals because of its rather strange activities!</p>
                     </div>
                   </div>
                 </div>
@@ -271,7 +277,7 @@ include 'header.php';
     <div class="row">
       <div class="col-md-12 col-sm-12">
         <div class="d-grid col-6 mx-auto">
-          <a href="#" style="color:black"><button class="btn btn-primary " type="button">
+          <a href="product.php" style="color:black"><button class="btn btn-primary " type="button">
               View more products
             </button></a>
         </div>
@@ -294,22 +300,22 @@ include 'header.php';
       <div class="container mt-4">
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/1.png" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/1.png" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/2.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/2.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/3.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/3.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/4.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/4.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/14.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/14.jpg" alt="Error 404">
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4">
-            <img class="img-thumbnail shadow rounded mb-4" src="ImagesDB/15.jpg" alt="Error 404">
+            <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/15.jpg" alt="Error 404">
           </div>
         </div>
       </div>
@@ -324,16 +330,52 @@ include 'header.php';
 <div class="container">
   <div class="row">
     <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
-      <h3><strong>Get in touch with us</strong></h3><br>
+      <h3><strong>You want to update news about us ?</strong></h3><br>
       <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
-      <input style="width:400px" type="email" name="userName" placeholder="Type your email here...">
+
+      <form class="form" method="post" action="Home.php">
+        <input type="text" class="form__field"
+          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter name" required name="name" />
+        <input type="email" class="form__field"
+          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter Email" required  name="email"/>
+        <input type="number" class="form__field"
+          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter phone" required name="phone" />
+        <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
+      </form>
+
       <br>
 
-      <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
+
     </div>
   </div>
 </div>
+<?php
+include 'connect_db.php';
+$name = $email = $phone = $Address = $Note = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (isset($_POST["name"])) {
+    $name = $_POST['name'];
+  }
+  if (isset($_POST["email"])) {
+    $email = $_POST['email'];
+  }
+  if (isset($_POST["Email"])) {
+    $Email = $_POST['Email'];
+  }
+  if (isset($_POST["phone"])) {
+    $phone = $_POST['phone'];
+  }
+  $sql = "INSERT INTO user (name,email,phone) VALUES ('$name', '$email','$phone')";
 
+  if (mysqli_query($connect, $sql)) {
+    echo "thêm dữ liệu thành công";
+    header('location : Home.php');
+  }
+}
+?>
 
 
 <!-- test footer -->
@@ -358,10 +400,10 @@ include 'header.php';
     <div class="noi-dung links">
       <h2>Site Map</h2>
       <ul class="Olist">
-        <li><a  href="Home.php">Home</a></li>
-        <li><a  href="">About Us</a></li>
-        <li><a  href="contact.php">Contact Us</a></li>
-        <li><a  href="product.php">Our Products</a></li>
+        <li><a class="dot" href="#">Home</a></li>
+        <li><a class="dot" href="about.php">About Us</a></li>
+        <li><a class="dot" href="contact.php">Contact Us</a></li>
+        <li><a class="dot" href="product.php">Our Products</a></li>
       </ul>
     </div>
     <!--Kết Thúc Nội Dung Đường Dẫn-->
@@ -405,5 +447,3 @@ include 'header.php';
 <script src="JSHomepage.js"></script>
 
 </html>
-
-

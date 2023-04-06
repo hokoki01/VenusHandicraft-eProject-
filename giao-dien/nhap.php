@@ -1,103 +1,54 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial;
-        }
-
-        /* Style the tab */
-        .tab {
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the buttons inside the tab */
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-            background-color: #ddd;
-        }
-
-        /* Create an active/current tablink class */
-        .tab button.active {
-            background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h2>Tabs</h2>
-    <p>Click on the buttons inside the tabbed menu:</p>
-
-    <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'London')">show more</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+        aria-expanded="true" aria-controls="collapseOne">
+        Venus Handicrafts
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Incepted in 2003, we, Venus Handicrafts, have achieved a remarkable position in the industry for manufacturing
+        and supplying of a wide assortment of Glass Stones, Claws and Cup Chains, Claws and Cup Chains with Stones,
+        Glass Beads, Plastic Beads and Metal Accessories. These are extremely appreciated for their durability and
+        multipurpose uses. The offered products are fabricated using modern technology in conformity with industrial
+        standards and guidelines and are broadly used in different industries. Our products are rigorously checked for
+        their quality by experienced professional before dispatch. Our products are available to our respected customers
+        at reasonable rates. We customize our products as per the client’s needs as well.
+      </div>
     </div>
-
-    <div id="London" class="tabcontent">
-        <h3>London</h3>
-        <p>London is the capital city of England.</p>
-        <div class="col-sm-4">
-            <?php
-            include 'connect_db.php';
-            $count = 0;
-            $result = mysqli_query($connect, "SELECT *FROM product where Id = 1");
-            include 'show_product.php';
-            ?>
-        </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+        aria-expanded="false" aria-controls="collapseTwo">
+        Why Us?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        We are the prime option of our clients for a qualitative variety of products. Owing to our quality-centric
+        approach, we fabricate these products as per the customers' needs and requirements and provide the same to them
+        at cost effective prices. There are several other features that have played a key role in becoming the first
+        preference of our customers. Some of them are mentioned below:
+      </div>
     </div>
-
-    <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+        aria-expanded="false" aria-controls="collapseThree">
+        Client Satisfaction
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Owing to our fair business dealings and client-centric approach, we have expanded our customer base all across
+        the nation. Our customized product option, on time delivery, economical prices and wide distribution network
+        also assist us to achieve maximum satisfaction of our prominent patrons. In addition to this, we are also open
+        to the queries and feedbacks given by our customers to enhance our offered variety. For our client’s
+        convenience, we provide various easy payment modes.
+      </div>
     </div>
-
-    <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
-    </div>
-
-    <script>
-    var acc = document.getElementsByClassName("tabcontent");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
-    }
-</script>
-
-</body>
-
-</html>
+  </div>
+</div>

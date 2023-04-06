@@ -1,85 +1,38 @@
 <?php
 include 'header.php';
-session_start();
 include 'connect_db.php';
 ?>
+<br><br><br>
+<div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; ">
+    <h2> Wood products</h2>
+</div>
+    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
-<body>
-    <style>
-        body {
-            padding-top: 100px;
+
+        <?php
+
+        $count = 0;
+        $result = mysqli_query($connect, "SELECT * FROM product where Category_id = 1 ");
+        // include 'show_product.php';
+        $i = 0;
+        while ($row = mysqli_fetch_array($result)) {
+            ?>
+            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
+                <a style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none;"
+                    href="product_detail.php?Id=<?= $row['Id']; ?>">
+                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
+                        style='width:430px ; height :300px; border: 5px solid yellow;' alt='Image'><br><br>
+
+                    <h4>
+                        <?php echo $row["Title"]; ?>
+                    </h4>
+                </a>
+            </li>
+            <?php
+            $i++;
         }
-    </style>
-    <div class="container">
-        <table class="table table-hover table-bordered">
-            <tbody>
-
-                <div class="row">
-
-                    <div class="col-sm-4">
-                        <?php
-
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 1 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 2 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 3 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 4 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 5 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 6 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 7 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                    <div class="col-sm-4">
-                        <?php
-                        $count = 0;
-                        $result = mysqli_query($connect, "SELECT *FROM product where Id = 8 and Category_id = 1");
-                        include 'show_product.php';
-                        ?>
-                    </div>
-                </div>
-            </tbody>
-        </table>
-    </div>
+        ?>
+    </ul>
     <?php
     include 'footer.php';
     ?>
-</body>
-
-</html>

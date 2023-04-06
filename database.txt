@@ -1,0 +1,148 @@
+create database Handicrafts;
+use Handicrafts;
+
+create table admin (
+Id int PRIMARY KEY AUTO_INCREMENT,
+email varchar(200),
+name varchar (50),
+password varchar (30)
+);
+
+
+create table user (
+Id int PRIMARY KEY AUTO_INCREMENT,
+Fullname varchar (50),
+Email varchar(150),
+phone varchar(50)
+);
+
+create table category( 
+Id int PRIMARY KEY AUTO_INCREMENT,
+category_name varchar(300)
+);
+
+insert into category values 
+(1,'wood'),
+(2,'Iron'),
+(3,'Glass'),
+(4,'Aluminium'),
+(5,'Brass'),
+(6,'Decorative')
+;
+
+create table product( 
+Id int PRIMARY KEY AUTO_INCREMENT,
+Category_id int ,
+Title varchar(350) ,
+Image varchar(500),
+Description text,
+FOREIGN KEY (Category_id) REFERENCES category(Id)
+);
+
+
+
+insert into product(Category_id,Title,Image,Description) values
+	(1,'Trac wooden','1.png','wooden pipe and Trac wooden Cigar pipe bring elegant, luxurious and unique beauty. Trac wooden pipe and Trac wooden cigar are made of natural Trac wood material,'),
+	(1,'Incense wooden','2.jpg','The Huong wooden tea tray is carefully completed by Hanoi Fine Arts. From the selection of incense to the finishing stage with varnish'),
+	(1,'High-grade pink mussel shell inlaid pen','3.jpg','Pearl inlaid pen was born as a result of the process of hard work and creativity. At each stage, we will feel the talented and skillful hands of the artisan. '),
+	(1,'Wooden boat model','4.jpg','HMS Victory wooden boat model for desks, office swarms. Finished from High Perfume Wood, with details meticulously crafted to scale like a real boat.'),
+	(1,'Wooden flowerpot','5.jpg','Small wooden flowerpot is made of natural mother-of-pearl wood used for flower arrangement, decoration or decor. New and modern style,'),
+	(1,'Thap Dieu Quan Mai','6.jpg','Falling apricots also has another beautiful name, collapsing ten birds with apricots.'),
+	(1,'Luc Binh (Loc Binh) ','7.jpg','Wooden Luc Binh, also known as wooden Loc Binh, is used for decorative purposes, expressing the nobility and luxury of the owner. '),
+	(1,'European wooden bowl','8.jpg','European-style wooden cup: The cup is made of European-style ACACIA wood. The product has been tested for food safety'),
+	(2,'DeepCraft Handpainted','9.jpg','Enjoy the colourful world of Rajasthan,'),
+    (2,'Garden Iron Handicraft ','10.jpg','Material: wrought iron, acrylicColor: flower pot, dwarf red, dwarf'),
+    (2,'Rajasthani Musician Set','11.jpg','This Set of 4 Women Musician Doll or Lady is perfectly suitable for Gifting your loved ones'),
+    (2,'Couple Metal','12.jpg','This bohemian wrought iron Framed Musician Couple is suitable'),
+    (2,'Gandhanra Antique T','13.jpg','This is collect from Tibet, a old badge or pandent, made of thokcha (Cold Iron or meteoric iron)'),
+    (2,'Iron Handmade ','14.jpg','Bring goodluck and ward off all your Vighnas with this auspious wall hanging having lord Ganesha.'),
+    (2,'Handpainted metal ','15.jpg','Portuguese Barcelos rooster, Portuguese Home Decor, artistic metal handicraft, Hand Painted, Made in Portugal.'),
+    (2,'Vintage handmade ','16.jpg','Motorcycle model trimmings Handmade iron material Each detail reflects the designers creativity, and uses nuts,'),
+    (3,'Glass Utensils','17.jpg','Glass has been artistically used to create utensils that include wide array of dishes ranging from pans & bowls to trays & casseroles. '),
+    (3,'Glass Votives','18.jpg','Adding a touch of class to the decor, glass votives are sure to leave the onlookers spellbound with their beauty.'),
+    (3,' Glass Bowls','19.jpg','Glass bowls are hemispherical vessels used for holding food or fluids and may include ice cream bowls, soup bowls, fruit bowls among others. '),
+    (3,' Glass Inkpots','20.jpg','Ideally used for holding ink, glass inkpots are exquisite items created by the craftsmen in traditional designs and patterns.'),
+    (3,'Glass Jars','21.jpg','Designed to perfection, the highly elegant glass jars depict exquisite craftsmanship and are ideally used for holding a variety of thing.'),
+    (3,'Perfume Bottles','22.jpg','Used for storing pleasing perfumes, glass perfume bottles are stunning pieces of art available in eye-catching designs.'),
+    (3,' Glass Wine Sets','23.jpg','Charmingly designed glass wine sets, which include bar decanter, bar dish and bar goblets add a practical appeal to bar decor.'),
+    (3,'Glass Flower Vases','24.jpg','Intricately carved in glass, the glass flower vases are specially used to display plants and flowers together and make exclusive gifts as decorative accents.'),
+    (3,'Glass Goblets','25.jpg','A must-haves for all bars, homes or hotels, glass goblets have sleek and sophisticated designs and are appreciated worldwide for design and functional features'),
+    (3,'Ice Buckets','26.jpg','Glass ice buckets serve as excellent items for chilling champagne or ice storage and are great additions to beverage service.'),
+    (4,'Oil Burners','27.jpg','Designed to perfection, oil burners are an elegant source of lighting that artistically created using iron and add immense beauty to the corners'),
+    (4,'Garden Urns','28.jpg','Garden urns created out of aluminium have perplexing carvings along with splendid designs and have are quite in vogue. '),
+    (4,'Aluminum Flower Vases','29.jpg','Aluminium flower vases create an eye-catching focal point when placed and are available in different sizes to fit all types of flowers. '),
+    (4,'Garden Animals','30.jpg','Attractive garden animals created using aluminium make the garden look more natural and impart the complete feel of a landscape. '),
+    (4,'Wine Chillers','31.jpg','Depicting alluring styles and exquisite designs, brass wine chillers are often lacquered to prevent tarnishing.	'),
+    (4,'Table Candle Holders','32.jpg','Artists who make table candle holders made of brass have drawn inspiration from the traditional designs, while keeping in mind the trends, in vogue. '),
+    (4,'Hooks','33.jpg','Stylish brass hooks are perfect for hanging a variety of things and are available in different finishes and designs. '),
+    (4,'Mirror Frames','34.jpg','Glorifying the cultural richness, brass mirror frames are aesthetically adored for intricate craftsmanship. '),
+    (5,'Votive Candle Holders','35.jpg','Votive candle holders made of brass hold candles that express or symbolize a wish, desire or vow and provide immense elegance to the decor. '),
+    (5,'Key Rings','36.jpg','Gifts with an unmatched regality, brass key rings are perfect accessories to hold the keys in style.'),
+    (5,'Paper Clips','37.jpg','Paper clips are ecstatic mementos richly handcrafted in sparkling brass and add immense sophistication to adorn the study. '),
+    (5,'Ice Tongs','38.jpg','Adding value and class to the evening drinks, brass ice tongs accentuate the enjoyment with their elegance. '),
+    (5,'Brass Napkin Rings','39.jpg','Beautiful designs in various shapes and patterns are created to adorn the brass napkin rings made to look new for a long time. '),
+    (5,' Crystal Napkin Rings','40.jpg','Certain napkin rings are made specifically to be gifted or used on specific occasions, brass napkin rings being one of them.'),
+    (5,'Silver Finish Napkin Rings','41.jpg','Brass napkin rings crafted with unique silver finish are in vogue and look graceful. '),
+    (5,'Magnifying Lens','42.jpg','Time to be smart and stylish using the sophisticated magnifying lens that is crafted to perfection'),
+    (5,'Brass Goblets','43.jpg','The design and finish of brass goblets reflects utmost care and perfection and are created using sophisticated patterns and styles.'),
+    (5,' Wine Chillers','44.jpg','Depicting alluring styles and exquisite designs, brass wine chillers are often lacquered to prevent tarnishing. '),
+    (5,'Hurricane Lamps','45.jpg','Hurricane lamps are skillfully chiseled out in iron and are highly appraised and demanded by the lovers of art as charming decorative pieces. '),
+    (5,'Table Candle Holders','46.jpg','Artists who make table candle holders made of brass have drawn inspiration from the traditional designs, while keeping in mind the trends, in vogue. '),
+    (6,'Candle Holders','47.jpg','Artistically magnificent candle holders offer the light of magic and brightness to the decor and are gifts to be cherished forever.'),
+    (6,' Wall Sconces','48.jpg','An ecstatic collection of wall sconces are perfect representations of gracious beauty to adorn the interiors.'),
+    (6,'Hurricane Lamps','49.jpg','Hurricane lamps are skillfully chiseled out in iron and are highly appraised and demanded by the lovers of art as charming decorative pieces.'),
+    (6,'Picture Frames','50.jpg','Exquisitely hand crafted iron picture frames have designs and patterns that shall render the onlooker spellbound with the distinct elegance. '),
+    (6,'Statues','51.jpg','Brass statues exemplify artistic excellence depicting traditional designs that lend the object a rich effect. '),
+    (6,'Lamp Bases','52.jpg','Lamp bases made of iron are available in a plethora of designs and patterns and bring about a touch of class and sophistication to the lams as well as the corners. '),
+    (6,' Mirror Frames','53.jpg','Glorifying the cultural richness, brass mirror frames are aesthetically adored for intricate craftsmanship.'),
+    (6,' Glass Jars','54.jpg','Designed to perfection, the highly elegant glass jars depict exquisite craftsmanship and are ideally used for holding a variety of thing.'),
+	(6,'Wooden Boxes','55.jpg','Chiseled out of exotic wood, wooden boxes often have intricate carvings and are inlaid with beautiful designs.'),
+	(6,'Stocking Holder','56.jpg','These metal stocking holders are fabricated in various imaginative designs to create a pleasant surroundings on Christmas festival.'),
+	(6,'Wooden Cupboards','57.jpg','Attractive and ornate, decorative wooden cupboards are designed to excel and come in various styles with varying designs, finishes and shapes')
+    ;
+
+create table artist(
+id int PRIMARY KEY AUTO_INCREMENT,
+name varchar(350),
+Biography text,
+Career text,
+Personality text,
+Reviews text,
+Honor text
+);
+insert into artist(name,Biography,Career,Personality,Reviews,Honor) values
+('Trần Duy Mong','Vốn là người con của làng nghề kim hoàn Kế Môn (xã Điền Môn, huyện Phong Điền, tỉnh Thừa Thiên Huế), nghệ nhân Trần Duy Mong sinh ra và lớn lên trong một gia tộc có truyền thống về nghề kim hoàn. Nhờ đó, ông đã lĩnh hội được nghề của ông cha truyền lại và luôn tận tụy với nghề truyền thống.','Nghệ nhân Trần Duy Mong theo nghề kim hoàn từ năm lên 15 tuổi. Nhờ sự thông minh, nhanh nhẹn, kiên trì, ông đã thành công và vào nghề sớm hơn những người bạn nghề cùng trang lứa. Đến nay, sau 50 năm theo nghề, ông đã trở thành thợ có tay nghề cao (bậc 7/7) và nắm giữ nhiều kỹ năng, kỹ xảo trong lĩnh vực chế tác vàng, bạc, đá quý. Đồng thời, ông cũng tự thiết kế và trực tiếp làm ra nhiều sản phẩm đạt trình độ kỹ thuật, mỹ thuật, có giá trị kinh tế cao.','Nghệ nhân Trần Duy Mong cho biết, trong bối cảnh ngành công nghệ chế tác trang sức phát triển mạnh như hiện nay, nghề kim hoàn truyền thống phải chịu sức ép không hề nhỏ, nhưng ông tin rằng, với vẻ đẹp và sự độc đáo riêng có, kim hoàn truyền thống vẫn sẽ có chỗ đứng riêng nếu biết phát huy thế mạnh.','Với nỗi lòng đau đáu với nghề, nghệ nhân Trần Duy Mong đã phát triển thành công chuỗi cơ sở kinh doanh vàng, bạc, đá quý của mình, góp phần tạo cơ hội công ăn việc làm cho người dân, đào tạo nghề cho lớp thợ kế cận. Đặc biệt, ông đã dày công xây dựng cơ sở Tịnh Tâm kim cổ thành điểm đến tham quan, du lịch, mua bán kim hoàn lớn và độc đáo nhất ở miền Trung. Đến với Tịnh Tâm kim cổ du khách sẽ được chiêm ngưỡng hàng nghìn mẫu hàng trang sức bằng vàng, bạc, đá quý và nhiều mẫu hàng lưu niệm được chế tác tinh xảo bằng vàng, bạc, đồng…','Mặc dù là lão luyện trong nghề nhưng nghệ nhân Trần Duy Mong vẫn không ngừng học tập, rèn giũa nâng cao tay nghề, nhờ đó, ông liên tục giành nhiều giải thưởng lớn tại các kỳ thi uy tín. Trong đó, phải kể đến các tác phẩm điển hình như: "Hài Cung Đình Huế" - Giải Ba Hội thi Sản phẩm thủ công mỹ nghệ Việt Nam lần thứ VI năm 2009; "Quạt Cung Đình" - Giải Đồng tại Hội thi Sản phẩm thủ công mỹ nghệ làm hàng lưu niệm phục vụ du lịch - Huế 2008; "Châm Hoa Lạc Việt" - giải Ba tại Hội thi Sản phẩm thủ công mỹ nghệ làm hàng lưu niệm và quà tặng Huế 2010. Sản phẩm Tranh Đại nội Huế mạ vàng khung kính không gian 3D đạt giải Nhất tại Hội thi Sản phẩm quà tặng lưu niệm Huế năm 2016 do UBND TP. Huế tổ chức.'),
+('Đỗ Văn Cường','Sinh ra trong một gia đình có nghề sản xuất thủ công mỹ nghệ truyền thống từ nhiều đời, do vậy, nghệ nhân Đỗ Văn Cường, chủ Hộ Kinh doanh Đỗ Văn Cường tại làng Thiết Úng, xã Vân Hà, huyện Đông Anh, thành phố Hà Nội đã có hơn hai chục năm kinh nghiệm làm nghề chạm khắc gỗ mỹ nghệ truyền thống. Với bàn tay khéo léo, tài hoa, nghệ nhân Đỗ Văn Cường đã cho ra đời hàng trăm tác phẩm điêu khắc từ gỗ.','Sinh ra trong một gia đình có nghề sản xuất thủ công mỹ nghệ truyền thống từ nhiều đời, do vậy, nghệ nhân Đỗ Văn Cường, chủ Hộ Kinh doanh Đỗ Văn Cường tại làng Thiết Úng, xã Vân Hà, huyện Đông Anh, thành phố Hà Nội đã có hơn hai chục năm kinh nghiệm làm nghề chạm khắc gỗ mỹ nghệ truyền thống. Với bàn tay khéo léo, tài hoa, nghệ nhân Đỗ Văn Cường đã cho ra đời hàng trăm tác phẩm điêu khắc từ gỗ.','Sinh ra trong một gia đình có nghề sản xuất thủ công mỹ nghệ truyền thống từ nhiều đời, do vậy, nghệ nhân Đỗ Văn Cường, chủ Hộ Kinh doanh Đỗ Văn Cường tại làng Thiết Úng, xã Vân Hà, huyện Đông Anh, thành phố Hà Nội đã có hơn hai chục năm kinh nghiệm làm nghề chạm khắc gỗ mỹ nghệ truyền thống. Với bàn tay khéo léo, tài hoa, nghệ nhân Đỗ Văn Cường đã cho ra đời hàng trăm tác phẩm điêu khắc từ gỗ.','Trong quá trình làm nghề, nghệ nhân Đỗ Văn Cường đã tạo ra hàng trăm tác phẩm điêu khắc gỗ, tiêu biểu như các tác phẩm: Hoa sen mùa thu, lan hồ điệp, mít cảnh, cá cảnh, tê giác 1 sừng, lợn phú quý, đài nến hoa sen…','Hiện nay nhu cầu thị trường trang trí nội thất các sản phẩm từ gỗ ngày càng cao để đủ số lượng phục vụ người tiêu dùng, các sản phẩm thông dụng của nghệ nhân Đỗ Văn Cường bắt đầu được áp dụng công nghệ cao để sản xuất hàng loạt. Tuy nhiên, vẫn đảm bảo chất lượng và thẩm mỹ của từng sản phẩm.'),
+('Nguyễn Duy Hưng','Nghệ nhân Nguyễn Duy Hưng, người thầy của hàng nghìn thợ kim hoàn đánh giá về nghề mà ông đeo đuổi nhiều năm qua như vậy. Ông Hưng sinh năm 1967, ngụ tại quận Phú Nhuận, TP. Hồ Chí Minh. Ông hiện là người thợ, đồng thời là người thầy có chuyên môn cao về chế tác được tất cả các dòng hàng nữ trang trên thị trường.','','','',''),
+('Nguyễn Bá Châu','Nguyễn Bá Châu sinh năm 1962, quê ở xã Thiệu Trung (Thiệu Hóa), nơi nổi tiếng với làng nghề đúc đồng Trà Đông. Bố của ông cũng là người thợ đúc đồng có tiếng ở mảnh đất này. “Cha truyền con nối”, Nguyễn Bá Châu của ngày hôm nay cũng đã trở thành một Nghệ nhân Ưu tú (NNƯT) đúc đồng. Ông là niềm tự hào của xứ Thanh.','Năm 2000 là thời khắc đầy dấu ấn với NNƯT Nguyễn Bá Châu khi là người đầu tiên trong cả nước đã đúc thành công trống đồng bằng phương pháp thủ công truyền thống. Điều này, quá sức tưởng tượng của chính bản thân ông và nhiều người. Bởi lẽ, đúc trống đồng không dễ, ngay tại làng nghề cũng chưa có người thợ nào dám nghĩ đến. Còn riêng đối với Nguyễn Bá Châu, trước đó ông đã có vài lần thất bại khi đúc trống đồng bằng phương pháp thủ công truyền thống. Vậy nên, sự thành công này đã đánh dấu bước ngoặt quan trọng trong sự nghiệp đúc đồng của ông. NNƯT Nguyễn Bá Châu nhớ lại: “Khi còn sống, bố tôi có nói với tôi rằng, nghề này rất quý bởi chỉ từ than, củi, rơm, rạ, đồ phế liệu, đồng nát, qua bàn tay người lao động đều sẽ trở thành sản phẩm giá trị. Tôi trăn trở, nghe lời cụ dặn và bắt tay vào nghiên cứu. Năm 1998, tôi làm thí điểm về cái trống đồng của Việt Nam có cách đây từ mấy nghìn năm nhưng không thành công. Sau đó, tôi tiếp tục làm nhưng vẫn không thành. Tôi hơi chán nản vì thời điểm này, kinh tế rất khó khăn, không thành công nên thất thoát về tài chính là cả vấn đề. Rất may, tôi được sự động viên của gia đình nên đã đi tiếp”','Sự đi tiếp này đã mang lại thành công cho NNƯT Nguyễn Bá Châu. Như vậy, từ năm 1998-2000, ông đã làm cuộc chinh phục để cho ra đời chiếc trống đồng bằng phương pháp thủ công truyền thống đầu tiên với đường kính 15cm. Trong cuộc hành trình này, ông đã từng đặt chân đến các làng nghề đúc đồng từ Nam ra Bắc để học hỏi kinh nghiệm nhưng đáng tiếc những làng nghề này cũng không giúp được gì vì bấy giờ trong cả nước không ai biết đúc trống đồng. Ông ngậm ngùi quay về quê nhưng lòng thì vẫn nung nấu với trống đồng, với sự dang dở chưa thành. Và, thật kỳ diệu, ông đã làm nên kỳ tích.','21 năm qua, kể từ khi NNƯT Nguyễn Bá Châu đúc thành công chiếc trống đồng bằng phương pháp thủ công truyền thống đầu tiên ông cũng đã đúc thành công nhiều sản phẩm đồ đồng khác, trong đó chủ đạo vẫn là trống đồng. Những tác phẩm của ông đã được trưng bày ở nhiều nơi và phục vụ các sự kiện lớn trong nước...','Sau 21 năm, đã có đến 4 lần những tác phẩm của ông được Tổ chức kỷ lục Việt Nam xác lập kỷ lục mà gần đây nhất là vào năm 2018 với tác phẩm: Phiên bản trống đồng Ngọc Lũ bằng phương pháp thủ công truyền thống lớn nhất Việt Nam. Tác phẩm này hiện đang lưu giữ tại thị xã Long Khánh (Đồng Nai). Trong năm 2020, ông và những người thợ của mình cũng đã hoàn thành chiếc trống đồng phiên bản Ngọc Lũ lớn nhất từ trước đến nay với đường kính 2,45m, cao 1,77m và nặng 4 tấn. Tác phẩm đã được trưng bày chào mừng Đại hội Đại biểu Đảng bộ tỉnh lần thứ XIX vào tháng 10 - 2020 vừa qua.'),
+('Đặng Ích Hoàn','Nghệ nhân ưu tú Đặng Ích Hoàn: Người có bàn tay tài hoa nghề đúc đồng Chè Đông LNV - Là một trong những người góp phần giữ gìn và phát huy giá trị nghề đúc đồng Chè Đông, Nghệ nhân ưu tú Đặng Ích Hoàn vẫn luôn trăn trở với việc truyền nghề cho thế hệ tiếp nối truyền thống của cha ông, đồng thời phát triển các sản phẩm chất lượng.','Hiện nay, hai người con trai của ông Hoàn là Đặng Quốc Phượng và Đặng Quốc Toàn lại tiếp tục kế thừa tinh hoa của gia đình. Đây cũng là những nghệ nhân trẻ tâm huyết với nghề. Anh Đặng Quốc Toàn đã từng đúc thành công chiếc trống đồng với đường kính 2m35, cao 1m86, nặng 7 tấn. Nghệ nhân Đặng Quốc Phượng cũng đúc thành công đôi súng thần công bằng chất liệu đồng lớn nhất Việt Nam.','Với đôi bàn tay tài ba và tâm huyết, nghệ nhân Đặng Ích Hoàn đã tạo ra hàng nghìn tác phẩm đưa đến tay khách hàng trong nước và quốc tế. Trong đó, năm 2022, sản phẩm mặt trống đồng Toàn Linh của gia đình nghệ nhân Đặng Ích Hoàn được UBND tỉnh Thanh Hóa công nhận là sản phẩm đạt chất lượng OCOP 4 sao. Mặt trống đồng được khắc họa tỉ mỉ những nét sinh hoạt kinh tế, xã hội, văn hóa Đông Sơn thời bấy giờ. Sản phẩm là món quà có ý nghĩa thể hiện nét văn hóa, văn minh của người Việt cổ, được dùng để trang trí trong nhiều không gian thể hiện sự tinh tế và sang trong. ','Theo Phó Chủ tịch UBND xã Thiệu Trung Đỗ Đức Thanh, qua bàn tay khéo léo, tài hoa, tỉ mỉ và sáng tạo của các thế hệ, những sản phẩm của làng nghề đúc đồng Trà Đông luôn được đánh giá cao cả về thẩm mỹ và chất lượng. Tuy nhiên, hiện việc quảng bá giới thiệu sản phẩm làng nghề ở quy mô lớn còn hạn chế. Vì vậy, thời gian tới, địa phương mong muốn đưa làng nghề phát triển theo định hướng mới, tiếp tục đầu tư, chỉnh trang và nâng cấp để phát triển làng nghề. ','UBND xã tạo điều kiện và động viên các hộ tạo ra sản phẩm mang giá trị truyền thống phục vụ khách du lịch, tham gia chương trình OCOP để làm sao đó sản phẩm mang tầm quốc tế, xuất khẩu ra nước ngoài. Địa phương cũng mong các cấp, các ngành tạo điều kiện cho làng nghề về huy động vốn, tạo hành lang pháp lý cho các hộ kinh doanh, doanh nghiệp, khuyến khích tăng việc làm, dạy nghề cho lao động địa phương, tham gia Chương trình OCOP cho các sản phẩm làng nghề được quảng bá sâu rộng hơn.'),
+('Đặng Ích Hân','Nghệ nhân Đặng Ích Hân tâm sự, nhìn chung tất cả công đoạn đúc đồng đều quan trọng, quan trọng hơn tất cả là khâu kiểm tra chất lượng đồng nung, bởi lẽ, nếu không xem xét kỹ lưỡng chất lượng đồng nung thì sản phẩm làm ra sẽ kém chất lượng. Đối với khâu đổ vào khuôn, sau khi đồng nung chảy được thợ đổ vào khuôn, việc rót đồng nóng phải được làm bởi những người thợ có kinh nghiệm 3-5 năm, đây là bước đòi hỏi sự chuẩn xác và nhẹ nhàng. Cuối cùng là công đoạn làm bóng bề mặt, người thợ phải dùng giấy nhám, tỉ mỉ mài từng chỗ, có tác dụng làm sạch các mảng đất bám còn xót lại từ khung đúc và để sản phẩm được nổi rõ màu đồng và có độ bóng bắt mắt… Hơn 40 năm làm nghề đúc đồng, từng sản phẩm được làm ra ông đều theo dõi sát sao từng công đoạn, nếu công đoạn nào không hoàn hảo thì sẽ phải làm lại…','Nghề đúc đồng gắn với dòng họ ông Đặng Ích Hân từ nhiều đời, trong mấy người con, ông cũng đang truyền nghề lại cho cậu con trai có đam mê nhất, say mê gắn bó với nghề. Dù cơ ngơi chưa thực lớn nhưng cửa hàng trưng bày giới thiệu sản phẩm của gia đình ông cũng là một trong những cơ sở lớn trong làng nghề với nhiều lọai trống đồng, chiêng đồng và các sản phẩm trang trí, mỹ nghệ','Thế mạnh nhất của sơ sở đúc đồng gia Đặng Ích Hân là những sản phẩm trống đồng, cồng chiêng đồng của đồng bào các dân tộc Tây Nguyên, đồ đồng giả cổ. Theo ông Hân để làm được những đồ đồng giả cổ như thật (đây là một loại hình sản phẩm chứ không phải làm giả) đòi hỏi phải là người có kinh nghiệm, nghiên cứu nhiều năm và không phải người làm nghề nào cũng làm đc. Với những sản phẩm này, đôi khi có giá 10 – 20 triệu, nhưng cũng có những sản phẩm giá lên đến vài trăm triệu đồng…','Những sản phẩm gắn với tên tuổi của ông, như: Đúc Trống đồng, Súng thần công và Kiếm lệnh tại khu tưởng niệm Đại tướng Võ Nguyên Giáp, Đảo Yến, Vũng Chùa, Quảng Bình.- Năm 2013, Hội Khoa học lịch sử Việt Nam đã ghi nhận đã đóng góp kim ngân quý - Giọt đồng, hòa vào dòng chảy đúc trống đồng, súng thần công, kiếm đồng dâng tặng Khu tưởng niệm cố Đại tướng Võ Nguyên Giáp tại Quảng Bình- Năm 2016, nhận Bằng khen của Bộ Công Thương vì đã có thành tích xuất sắc trong việc khôi phục, bảo tồn và phát triển nghề đúc đồng truyền thống; Bộ Công Thương tặng Kỷ niệm chương “Vì sự nghiệp phát triển ngành Công Thương Việt Nam”; Hiệp hội Làng nghề Việt Nam phong tặng Bảng vàng Gia tộc và Nghệ nhân làng nghề Việt Nam; Bằng khen của Hội Di sản văn hóa Việt Nam vì đã có thành tích trong hoạt động bảo vệ và phát huy giá trị di sản văn hóa',''),
+('Nguyễn Trần Hiệp','Sớm nhận thấy trách nhiệm của mình trong việc giữ “lửa” nghề truyền thống của quê hương Từ Sơn (Bắc Ninh), “chàng trai trẻ” Nguyễn Trần Hiệp khi đó đã ấp ủ giấc mơ làm giàu bằng chính chính những tác phẩm mỹ nghệ điêu khắc. Những tác phẩm được mài đục từ đôi bàn tay tài hoa của Nguyễn Trần Hiệp không chỉ nhận được sự đánh giá cao về giá trị nghệ thuật, giá trị tư tưởng mà chứa đựng trong đó cả những giá trị văn hóa, giá trị tâm linh Đông phương.','Chỉ với tài năng, niềm đam mê với điêu khắc, cùng với ý chí và nghị lực của tuổi trẻ, sau 8 năm “tầm sư học đạo”, hơn 10 năm gây dựng sự nghiệp, năm 2010, Nguyễn Trần Hiệp đã thành công và vinh dự được Hội Mỹ nghệ kim hoàn đá quý Việt Nam phong tặng danh hiệu Nghệ nhân quốc gia khi mới 37 tuổi. Hai năm sau, Nghệ nhân quốc gia Nguyễn Trần Hiệp được tỉnh Bắc Ninh phong tặng danh hiệu Nghệ nhân tỉnh Bắc Ninh. Đến nay, nghệ nhân Nguyễn Trần Hiệp đã trở thành nhà điêu khắc có tiếng, làm giàu chính đáng trên quê hương mình.','Nhớ lại những ngày đầu gây dựng sự nghiệp, nghệ nhân Nguyễn Trần Hiệp không khỏi bồi hồi. Ông đã mất rất nhiều đêm thức trắng suy nghĩ, làm sao để các sản phẩm được thị trường đón nhận. Sau đó, ông đã tìm ra hai phân khúc khách hàng chủ đạo. Phân khúc thứ nhất, là nhóm khách du lịch vào Việt Nam, là những sản phẩm mỹ nghệ nhỏ, làm quà lưu niệm. Phân khúc thứ hai là chủ đạo, các sản phẩm được sản xuất phục vụ cho việc xuất khẩu. Nhờ sự quyết đoán như vậy, ông Nguyễn Trần Hiệp đã thành công và mở rộng mô hình sản xuất đồ gỗ mỹ nghệ Hiệp Thắng của mình.','bằng sự kiên trì và lòng đam mê nghệ thuật, với bàn tay tài hoa của mình, mỗi tác phẩm của ông đều được “thai nghén”, ra đời mang đậm giá trị văn hoá, sự tinh tế và giá trị kinh tế cao. Trong đó, phải kể đến tác phẩm chào mừng 1.000 năm Thăng Long - Hà Nội mang tên “Âm hưởng Thăng Long”, bằng chất liệu gỗ mun vân hoa. Tác phẩm hoàn thành được Chủ tịch Hội Mỹ nghệ kim hoàn đá quý Việt Nam đánh giá rất cao về ý tưởng. Tác phẩm tôn vinh khí thế hào hùng của dân tộc, mang hào khí Thăng Long, tô đậm quá trình hình thành và phát triển của Kinh đô Thăng Long xuyên suốt chiều dài lịch sử 1000 năm. Gần đây nhất, nghệ nhân Nguyễn Trần Hiệp lại vinh dự đạt giải Xuất sắc do Tổng liên Đoàn lao động Việt Nam trao tặng năm 2018, cho tác phẩm điêu khắc gỗ nghệ thuật “Kê, ngưu tương phùng”.','Nỗ lực không ngừng, biến tài năng thành động lực, bước từng bước kiên định, nghệ nhân Nguyễn Trần Hiệp đã và đang góp phần tích cực vào việc bảo tồn phát huy những giá trị tinh hoa nghề truyền thống của dân tộc. Đồng thời, từ tấm gương vượt khó làm giàu của nghệ nhân Nguyễn Trần Hiệp, cũng khẳng định rằng mỗi người đều có rất nhiều con đường để lập nghiệp, nhưng chỉ có một con đường dẫn tới thành công đó là bằng sức lao động chân chính, nhiệt huyết và trí tuệ của tuổi trẻ.')
+;
+
+create table contact(
+Id int PRIMARY KEY AUTO_INCREMENT,
+Name varchar(30),
+Email varchar(150),
+Phone varchar(20),
+Note varchar(500)
+);
+
+select * from product;
+select * from category;
+
+drop table admin;
+drop table user;
+drop table category;
+drop table product;
+drop table artist;
+drop table contact;
+drop database Handicrafts;
+
+
+
+
+
+
+
+
