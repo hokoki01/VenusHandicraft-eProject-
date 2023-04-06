@@ -2,7 +2,7 @@
 $servername = "localhost";
 $database = "handicrafts";
 $username = "root";
-$password = "123456";
+$password = "12345678";
 $connect = mysqli_connect($servername, $username, $password, $database);
 
 if (!$connect) {
