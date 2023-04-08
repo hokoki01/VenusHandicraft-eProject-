@@ -2,9 +2,27 @@
 include 'header.php';
 include 'connect_db.php';
 ?>
-<br><br><br>
+
+<style>
+    .text {
+        background: url(image_DTB/b.png) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+        color: white;
+        padding-top: 150px;
+        text-align: center;
+        text-decoration: none;
+    }
+</style>
+
+<h1 class="text">PRODUCT ALUMNIUM</h1>
+<!-- <br><br><br> -->
 <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; ">
-    <h2> Aluminium products</h2>
+    <!-- <h2> Aluminium products</h2> -->
 </div>
 
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">

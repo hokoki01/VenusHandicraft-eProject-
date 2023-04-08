@@ -153,7 +153,7 @@ include 'header.php';
                       src="image_DTB/cói.jpg" >
                     <div class="card-body">
                       <h4 class="card-title">Kim Son sedge village</h4>
-                      <p class="card-text">Kim Son sedge village has long been famous for sedge cultivation and sedge making with a history of more than 100 years. Through many ups and downs, Kim Son sedge has increasingly affirmed its position. Products of this most famous traditional craft village in Vietnam are increasingly popular because of their diversity and eye-catching. Currently, Kim Son sedge mats are present in more than 20 countries and territories around the world.</p>
+                      <p class="card-text">Kim Son sedge village has long been famous for sedge cultivation and sedge making with a history of more than 100 years. Products of this most famous traditional craft village in Vietnam are increasingly popular because of their diversity.</p>
 
                     </div>
 
@@ -165,7 +165,7 @@ include 'header.php';
                       src="image_DTB/tc.jpg" >
                     <div class="card-body">
                       <h4 class="card-title">Phu Yen bottle basket village</h4>
-                      <p class="card-text">Phu Yen's bottle basket has the special feature of using only local ingredients. According to local people, bamboo grown on Phu Yen soil has good water resistance, toughness and has a very good source of oat oil when plastering baskets, helping to maintain product durability.</p>
+                      <p class="card-text">Phu Yen's bottle basket has the special feature of using only local ingredients. According to local people, bamboo grown on Phu Yen soil has good water resistance, toughness and has a very good source of oat oil when plastering baskets</p>
 
                     </div>
                   </div>
@@ -176,8 +176,7 @@ include 'header.php';
                       src="image_DTB/trống.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Doi Tam Drum Village</h4>
-                      <p class="card-text">Doi Tam drum village is very famous because of its 1000-year history of making drums with many famous craftsmen throughout the region. Accordingly, the drum-making profession here is passed down from father to son, generation after generation to preserve and develop the drum-making profession, here, people make all kinds of drums, making thousands of drums each year. drums of all kinds. Doi Tam Drum is famous for its durability, beauty and roundness… that is thanks to the secret of the drum making profession and the enthusiasm of the artisans.</p>
-
+                      <p class="card-text">Doi Tam drum village is very famous because of its 1000-year history of making drums with many famous craftsmen throughout the region. Accordingly, the drum-making profession here is passed down from father to son </p>
                     </div>
                   </div>
                 </div>
@@ -205,7 +204,7 @@ include 'header.php';
                       src="image_DTB/lụa.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Van Phuc Silk Village </h4>
-                      <p class="card-text">Van Phuc Silk Village is the most concentrated part of the old Ha Dong Silk Village, which is very famous and has gone into poetry, music and painting as a traditional cultural beauty. This is one of the oldest craft villages in Vietnam, located on the banks of the Nhue River. </p>
+                      <p class="card-text">Van Phuc Silk Village is the most concentrated part of the old Ha Dong Silk Village, which is very famous and has gone into poetry, music and painting as a traditional cultural beauty. This is one of the oldest craft villages in Vietnam. </p>
 
                     </div>
                   </div>
@@ -216,7 +215,7 @@ include 'header.php';
                       src="image_DTB/tranh.png">
                     <div class="card-body">
                       <h4 class="card-title">Dong Ho folk painting village</h4>
-                      <p class="card-text">The East Lake Painting Village in Bac Ninh has long been famous for its valuable and unique products. This is also a place that attracts thousands of tourists every year to learn a little about the traditional craft village in Bac Ninh - Dong Ho painting village. </p>
+                      <p class="card-text">The East Lake Painting Village in Bac Ninh has long been famous for its valuable and unique products. This is also a place that attracts thousands of tourists every year to learn a little about the traditional craft </p>
 
                     </div>
                   </div>
@@ -244,8 +243,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/nón.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Thoi Tan Can Tho conical hat craft village</h4>
-                      <p class="card-text">Besides the rich beauty that nature offers, Can Tho is also a place known by the rich diversity of traditional craft villages handed down from generations. One of the famous craft villages is the conical hat craft village in Thoi Tan A hamlet, Thoi Lai district, Can Tho, with a long history of more than 70 years.</p>
+                      <h4 class="card-title">conical hat craft village</h4>
+                      <p class="card-text">Can Tho is also a place known by the rich diversity of traditional craft villages handed down from generations. One of the famous craft villages is the conical hat craft village in Thoi Tan A hamlet, Thoi Lai district, Can Tho</p>
 
                     </div>
                   </div>
@@ -255,8 +254,8 @@ include 'header.php';
                     <img class="img-thumbnail" alt="100%x280"
                       src="image_DTB/chiếu.jpg">
                     <div class="card-body">
-                      <h4 class="card-title">Dinh Yen mat weaving village - Dong Thap</h4>
-                      <p class="card-text">Next to the vast Hau River of the rich Mekong Delta, there is a very old mat weaving village and a market of more than 100 years old in Lap Vo district, Dong Thap province. Dinh Yen mat market is also known as a "ghost" market by the locals because of its rather strange activities!</p>
+                      <h4 class="card-title">Dinh Yen mat weaving village</h4>
+                      <p class="card-text">Next to the vast Hau River of the rich Mekong Delta.This place is also the "cradle" of the famous traditional embroidery craft everywhere Dinh Yen mat market is also known as a "ghost" market by the locals because of its rather strange activities!</p>
                     </div>
                   </div>
                 </div>

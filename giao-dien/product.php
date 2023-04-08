@@ -19,7 +19,7 @@ include 'connect_db.php';
                 <a style="display: block;color: white;text-align: center;padding: 16px;text-decoration: none;"
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:370px ; height :250px; border: 5px solid Violet;' alt='Image'><br><br>
+                        style='width:420px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>

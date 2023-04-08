@@ -12,7 +12,7 @@ include 'header.php';
 
                 <div class="col">
 
-                    <img src='image_DTB/CEO.jpg' class='img-responsive' alt='Image'>
+                    <img src='image_DTB/CEO.jpg' class='img-responsive' alt='Image' width="100%">
                 </div>
                 <div class="col">
                     <h5 class="card-title">

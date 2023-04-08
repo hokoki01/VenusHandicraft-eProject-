@@ -25,19 +25,30 @@
                 $password = $_POST['password'];
                 $enter_password = $_POST['enter_password'];
             }
-            if ($password == $enter_password) {
+            if ($password != $enter_password || $password != '@[A-Z][a-z][0-9][^\w]@') {
+                echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+
+            } else {
                 $sql = "INSERT INTO admin (Id ,email, name, password) VALUES ('1','$email', '$name', '$password')";
 
                 if (mysqli_query($connect, $sql)) {
                     header('location: sign_in.php');
                 }
-            } else {
-                echo "vui lòng nhập lại đúng password !";
+                
             }
 
         }
         ?>
-        <table>
+        $password = 'user-input-pass';// Validate password strength
+        $uppercase = preg_match('@[A-Z]@', $password);
+        $lowercase = preg_match('@[a-z]@', $password);
+        $number = preg_match('@[0-9]@', $password);
+        $specialChars = preg_match('@[^\w]@', $password);
+        if(!
+
+        $uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+            echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.'
+            ; }else{ echo 'Strong password.' ; } <table>
             <h2>SIGN UP</h2>
             <tr>
                 <th>email or phone number : </th>
@@ -59,11 +70,11 @@
                 <td><input type="password" placeholder="Enter the password" name="enter_password" required></td>
             </tr>
 
-        </table>
-        <button type="submit">sign up</button><br><br>
+            </table>
+            <button type="submit">sign up</button><br><br>
 
-        bạn đã có tài khoản ?
-        <a href="sign_in.php">sign in</a>
+            bạn đã có tài khoản ?
+            <a href="sign_in.php">sign in</a>
     </form>
     <style>
         body {

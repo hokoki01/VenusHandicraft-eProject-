@@ -106,7 +106,7 @@
   </nav>
 
   </div>
-  <br><br><br>
+
   <?php
   if (isset($_REQUEST['ok'])) {
     $search = addslashes($_GET['search']);
@@ -114,6 +114,8 @@
       echo "Yeu cau nhap du lieu vao o trong";
     } else {
       include 'connect_db.php';
+      echo '<br><br><br>';
+      echo "&ensp;&ensp;<h3>Are you looking for this product?</h3>";
       $sql = "SELECT * FROM product where Title like '%$search%'";
       $result = mysqli_query($connect, $sql);
       while ($row = mysqli_fetch_array($result)) {
