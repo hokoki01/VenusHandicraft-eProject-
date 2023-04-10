@@ -4,6 +4,32 @@ include 'header.php';
 ?>
 
 <br><br><br><br>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .img-magnifier-container {
+        position: relative;
+    }
+
+    .img-magnifier-glass {
+        position: absolute;
+        border: 3px solid #000;
+        border-radius: 50%;
+        cursor: none;
+        /*Set the size of the magnifier glass:*/
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+
+
+
+
+
+
 <div class="container">
     <table class="table table-hover table-bordered">
         <tbody>
@@ -26,9 +52,11 @@ include 'header.php';
                     <div class="row g-3">
 
                         <div class="col">
+                            <div class="img-magnifier-container">
+                                <img id="myimage" src='image_DTB/<?= $product['Image']; ?>' class='img-responsive'
+                                    style='width:100%;border: 5px solid green;' alt='Image'>
+                            </div>
 
-                            <img src='image_DTB/<?= $product['Image']; ?>' class='img-responsive' style='width:100%;border: 5px solid green;'
-                                alt='Image'>
                         </div>
                         <div class="col">
                             <h5 class="card-title">
@@ -38,48 +66,16 @@ include 'header.php';
                                     <div class="jumbotron">
                                         <!-- for page header -->
                                         <h4 style="color: green">PRODUCT NAME</h4><br>
-                                            <h4 style="color: blue ;">
-                                                <?= $product['Title']; ?>
+                                        <h4 style="color: blue ;">
+                                            <?= $product['Title']; ?>
 
-                                            </h4><br><br>
-                                        
+                                        </h4><br><br>
+
                                         <h4 style="color: green">PRODUCT ATTRIBUTES</h4><br>
                                         <p style="color: #000">
                                             <?= $product['Description']; ?>
                                         </p>
                                         <br>
-                                        <h4 style="color: green">SOME OUTSTANDING ARTISTS</h4><br>
-                                        <a
-                                            href="https://langngheviet.com.vn/lang-nghe-nghe-nhan/nghe-nhan-do-van-cuong-nguoi-phat-huy-the-manh-lang-nghe-truyen-thong.html35816">
-                                            <img src="image_DTB/hkd-do-van-cuong-202022110518235.jpg"
-                                                alt="nghệ nhân Đặng Ích Hoàn"
-                                                style='width:20%; height : 100px; border-radius:50%;'>&ensp;&ensp;&ensp;&ensp;&ensp;
-                                        </a>
-                                        <a
-                                            href="https://congthuong.vn/nghe-nhan-dang-ich-han-say-nghe-va-dong-gop-lon-gin-giu-nghe-130374.html">
-                                            <img src="image_DTB/DIHan.jpg" alt="nghệ nhân Đặng Ích Hân"
-                                                style='width:20%; height : 100px;border-radius:50%;'>&ensp;&ensp;&ensp;&ensp;&ensp;
-                                        </a>
-                                        <a
-                                            href="https://cand.com.vn/Ly-luan/nghe-nhan-uu-tu-nguyen-ba-chau-khong-dung-tai-nang-de-truc-loi-i663619/">
-                                            <img src="image_DTB/NBC.jpg" alt="nghệ nhân Nguyễn Bá Châu"
-                                                style='width:20%; height : 100px;border-radius:50%;'><br><br>
-                                        </a>
-                                        <a
-                                            href="https://congthuong.vn/nghe-nhan-nguyen-duy-hung-moi-san-pham-kim-hoan-la-mot-tac-pham-nghe-thuat-147248.html">
-                                            <img src="image_DTB/NDH.jpg" alt="nghệ nhân Nguyễn Duy Hưng"
-                                                style='width:20%; height : 100px;border-radius:50%;'>&ensp;&ensp;&ensp;&ensp;&ensp;
-                                        </a>
-                                        <a
-                                            href="https://congthuong.vn/nghe-nhan-nguyen-tran-hiep-lam-giau-bang-trach-nhiem-va-dam-me-130370.html">
-                                            <img src="image_DTB/NTH.jpg" alt="nghệ nhân Nguyễn Trần Hiệp"
-                                                style='width:20%; height : 100px;border-radius:50%;'>&ensp;&ensp;&ensp;&ensp;&ensp;
-                                        </a>
-                                        <a
-                                            href="https://congthuong.vn/nghe-nhan-tran-duy-mong-ban-tay-vang-nghe-kim-hoan-xu-hue-149371.html">
-                                            <img src="image_DTB/TDM.jpg" alt="nghệ nhân Trần Duy Mong "
-                                                style='width:20%; height : 100px;border-radius:50%;'>&ensp;&ensp;&ensp;&ensp;&ensp;
-                                        </a>
                                     </div>
                                 </div>
 
@@ -95,3 +91,49 @@ include 'header.php';
         </tbody>
     </table>
 </div>
+<script>
+    function magnify(imgID, zoom) {
+        var img, glass, w, h, bw;
+        img = document.getElementById(imgID);
+        glass = document.createElement("DIV");
+        glass.setAttribute("class", "img-magnifier-glass");
+        img.parentElement.insertBefore(glass, img);
+        glass.style.backgroundImage = "url('" + img.src + "')";
+        glass.style.backgroundRepeat = "no-repeat";
+        glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+        bw = 3;
+        w = glass.offsetWidth / 2;
+        h = glass.offsetHeight / 2;
+        glass.addEventListener("mousemove", moveMagnifier);
+        img.addEventListener("mousemove", moveMagnifier);
+        glass.addEventListener("touchmove", moveMagnifier);
+        img.addEventListener("touchmove", moveMagnifier);
+        function moveMagnifier(e) {
+            var pos, x, y;
+            e.preventDefault();
+            pos = getCursorPos(e);
+            x = pos.x;
+            y = pos.y;
+            if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
+            if (x < w / zoom) { x = w / zoom; }
+            if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
+            if (y < h / zoom) { y = h / zoom; }
+            glass.style.left = (x - w) + "px";
+            glass.style.top = (y - h) + "px";
+            glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+        }
+        function getCursorPos(e) {
+            var a, x = 0, y = 0;
+            e = e || window.event;
+            a = img.getBoundingClientRect();
+            x = e.pageX - a.left;
+            y = e.pageY - a.top;
+            x = x - window.pageXOffset;
+            y = y - window.pageYOffset;
+            return { x: x, y: y };
+        }
+    }
+</script>
+<script>
+    magnify("myimage", 3);
+</script>

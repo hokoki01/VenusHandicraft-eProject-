@@ -19,9 +19,6 @@ include 'connect_db.php';
 </style>
 
 <h1 class="text">PRODUCT WOOD</h1>
-<div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; ">
-    <!-- <h2> Wood products</h2> -->
-</div>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 
@@ -34,10 +31,10 @@ include 'connect_db.php';
         while ($row = mysqli_fetch_array($result)) {
             ?>
             <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
-                <a style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none;"
+                <a 
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:430px ; height :300px; border: 5px solid yellow;' alt='Image'><br><br>
+                        style='width:470px ; height :300px; border: 5px solid yellow;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>

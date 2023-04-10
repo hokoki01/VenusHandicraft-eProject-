@@ -5,35 +5,35 @@ include 'header.php';
 <!-- slider images -->
 
 
-      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+      aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
 
-        <div class="carousel-inner">
-          <div class="carousel-item c-item" data-bs-interval="10000">
-            <img src="Images/carousel1.jpg" class="d-block w-100 c-img" alt="img1">
-          </div>
-          <div class="carousel-item active c-item" data-bs-interval="2000">
-            <img src="Images/pottery-souvenir-traditional-art.jpg" class="d-block w-100 c-img" alt="img2">
-          </div>
-          <div class="carousel-item c-item">
-            <img src="Images/indian-handicrafts.jpg" class="d-block w-100 c-img" alt="img3">
-          </div>
-        </div>
+  <div class="carousel-inner">
+    <div class="carousel-item c-item" data-bs-interval="10000">
+      <img src="Images/carousel1.jpg" class="d-block w-100 c-img" alt="img1">
+    </div>
+    <div class="carousel-item active c-item" data-bs-interval="2000">
+      <img src="Images/pottery-souvenir-traditional-art.jpg" class="d-block w-100 c-img" alt="img2">
+    </div>
+    <div class="carousel-item c-item">
+      <img src="Images/indian-handicrafts.jpg" class="d-block w-100 c-img" alt="img3">
+    </div>
+  </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
 
@@ -57,7 +57,7 @@ include 'header.php';
         <!-- link để đọc đc thêm -->
         <a href="about.php">Read more</a>
       </div>
-      <div class="col-md-6 col-sm-12">  
+      <div class="col-md-6 col-sm-12">
         <img src="Images/aboutUsImg.jpg" style="height:100%;width:100%;object-fit:cover;" alt="alter" width="650px">
       </div>
     </div>
@@ -149,11 +149,12 @@ include 'header.php';
 
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/cói.jpg" >
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/cói.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Kim Son sedge village</h4>
-                      <p class="card-text">Kim Son sedge village has long been famous for sedge cultivation and sedge making with a history of more than 100 years. Products of this most famous traditional craft village in Vietnam are increasingly popular because of their diversity.</p>
+                      <p class="card-text">Kim Son sedge village has long been famous for sedge cultivation and sedge
+                        making with a history of more than 100 years. Products of this most famous traditional craft
+                        village in Vietnam are increasingly popular because of their diversity.</p>
 
                     </div>
 
@@ -161,22 +162,24 @@ include 'header.php';
                 </div>
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/tc.jpg" >
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/tc.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Phu Yen bottle basket village</h4>
-                      <p class="card-text">Phu Yen's bottle basket has the special feature of using only local ingredients. According to local people, bamboo grown on Phu Yen soil has good water resistance, toughness and has a very good source of oat oil when plastering baskets</p>
+                      <p class="card-text">Phu Yen's bottle basket has the special feature of using only local
+                        ingredients. According to local people, bamboo grown on Phu Yen soil has good water resistance,
+                        toughness and has a very good source of oat oil when plastering baskets</p>
 
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 mb-3" >
+                <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/trống.jpg">
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/trống.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Doi Tam Drum Village</h4>
-                      <p class="card-text">Doi Tam drum village is very famous because of its 1000-year history of making drums with many famous craftsmen throughout the region. Accordingly, the drum-making profession here is passed down from father to son </p>
+                      <p class="card-text">Doi Tam drum village is very famous because of its 1000-year history of
+                        making drums with many famous craftsmen throughout the region. Accordingly, the drum-making
+                        profession here is passed down from father to son </p>
                     </div>
                   </div>
                 </div>
@@ -188,11 +191,12 @@ include 'header.php';
 
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/GS.jpg">
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/GS.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Bat Trang ceramics</h4>
-                      <p class="card-text">Bat Trang pottery is a product that converges the soul and quintessence of Vietnamese culture. Bat Trang ceramics, from designs, glazes, drawings to embossed details, are carefully researched and created by Bat Trang artisans.</p>
+                      <p class="card-text">Bat Trang pottery is a product that converges the soul and quintessence of
+                        Vietnamese culture. Bat Trang ceramics, from designs, glazes, drawings to embossed details, are
+                        carefully researched and created by Bat Trang artisans.</p>
 
                     </div>
 
@@ -200,22 +204,24 @@ include 'header.php';
                 </div>
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/lụa.jpg">
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/lụa.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Van Phuc Silk Village </h4>
-                      <p class="card-text">Van Phuc Silk Village is the most concentrated part of the old Ha Dong Silk Village, which is very famous and has gone into poetry, music and painting as a traditional cultural beauty. This is one of the oldest craft villages in Vietnam. </p>
+                      <p class="card-text">Van Phuc Silk Village is the most concentrated part of the old Ha Dong Silk
+                        Village, which is very famous and has gone into poetry, music and painting as a traditional
+                        cultural beauty. This is one of the oldest craft villages in Vietnam. </p>
 
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/tranh.png">
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/tranh.png">
                     <div class="card-body">
                       <h4 class="card-title">Dong Ho folk painting village</h4>
-                      <p class="card-text">The East Lake Painting Village in Bac Ninh has long been famous for its valuable and unique products. This is also a place that attracts thousands of tourists every year to learn a little about the traditional craft </p>
+                      <p class="card-text">The East Lake Painting Village in Bac Ninh has long been famous for its
+                        valuable and unique products. This is also a place that attracts thousands of tourists every
+                        year to learn a little about the traditional craft </p>
 
                     </div>
                   </div>
@@ -228,11 +234,12 @@ include 'header.php';
 
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/đá.jpg">
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/đá.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Non Nuoc stone art village</h4>
-                      <p class="card-text">Visiting Non Nuoc stone craft village, you not only discover an extremely attractive tourist destination in Da Nang with a peaceful space at the foot of Ngu Hanh Son mountain, but also admire the ingenuity and meticulousness of artisans.</p>
+                      <p class="card-text">Visiting Non Nuoc stone craft village, you not only discover an extremely
+                        attractive tourist destination in Da Nang with a peaceful space at the foot of Ngu Hanh Son
+                        mountain, but also admire the ingenuity and meticulousness of artisans.</p>
 
                     </div>
 
@@ -240,22 +247,24 @@ include 'header.php';
                 </div>
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/nón.jpg">
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/nón.jpg">
                     <div class="card-body">
                       <h4 class="card-title">conical hat craft village</h4>
-                      <p class="card-text">Can Tho is also a place known by the rich diversity of traditional craft villages handed down from generations. One of the famous craft villages is the conical hat craft village in Thoi Tan A hamlet, Thoi Lai district, Can Tho</p>
+                      <p class="card-text">Can Tho is also a place known by the rich diversity of traditional craft
+                        villages handed down from generations. One of the famous craft villages is the conical hat craft
+                        village in Thoi Tan A hamlet, Thoi Lai district, Can Tho</p>
 
                     </div>
                   </div>
                 </div>
                 <div class="col-md-4 mb-3">
                   <div class="card">
-                    <img class="img-thumbnail" alt="100%x280"
-                      src="image_DTB/chiếu.jpg">
+                    <img class="img-thumbnail" alt="100%x280" src="image_DTB/chiếu.jpg">
                     <div class="card-body">
                       <h4 class="card-title">Dinh Yen mat weaving village</h4>
-                      <p class="card-text">Next to the vast Hau River of the rich Mekong Delta.This place is also the "cradle" of the famous traditional embroidery craft everywhere Dinh Yen mat market is also known as a "ghost" market by the locals because of its rather strange activities!</p>
+                      <p class="card-text">Next to the vast Hau River of the rich Mekong Delta.This place is also the
+                        "cradle" of the famous traditional embroidery craft everywhere Dinh Yen mat market is also known
+                        as a "ghost" market by the locals because of its rather strange activities!</p>
                     </div>
                   </div>
                 </div>
@@ -328,20 +337,16 @@ include 'header.php';
 <!-- Get in touch text -->
 <div class="container">
   <div class="row">
-    <div class="col-md-12 col-sm-12" style="text-align:left; padding:30px;">
-      <h3><strong>You want to update news about us ?</strong></h3><br>
-      <h5>Sign up to stay up to date with the latest on promotions, products and events.</h5>
 
+    <div class="col-sm-6">
+      <h3><strong>You want to update news about us ?</strong></h3><br>
+      <h5>Register now here !</h5>
       <form class="form" method="post" action="Home.php">
-        <input type="text" class="form__field"
-          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
-          placeholder="Enter name" required name="name" />
         <input type="email" class="form__field"
-          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
-          placeholder="Enter Email" required  name="email"/>
-        <input type="number" class="form__field"
-          style=" width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
-          placeholder="Enter phone" required name="phone" />
+          style=" width: 70%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter Email" required name="email" />
+
+        <br>
         <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
       </form>
 
@@ -349,30 +354,21 @@ include 'header.php';
 
 
     </div>
+    <div class="col-sm-6">
+      <img src="image_DTB/submit.png" alt="submit" width="100%" height="200px">
+    </div>
   </div>
 </div>
+
 <?php
 include 'connect_db.php';
-$name = $email = $phone = $Address = $Note = "";
+$email = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (isset($_POST["name"])) {
-    $name = $_POST['name'];
-  }
   if (isset($_POST["email"])) {
     $email = $_POST['email'];
   }
-  if (isset($_POST["Email"])) {
-    $Email = $_POST['Email'];
-  }
-  if (isset($_POST["phone"])) {
-    $phone = $_POST['phone'];
-  }
-  $sql = "INSERT INTO user (name,email,phone) VALUES ('$name', '$email','$phone')";
-
-  if (mysqli_query($connect, $sql)) {
-    echo "thêm dữ liệu thành công";
-    header('location : Home.php');
-  }
+  $sql = "INSERT INTO user (email) VALUES ('$email')";
+  mysqli_query($connect, $sql);
 }
 ?>
 

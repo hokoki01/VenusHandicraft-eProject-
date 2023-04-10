@@ -21,9 +21,9 @@ include 'connect_db.php';
 
 <h1 class="text">PRODUCT ALUMNIUM</h1>
 <!-- <br><br><br> -->
-<div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; ">
+<!-- <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; "> -->
     <!-- <h2> Aluminium products</h2> -->
-</div>
+<!-- </div> -->
 
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 

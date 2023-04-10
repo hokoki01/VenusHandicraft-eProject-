@@ -19,9 +19,9 @@ include 'connect_db.php';
 </style>
 
 <h1 class="text">PRODUCT GLASS</h1>
-<div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; ">
+<!-- <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; "> -->
     <!-- <h2> Glass products</h2> -->
-</div>
+<!-- </div> -->
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 

@@ -6,7 +6,7 @@ require 'connect_db.php';
 
 
 <div class="container mt-4">
-  <div class="container-fluid"> 
+  <div class="container-fluid">
     <div class="row">
       <div class="col-sm bg-warning text-white p-3">
         <h1>Product</h1>
@@ -57,7 +57,7 @@ require 'connect_db.php';
   </div>
 
   <br><br><br>
-  <?php include('message.php'); ?>
+
 
   <div class="row">
     <div class="col-md-12">
@@ -66,7 +66,13 @@ require 'connect_db.php';
       <h4>Product Details
         <a href="add_new_product.php" class="btn btn-primary float-end">Add Product</a>
       </h4>
+      <?php include('message.php');
+      $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 9;
+      $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+      $offset = ($current_page - 1) * $item_per_page;
+      $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
     </div>
+
     <!-- <div class="card-body"> -->
 
     <table class="table table-bordered table-striped" style="border : 1 solid black;">
@@ -82,8 +88,10 @@ require 'connect_db.php';
       </thead>
       <tbody>
         <?php
-        $query = "SELECT * FROM product";
+
+        $query = "SELECT * FROM product LIMIT " . $item_per_page . " OFFSET $offset";
         $query_run = mysqli_query($connect, $query);
+
 
         if (mysqli_num_rows($query_run) > 0) {
           foreach ($query_run as $product) {
@@ -120,10 +128,28 @@ require 'connect_db.php';
         } else {
           echo "<h5> No Record Found </h5>";
         }
+
+
+
         ?>
 
       </tbody>
+
     </table>
+    <div class="col-md-12">
+      <?php
+      $total_records = $total_records->num_rows;
+      $total_page = ceil($total_records / $item_per_page);
+      for ($num = 1; $num <= $total_page; $num++) {
+        ?>
+        <a class="btn btn-outline-success float-end" href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>"
+          class="btn btn-outline-success float-end"><?= $num ?></a>
+        <?php
+
+      }
+
+      ?>
+    </div>
 
     <!-- </div> -->
     <!-- </div> -->
