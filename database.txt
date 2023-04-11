@@ -11,7 +11,7 @@ password varchar (30)
 
 create table user (
 Id int PRIMARY KEY AUTO_INCREMENT,
-Fullname varchar (50),
+Name varchar (50),
 Email varchar(150),
 phone varchar(50)
 );

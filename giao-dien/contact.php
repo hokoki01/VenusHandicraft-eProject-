@@ -44,8 +44,9 @@ include 'header.php';
                 if (isset($_POST["Note"])) {
                     $Note = $_POST['Note'];
                 }
-                $sql = "INSERT INTO contact (Name,Email,Phone,Note) VALUES ('$Name', '$Email','$Phone','$Note')";
-
+                $sql = "INSERT INTO contact (Name,Email,Phone,Note) VALUES ('$Name', '$Email','$Phone','$Note') ";
+                $sql1 = "INSERT INTO user (Name,Email,Phone) VALUES ('$Name', '$Email','$Phone')";
+                mysqli_query($connect, $sql1);
                 if (mysqli_query($connect, $sql)) {
                     echo "thêm dữ liệu thành công";
                 }
@@ -67,7 +68,7 @@ include 'header.php';
                 <textarea name="Note" id="Note" style="width: 100%;height : 120px;" placeholder="Note"
                     required></textarea>
                 <div class="col-md-12 mx-auto ">
-                    <button type="sunmit" values="send" class="btn btn-success">send</button>
+                    <button type="sunmit" id="submit" values="send" class="btn btn-success">send</button>
                 </div>
             </form>
         </div>

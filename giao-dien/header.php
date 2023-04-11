@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Handicrafts</title>
   <link rel="stylesheet" href="styleIndex.css">
   <link rel="stylesheet" href="styleHomepage.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -96,15 +96,18 @@
 
         <form class="d-flex" action="header.php" method="get">
           <input class="inputBOX" style="width:300px" type="text" name="search" placeholder=" Type Here..." required />
-          <button class="submitBTN" type="submit" name="ok"><i class="bi bi-search"></i></button>
+          <button class="submitBTN" id="submit" type="submit" name="ok"><i class="bi bi-search"></i></button>
         </form>
 
-      </div>
-      <!-- </div>
-        </div> -->
-    </div>
-  </nav>
 
+      </div>
+  </nav>
+  <script language="javascript">
+    var button = document.getElementById("submit");
+    button.onclick = function () {
+      alert("submitt success !");
+    }
+  </script>
   </div>
 
   <?php
@@ -136,4 +139,19 @@
     }
   }
   ?>
- 
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+  </div>

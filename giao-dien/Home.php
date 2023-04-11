@@ -347,7 +347,13 @@ include 'header.php';
           placeholder="Enter Email" required name="email" />
 
         <br>
-        <button type="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
+        <button type="submit" id = "submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
+        <script language="javascript">
+            var button = document.getElementById("submit");
+            button.onclick = function(){
+                alert("submitt success !");
+            }
+        </script>
       </form>
 
       <br>
