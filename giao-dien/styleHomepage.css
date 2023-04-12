@@ -214,13 +214,7 @@ h1,h2,h3,h4{
 
 
 /* nền cho phần "About Us" */
- .bg-indigo{
-    /* background-color: #ffffff; */
-    padding: 55px 50px;
-    text-indent: 20px;
-    text-align:justify;
- }
- 
+
 .col-md-4{
     padding: 10px;
     text-align: center;
@@ -356,28 +350,29 @@ footer{
     flex-wrap: wrap;
 }
 
-footer .container{
+footer .wrapper{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-footer .container .noi-dung{
+footer .wrapper .noi-dung{
     margin-right: 30px;
 }
 
-footer  .container .noi-dung.about{
-    width:40%;
+footer  .wrapper .noi-dung.about{
+    width:35%;
+    text-align: justify;
 }
-footer .container .noi-dung.about h2{
+footer .wrapper .noi-dung.about h2{
     position: relative;
     color: #fff;
     font-weight: 500;
     margin-bottom: 15px;
 }
 /* underline for text */
-footer .container .noi-dung.about h2:before{
+footer .wrapper .noi-dung.about h2:before{
     content: '';
     position: absolute;
     bottom: -5px;
@@ -387,13 +382,16 @@ footer .container .noi-dung.about h2:before{
     background: #e6cc00;
 }
 
-footer .container .noi-dung.about p{
+footer .wrapper .noi-dung.about p{
     color: #999;
 }
 
 .social-icon{
     margin-top: 20px;
     display: flex;
+}
+ul.social-icon{
+    padding-left: 0px;
 }
 
 .social-icon li {
@@ -411,6 +409,7 @@ footer .container .noi-dung.about p{
     margin-right: 10px;
     text-decoration: none;
     border-radius: 4px;
+    
 }
 /* hover cho icon */
 .social-icon li a:hover{
@@ -444,6 +443,7 @@ footer .container .noi-dung.about p{
      height: 2px;
      background: #e6cc00;
  }
+ 
 .links{
     position: relative;
     width: 25%;
@@ -500,7 +500,9 @@ footer .container .noi-dung.about p{
     font-size: 20px;
     margin-right: 10px;
 }
-
+ul.info{
+    padding-left: 0px;
+}
 .contact .info li span{
     color: #999;
 }
@@ -553,14 +555,37 @@ footer .container .noi-dung.about p{
         padding: 40px;
         
     }
-    footer .container{
+    footer .wrapper{
         flex-direction: column;
     }
-    footer .container .noi-dung{
+    footer .wrapper .noi-dung{
         margin-right: 0;
         margin-bottom: 40px;
     }
-    footer .container, .noi-dung.about, .links, .contact{
+    footer .wrapper, .noi-dung.about, .links, .contact{
         width: 100%;
     }
+}
+
+
+.main{
+    padding: 20px;
+    
+    background-color: #1d1d19;
+    color: #999;
+}
+
+.policy p{
+    color: #999;
+    text-align:justify;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: larger;
+}
+
+.policy2 a :hover{
+    text-decoration-line: underline;
+    text-decoration-color: #e6cc00;
+    font-size:300px;
 }

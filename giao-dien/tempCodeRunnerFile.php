@@ -1,3 +1,4 @@
+<?php
 <!DOCTYPE html>
 <html lang="en">
 
@@ -128,7 +129,6 @@
               href="product_detail.php?Id=<?= $row['Id']; ?>">
               <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
                 style='width:430px ; height :300px; border: 5px solid blue;' alt='Image'><br><br>
-  
               <h4>
                 <?php echo $row["Title"]; ?>
               </h4>
@@ -141,4 +141,3 @@
     }
   }
   ?>
- 
