@@ -40,16 +40,12 @@ include 'header.php';
 <section class="hidden">
   <!-- About Us của cty -->
   <div class="container ">
-  <div class="container ">
     <!-- bootstrap "container" sẽ cho content ở giữa màn hình  -->
-    <div class="row mt-3">
-      <div class="col-md-12 fw-bold">
     <div class="row mt-3">
       <div class="col-md-12 fw-bold">
         <h1>Handicrafts</h1>
         <br>
       </div>
-      <div class="col-md-6 col-sm-5">
       <div class="col-md-6 col-sm-5">
         <br>
         <p>Incepted in 2003, we, Venus Handicrafts, have achieved a remarkable position in the industry for
@@ -489,13 +485,14 @@ include 'header.php';
       <form class="form" method="post" action="Home.php">
           <input type="text" required name="email" name="email" class="form-control" placeholder=" Type your email here ...">
 
-          <button type="submit" id="submit" onclick="submit()" class="btn btn-warning" name="BTNsubmit">Subscribe</button>
-          </form>
-        <script>
-          function submit() {
-            alert("submit success !");
-          }
-          submit();
+          <button type="submit" id="submit" style="color:#e2e2e2" class="btn btn-warning ">Submit</button>
+      </form>
+
+      <script language="javascript">
+            var button = document.getElementById("submit");
+            button.onclick = function(){
+                alert("submitt success !");
+            }
         </script>
   
 
