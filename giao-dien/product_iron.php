@@ -4,14 +4,14 @@ include 'connect_db.php';
 ?>
 <!-- <br><br><br> -->
 <style>
-    .text {
-        background: url(image_DTB/b.png) no-repeat center center fixed;
+    .product-theme3 {
+        background: url(Images/theme3.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
-        height: 300px;
+        height: 350px;
         color: white;
         padding-top: 150px;
         text-align: center;
@@ -19,7 +19,7 @@ include 'connect_db.php';
     }
 </style>
 
-<h1 class="text">PRODUCT IRON</h1>
+<h1 class="product-theme3">PRODUCT IRON</h1>
 <!-- <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; "> -->
     <!-- <h2> Iron products</h2> -->
 <!-- </div> -->
@@ -38,7 +38,7 @@ include 'connect_db.php';
                 <a style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none;"
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:430px ; height :300px; border: 5px solid white;' alt='Image'><br><br>
+                        style='width:350px ; height :350px; border: 5px solid white;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>

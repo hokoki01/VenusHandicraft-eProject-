@@ -3,14 +3,14 @@ include 'header.php';
 include 'connect_db.php';
 ?>
 <style>
-    .text {
-        background: url(image_DTB/b.png) no-repeat center center fixed;
+    .product-theme {
+        background: url(Images/theme3.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
-        height: 300px;
+        height: 350px;
         color: white;
         padding-top: 150px;
         text-align: center;
@@ -18,7 +18,7 @@ include 'connect_db.php';
     }
 </style>
 
-<h1 class="text">PRODUCT WOOD</h1>
+<h1 class="product-theme">PRODUCT WOOD</h1>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 
@@ -30,17 +30,19 @@ include 'connect_db.php';
         $i = 0;
         while ($row = mysqli_fetch_array($result)) {
             ?>
-            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
+            <div class="container">
+            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float:left;">
                 <a 
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:470px ; height :300px; border: 5px solid yellow;' alt='Image'><br><br>
+                        style='width:350px ; height :350px; border: 5px solid yellow;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>
                     </h4>
                 </a>
             </li>
+            </div>
             <?php
             $i++;
         }

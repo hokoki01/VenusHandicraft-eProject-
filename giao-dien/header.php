@@ -35,10 +35,11 @@
             }
 
             .inputBOX {
-              
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
               border: solid black 0px;
-              
-              padding: 3px;
+              text-indent: 5px;
+              padding: 5px;
             }
 
             /* xoá hiệu ứng border khi ấn vào ô input */
@@ -75,7 +76,7 @@
             <a class="nav-link active" aria-current="page" href="Home.php">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="D:\VenusHandicraft(eProject)\giao-dien\product.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Our Products
             </a>
             <ul class="dropdown-menu">
@@ -148,17 +149,7 @@
   }
   ?>
 
-  <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
 
 
 
