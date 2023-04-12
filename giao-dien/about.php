@@ -2,8 +2,23 @@
 include 'header.php';
 require 'connect_db.php';
 ?>
+<style>
+    .theme {
+        background: url(Images/theme2.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+        color:#FFD300;
+        padding-top: 150px;
+        text-align: center;
+        text-decoration: none;
 
-<br><br><br><br>
+    }
+</style>
+<h1 class="theme">About Us</h1>
 <div class="container">
     <table class="table table-hover table-bordered">
         <tbody>
@@ -19,7 +34,7 @@ require 'connect_db.php';
                     <h5 class="card-title">
                         <div class="container">
                             <div class="jumbotron">
-                                <h4 style="color: green;">ABOUT US</h4><br>
+                                <!-- <h4 style="color: green;">ABOUT US</h4><br> -->
                                 <!-- <p > -->
                                 <div class="accordion" id="accordionExample">
                                     <div class="accordion-item">

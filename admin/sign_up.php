@@ -2,7 +2,6 @@
 
 <head>
     <title>sign up</title>
-    <link rel="stylesheet" href="web.css">
 </head>
 
 <body>

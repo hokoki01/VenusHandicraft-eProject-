@@ -4,28 +4,33 @@ include 'header.php';
 ?>
 <style>
     .text {
-        background: url(image_DTB/b.png) no-repeat center center fixed;
+        background: url(Images/themes.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 300px;
-        color: white;
+        color: #FFD300;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
+
     }
 </style>
 
 <h1 class="text">CONTACT US</h1>
 <div class="container mau">
     <div class="row">
-        <div class="col">
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1dhxgJud_QnSwU2fxYDfaPVQskNyM5Ok&ehbc=2E312F"
-                width="640" height="480"></iframe>
+        <div class="col-sm-12 col-md-6  mt-5">
+            <iframe class="ratio ratio-16x9"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251637.99536054913!2d105.6189039771115!3d9.779291669518413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0629029bf47a3%3A0xd8b03c9f3b378d86!2zUGjDsm5nIEPhuqNuaCBTw6F0IELhuqNvIFbhu4cgJiBDxqEgxJDhu5luZw!5e0!3m2!1svi!2s!4v1680858663348!5m2!1svi!2s"
+                width="640" height="480" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
         </div>
-        <div class="col">
+        <div class="col-sm-12 col-md-6  mt-5">
             <?php
             include 'connect_db.php';
             $Name = $Email = $Phone = $Note = "";
@@ -66,7 +71,8 @@ include 'header.php';
                 <textarea name="Note" id="Note" style="width: 100%;height : 120px;" placeholder="Note"
                     required></textarea>
                 <div class="col-md-12 mx-auto ">
-                    <button type="sunmit" id="submit" onclick="submit()" values="send" class="btn btn-success">send</button>
+                    <button type="sunmit" id="submit" onclick="submit()" values="send"
+                        class="btn btn-success">send</button>
                     <script>
                         function submit() {
                             alert("send success !");
