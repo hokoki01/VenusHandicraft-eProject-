@@ -70,6 +70,64 @@
         <span class="toggler-icon bottom-bar"></span>
       </button>
 
+  <style>
+            /* modify cho navbar */
+            .navbar-nav .nav-item {
+              padding-right: 40px;
+            }
+
+            ul.dropdown-menu.show {
+              margin: 0;
+              padding: 0;
+              /* border-radius:0; */
+            }
+
+            /* cho phần form Search bar */
+            .submitBTN {
+              border-top-right-radius: 30px;
+              border-bottom-right-radius: 30px;
+              color: white;
+              background-color: #FFD300;
+              border: none;
+              width: 40px;
+            }
+
+            .inputBOX {
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+              border: solid black 0px;
+              text-indent: 5px;
+              padding: 5px;
+            }
+
+            /* xoá hiệu ứng border khi ấn vào ô input */
+            input:focus,
+            textarea:focus,
+            select:focus {
+              outline: none;
+            }
+          </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  fixed-top ">
+    <div class="container-fluid">
+      <!-- <div class="row"> -->
+        <!-- <div class="col-sm-12"> -->
+      <a class="navbar-brand" href="Home.php">
+
+        <span style="color: white;font-family: bradley hand,cursive;"><i class="bi bi-scissors"
+            style="color:white"></i>Venus Handicrafts<i class="bi bi-brush" style="color:white"></i></span></a>
+
+      <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
+      </button>
+
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 500px;">
           <li class="nav-item">

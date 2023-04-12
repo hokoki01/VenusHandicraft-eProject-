@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+require 'connect_db.php';
 ?>
 <style>
     .theme {
@@ -18,7 +19,7 @@ include 'header.php';
     }
 </style>
 <h1 class="theme">About Us</h1>
-<div class="container" >
+<div class="container">
     <table class="table table-hover table-bordered">
         <tbody>
 
@@ -33,7 +34,7 @@ include 'header.php';
                     <h5 class="card-title">
                         <div class="container">
                             <div class="jumbotron">
-                                <!-- <h4 style="color: black;">ABOUT US</h4><br> -->
+                                <!-- <h4 style="color: green;">ABOUT US</h4><br> -->
                                 <!-- <p > -->
                                 <div class="accordion" id="accordionExample">
                                     <div class="accordion-item">
@@ -120,7 +121,6 @@ include 'header.php';
         </tbody>
     </table>
 </div>
-
 <?php
 include 'footer.php';
 ?>

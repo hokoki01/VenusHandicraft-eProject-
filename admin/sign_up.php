@@ -2,7 +2,6 @@
 
 <head>
     <title>sign up</title>
-    <link rel="stylesheet" href="web.css">
 </head>
 
 <body>
@@ -40,6 +39,7 @@
 
         }
         ?>
+        <table>
          <table>
             <h2>SIGN UP</h2>
             <tr>
