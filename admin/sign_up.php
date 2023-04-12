@@ -40,6 +40,7 @@
         }
         ?>
         <table>
+         <table>
             <h2>SIGN UP</h2>
             <tr>
                 <th>email or phone number : </th>

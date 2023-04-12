@@ -1,3 +1,4 @@
+
 <?php
 include 'connect_db.php';
 include 'header.php';
@@ -48,8 +49,8 @@ include 'header.php';
                 if (isset($_POST["Note"])) {
                     $Note = $_POST['Note'];
                 }
-                $sql = "INSERT INTO contact (Name,Email,Phone,Note) VALUES ('$Name', '$Email','$Phone','$Note') ";
-                // mysqli_query($connect, $sql);
+                $sql = "INSERT INTO contact (Name,Email,Phone,Note) VALUES ('$Name', '$Email','$Phone','$Note')";
+
                 if (mysqli_query($connect, $sql)) {
                     echo "thêm dữ liệu thành công";
                 }
@@ -65,20 +66,13 @@ include 'header.php';
                 <input type="text" Id="Email" placeholder="Email" name="Email" required
                     style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                 <label for="Phone">Phone : </label>
-                <input type="number" Id="Phone" placeholder="Phone" name="Phone" required
+                <input type="text" Id="Phone" placeholder="Phone" name="Phone" required
                     style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
                 <label for="Note">Note : </label>
                 <textarea name="Note" id="Note" style="width: 100%;height : 120px;" placeholder="Note"
                     required></textarea>
                 <div class="col-md-12 mx-auto ">
-                    <button type="sunmit" id="submit" onclick="submit()" values="send"
-                        class="btn btn-success">send</button>
-                    <script>
-                        function submit() {
-                            alert("send success !");
-                        }
-                        submit();
-                    </script>
+                    <button type="sunmit" values="send" class="btn btn-success">send</button>
                 </div>
             </form>
         </div>

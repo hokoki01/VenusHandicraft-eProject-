@@ -485,13 +485,14 @@ include 'header.php';
       <form class="form" method="post" action="Home.php">
           <input type="text" required name="email" name="email" class="form-control" placeholder=" Type your email here ...">
 
-          <button type="submit" id="submit" onclick="submit()" class="btn btn-warning" name="BTNsubmit">Subscribe</button>
-          </form>
-        <script>
-          function submit() {
-            alert("submit success !");
-          }
-          submit();
+          <button type="submit" id="submit" style="color:#e2e2e2" class="btn btn-warning ">Submit</button>
+      </form>
+
+      <script language="javascript">
+            var button = document.getElementById("submit");
+            button.onclick = function(){
+                alert("submitt success !");
+            }
         </script>
   
 
