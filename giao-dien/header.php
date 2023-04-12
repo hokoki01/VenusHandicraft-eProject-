@@ -96,24 +96,16 @@
         </ul>
 
         <form class="d-flex" action="header.php" method="get">
-<<<<<<< HEAD
           <input class="inputBOX" style="width:282px" type="text" name="search" placeholder=" Type Here..." required />
-          <button class="submitBTN" type="submit" name="ok"><i class="bi bi-search"></i></button>
+          <button class="submitBTN" id="submit" type="submit" name="ok"><i class="bi bi-search"></i></button>
+         
         </form>
+
 
       </div>
       <!-- </div> -->
         <!-- </div> -->
     </div>
-  </nav>
-=======
-          <input class="inputBOX" style="width:300px" type="text" name="search" placeholder=" Type Here..." required />
-          <button class="submitBTN" id="submit" type="submit" name="ok"><i class="bi bi-search"></i></button>
-        </form>
-
->>>>>>> 6fe3f709ec6e5522841a27ea618e32815d04eeb8
-
-      </div>
   </nav>
   <script language="javascript">
     var button = document.getElementById("submit");
@@ -143,7 +135,6 @@
               href="product_detail.php?Id=<?= $row['Id']; ?>">
               <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
                 style='width:430px ; height :300px; border: 5px solid blue;' alt='Image'><br><br>
-  
               <h4>
                 <?php echo $row["Title"]; ?>
               </h4>
