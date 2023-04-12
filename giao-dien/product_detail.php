@@ -1,35 +1,15 @@
 <?php
 include 'connect_db.php';
 include 'header.php';
+$item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 1;
+$current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+$offset = ($current_page - 1) * $item_per_page;
+$total_records = mysqli_query($connect, "SELECT * FROM artist");
 ?>
-
-<br><br><br><br>
-<style>
-    * {
-        box-sizing: border-box;
-    }
-
-    .img-magnifier-container {
-        position: relative;
-    }
-
-    .img-magnifier-glass {
-        position: absolute;
-        border: 3px solid #000;
-        border-radius: 50%;
-        cursor: none;
-        /*Set the size of the magnifier glass:*/
-        width: 100px;
-        height: 100px;
-    }
-</style>
-
-
-
-
-
-
-
+<br><br><br>
+<div class="container-fluid p-5  text-center text-success">
+    <h2 style="Text-decoration : none;">Product Detail</h2><br>
+</div>
 <div class="container">
     <table class="table table-hover table-bordered">
         <tbody>
@@ -44,7 +24,6 @@ include 'header.php';
                     ?>
                     <div class="card-header">
                         <h4>
-
                             <a href="Home.php" class="btn btn-danger float-end">BACK</a>
                         </h4>
                     </div>
@@ -90,6 +69,157 @@ include 'header.php';
 
         </tbody>
     </table>
+    <div class="container-fluid p-5 bg-success text-white text-center">
+        <h2 style="Text-decoration : none;">Handicrafts are traditional products in Vietnamese craft villages</h2><br>
+        <p>One of the most popular and loved industries in this era. Thanks to the ingenuity and meticulousness of the
+            artisans, they have made very eye-catching finished products. Moreover, this is a very successful branch of
+            the crafting industry. You know, the handicrafts are made 100% by hand and with the whole heart of the
+            artisan.</p>
+    </div>
+    <?php
+    $count = 0;
+    $result = mysqli_query($connect, "SELECT * FROM artist LIMIT " . $item_per_page . " OFFSET $offset");
+    $i = 0;
+    while ($row = mysqli_fetch_array($result)) {
+        ?>
+        <div class="container">
+            <table class="table table-hover table-bordered">
+                <tbody>
+
+
+                    <div class="row g-3">
+
+                        <div class="col">
+                            <br><br>
+                            <a
+                                href="https://www.google.com/search?q=Artist+<?php echo $row['name'] ?>&sourceid=chrome&ie=UTF-8">
+                                <img src='image_DTB/<?php echo $row['image'] ?>' class='img-responsive' alt='Image'
+                                    width="100%"><br><br>
+                                <h1 class="text-success" style="Text-decoration : none; text-align:center;">Artist
+                                    <?php echo $row['name'] ?>
+                                </h1>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <h5 class="card-title">
+                                <div class="container">
+                                    <div class="jumbotron">
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="container mt-5">
+                                                <div class="row">
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header">
+                                                                <button class="accordion-button" type="button"
+                                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                                    Biography
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <?php echo $row['Biography'] ?>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header">
+                                                                <button class="accordion-button collapsed" type="button"
+                                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                                    Career
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <?php echo $row['Career'] ?>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header">
+                                                                <button class="accordion-button collapsed" type="button"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                                                    aria-controls="collapseThree">
+                                                                    Personality
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <?php echo $row['Personality'] ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header">
+                                                                <button class="accordion-button collapsed" type="button"
+                                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                                    aria-expanded="false" aria-controls="collapseFour">
+                                                                    Reviews
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseFour" class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <?php echo $row['Reviews'] ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header">
+                                                                <button class="accordion-button collapsed" type="button"
+                                                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                                    aria-expanded="false" aria-controls="collapseFive">
+                                                                    Honor
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseFive" class="accordion-collapse collapse"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <?php echo $row['Honor'] ?>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <?php
+                                                    $i++;
+    }
+    ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- </div> -->
+                    </div>
+
+                </div>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-12">
+        <h3>xem thêm các nghệ nhân khác tại đây</h3>
+        <?php
+        $total_records = $total_records->num_rows;
+        $total_page = ceil($total_records / $item_per_page);
+
+        for ($num = 1; $num <= $total_page; $num++) {
+                ?>
+                <a href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>" class="btn btn-outline-success "><?= $num ?></a>
+                <?php
+        }
+
+        ?>
+    </div>
+</div>
 </div>
 <script>
     function magnify(imgID, zoom) {

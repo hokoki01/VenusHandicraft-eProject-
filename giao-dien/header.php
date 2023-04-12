@@ -45,12 +45,11 @@
               <li><a class="dropdown-item" href="product_glass.php">Glass</a></li>
               <li><a class="dropdown-item" href="product_brass.php">Brass</a></li>
               <li><a class="dropdown-item" href="product_wood.php">Wood</a></li>
-              <li><a class="dropdown-item" href="product_decorative.php">Handicraft Decorative</a></li>
+              <li><a class="dropdown-item" href="product_decorative.php">Decorative</a></li>
               <li><a class="dropdown-item" href="product_aluminium.php">Aluminium</a></li>
             </ul>
           </li>
           <style>
-            /* modify cho navbar */
             .navbar-nav .nav-item {
               padding-right: 40px;
             }
@@ -58,10 +57,7 @@
             ul.dropdown-menu.show {
               margin: 0;
               padding: 0;
-              /* border-radius:0; */
             }
-
-            /* cho phần form Search bar */
             .submitBTN {
               border-top-right-radius: 30px;
               border-bottom-right-radius: 30px;
@@ -78,8 +74,6 @@
               text-indent: 18px;
               padding: 3px;
             }
-
-            /* xoá hiệu ứng border khi ấn vào ô input */
             input:focus,
             textarea:focus,
             select:focus {
@@ -139,19 +133,4 @@
     }
   }
   ?>
-
-  <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
-
-
   </div>

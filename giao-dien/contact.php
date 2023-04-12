@@ -1,4 +1,3 @@
-
 <?php
 include 'connect_db.php';
 include 'header.php';
@@ -33,7 +32,7 @@ include 'header.php';
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 if (isset($_POST["Name"])) {
-                    $Email = $_POST['Name'];
+                    $Name = $_POST['Name'];
                 }
                 if (isset($_POST["Email"])) {
                     $Email = $_POST['Email'];
@@ -45,8 +44,7 @@ include 'header.php';
                     $Note = $_POST['Note'];
                 }
                 $sql = "INSERT INTO contact (Name,Email,Phone,Note) VALUES ('$Name', '$Email','$Phone','$Note') ";
-                $sql1 = "INSERT INTO user (Name,Email,Phone) VALUES ('$Name', '$Email','$Phone')";
-                mysqli_query($connect, $sql1);
+                // mysqli_query($connect, $sql);
                 if (mysqli_query($connect, $sql)) {
                     echo "thêm dữ liệu thành công";
                 }
@@ -68,7 +66,13 @@ include 'header.php';
                 <textarea name="Note" id="Note" style="width: 100%;height : 120px;" placeholder="Note"
                     required></textarea>
                 <div class="col-md-12 mx-auto ">
-                    <button type="sunmit" id="submit" values="send" class="btn btn-success">send</button>
+                    <button type="sunmit" id="submit" onclick="submit()" values="send" class="btn btn-success">send</button>
+                    <script>
+                        function submit() {
+                            alert("send success !");
+                        }
+                        submit();
+                    </script>
                 </div>
             </form>
         </div>

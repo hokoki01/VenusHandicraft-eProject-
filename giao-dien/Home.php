@@ -347,12 +347,12 @@ include 'header.php';
           placeholder="Enter Email" required name="email" />
 
         <br>
-        <button type="submit" id = "submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
-        <script language="javascript">
-            var button = document.getElementById("submit");
-            button.onclick = function(){
-                alert("submitt success !");
-            }
+        <button type="submit" id="submit" onclick="submit()" class="btn btn-warning" name="BTNsubmit">Subscribe</button>
+        <script>
+          function submit() {
+            alert("submit success !");
+          }
+          submit();
         </script>
       </form>
 
@@ -446,5 +446,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!-- files JavaScripts -->
 <script src="JSHomepage.js"></script>
+
 
 </html>

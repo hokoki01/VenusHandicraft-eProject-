@@ -10,7 +10,7 @@ require 'connect_db.php';
     $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 9;
     $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
     $offset = ($current_page - 1) * $item_per_page;
-    $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
+    $total_records = mysqli_query($connect, "SELECT * FROM contact"); ?>
 
     
       <div class="c">
@@ -19,49 +19,34 @@ require 'connect_db.php';
         <table class="table table-bordered table-striped" style="border : 1 solid black;">
           <thead>
             <tr>
-              <th>ID</th>
-              <!-- <th>Category</th> -->
-              <th>Title</th>
-              <th>Image</th>
-              <th>Description</th>
-              <th>Action</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Note</th>
             </tr>
           </thead>
           <tbody>
             <?php
 
-            $query = "SELECT * FROM product LIMIT " . $item_per_page . " OFFSET $offset";
+            $query = "SELECT * FROM contact LIMIT " . $item_per_page . " OFFSET $offset";
             $query_run = mysqli_query($connect, $query);
 
 
             if (mysqli_num_rows($query_run) > 0) {
-              foreach ($query_run as $product) {
+              foreach ($query_run as $contact) {
                 ?>
                 <tr>
                   <td>
-                    <?= $product['Id']; ?>
-                  </td>
-                  <!-- <td>
-                    <?= $product['Category_id']; ?>
-                  </td> -->
-                  <td>
-                    <?= $product['Title']; ?>
+                    <?= $contact['Name']; ?>
                   </td>
                   <td>
-
-                    <img src='image_DTB/<?= $image = $product['Image']; ?>' class='img-responsive' style='width:20%'
-                      alt='Image'>
+                    <?= $contact['Email']; ?>
                   </td>
                   <td>
-                    <?= $product['Description']; ?>
+                    <?= $contact['Phone']; ?>
                   </td>
                   <td>
-                    <a href="product_view.php?Id=<?= $product['Id']; ?>" class="btn btn-info btn-sm">View</a><br>
-                    <a href="edit_product.php?Id=<?= $product['Id']; ?>" class="btn btn-success btn-sm">Edit</a><br>
-                    <form action="code.php" method="POST" class="d-inline">
-                      <button type="submit" name="delete_student" value="<?= $product['Id']; ?>"
-                        class="btn btn-danger btn-sm">Delete</button>
-                    </form>
+                    <?= $contact['Note']; ?>
                   </td>
                 </tr>
                 <?php

@@ -1,9 +1,10 @@
 <?php
 include 'header.php';
+require 'connect_db.php';
 ?>
 
 <br><br><br><br>
-<div class="container" >
+<div class="container">
     <table class="table table-hover table-bordered">
         <tbody>
 
@@ -105,7 +106,6 @@ include 'header.php';
         </tbody>
     </table>
 </div>
-
 <?php
 include 'footer.php';
 ?>
