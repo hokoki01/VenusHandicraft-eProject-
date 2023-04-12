@@ -2,84 +2,90 @@
 include 'header.php';
 require 'connect_db.php';
 ?>
-<h2 style="text-align:  center;">ADMIN PAGE </h2>
+<div class="container">
+  <div class="container float-end">
+    <!-- <h4>John's Blog</h4> -->
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="admin.php" style = "margin-left: 750px ;">Home</a></li>
 
-
-<div class="container mt-4">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm bg-warning text-white p-3">
-        <h1>Product</h1>
-        <h3 style="text-align:  left;">
-          <?php $result = mysqli_query($connect, "SELECT * FROM product");
-          $i = 0;
-          while ($row = mysqli_fetch_array($result)) {
-            $i++;
-          }
-          echo $i; ?>
-        </h3>
-
-      </div>
-      <div class="col-sm bg-success text-white p-3">
-        <h1>User</h1>
-        <h3 style="text-align:  left;">
-          <?php $result = mysqli_query($connect, "SELECT * FROM user");
-          $i = 0;
-          while ($row = mysqli_fetch_array($result)) {
-            $i++;
-          }
-          echo $i; ?>
-        </h3>
-      </div>
-      <div class="col-sm bg-info text-white p-3">
-        <h1>contact</h1>
-        <h3 style="text-align:  left;">
-          <?php $result = mysqli_query($connect, "SELECT * FROM contact");
-          $i = 0;
-          while ($row = mysqli_fetch_array($result)) {
-            $i++;
-          }
-          echo $i; ?>
-        </h3>
-      </div>
-      <div class="col-sm bg-danger text-white p-3">
-        <h1>Admin</h1>
-        <h3 style="text-align:  left;">
-          <?php $result = mysqli_query($connect, "SELECT * FROM admin");
-          $i = 0;
-          while ($row = mysqli_fetch_array($result)) {
-            $i++;
-          }
-          echo $i; ?>
-        </h3>
-      </div>
-    </div>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<li><a href="Sign_up.php">Register</a></li>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<li><a href="Sign_in.php">Login</a></li>
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<li><a href="logout.php">Logout</a></li>
+    </ul><br>
   </div>
 
-  <br><br><br>
+
+  <!-- <h2 style="text-align:  center;">ADMIN PAGE </h2> -->
 
 
-  <div class="row">
-    <div class="col-md-12">
-      <!-- <div class="card">
-        <div class="card-header"> -->
-      <h4>Product Details
-        <a href="add_new_product.php" class="btn btn-primary float-end">Add Product</a>
-      </h4>
-      <?php include('message.php');
-      $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 9;
-      $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
-      $offset = ($current_page - 1) * $item_per_page;
-      $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
-    </div>
+  <div class="container mt-4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm bg-warning text-white p-3">
+          <h1>Product</h1>
+          <h3 style="text-align:  left;">
+            <?php $result = mysqli_query($connect, "SELECT * FROM product");
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {
+              $i++;
+            }
+            echo $i; ?>
+          </h3>
 
-    <!-- <div class="card-body"> -->
+        </div>
+        <div class="col-sm bg-success text-white p-3">
+          <h1>User</h1>
+          <h3 style="text-align:  left;">
+            <?php $result = mysqli_query($connect, "SELECT * FROM user");
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {
+              $i++;
+            }
+            echo $i; ?>
+          </h3>
+        </div>
+        <div class="col-sm bg-info text-white p-3">
+          <h1>contact</h1>
+          <h3 style="text-align:  left;">
+            <?php $result = mysqli_query($connect, "SELECT * FROM contact");
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {
+              $i++;
+            }
+            echo $i; ?>
+          </h3>
+        </div>
+        <div class="col-sm bg-danger text-white p-3">
+          <h1>Admin</h1>
+          <h3 style="text-align:  left;">
+            <?php $result = mysqli_query($connect, "SELECT * FROM admin");
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {
+              $i++;
+            }
+            echo $i; ?>
+          </h3>
+        </div>
+      </div>
+    </div><br>
+
+    <h4>Product 
+      <a href="add_new_product.php" class="btn btn-primary float-end">Add Product</a>
+    </h4><br>
+    <?php include('message.php');
+    $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 9;
+    $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+    $offset = ($current_page - 1) * $item_per_page;
+    $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
+
+
+    <div class="c">
 
     <table class="table table-bordered table-striped" style="border : 1 solid black;">
       <thead>
         <tr>
           <th>ID</th>
-          <th>Category</th>
+          <!-- <th>Category</th> -->
           <th>Title</th>
           <th>Image</th>
           <th>Description</th>
@@ -100,9 +106,9 @@ require 'connect_db.php';
               <td>
                 <?= $product['Id']; ?>
               </td>
-              <td>
-                <?= $product['Category_id']; ?>
-              </td>
+              <!-- <td>
+                    <?= $product['Category_id']; ?>
+                  </td> -->
               <td>
                 <?= $product['Title']; ?>
               </td>
@@ -115,8 +121,8 @@ require 'connect_db.php';
                 <?= $product['Description']; ?>
               </td>
               <td>
-                <a href="product_view.php?Id=<?= $product['Id']; ?>" class="btn btn-info btn-sm">View</a>
-                <a href="edit_product.php?Id=<?= $product['Id']; ?>" class="btn btn-success btn-sm">Edit</a>
+                <a href="product_view.php?Id=<?= $product['Id']; ?>" class="btn btn-info btn-sm">View</a><br>
+                <a href="edit_product.php?Id=<?= $product['Id']; ?>" class="btn btn-success btn-sm">Edit</a><br>
                 <form action="code.php" method="POST" class="d-inline">
                   <button type="submit" name="delete_student" value="<?= $product['Id']; ?>"
                     class="btn btn-danger btn-sm">Delete</button>
@@ -151,14 +157,10 @@ require 'connect_db.php';
       ?>
     </div>
 
-    <!-- </div> -->
-    <!-- </div> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </div>
-  <!-- </div> -->
-</div>
+  </body>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
+  </html>

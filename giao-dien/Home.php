@@ -341,14 +341,21 @@ include 'header.php';
     <div class="col-md-6 col-sm-12" style="padding-left: 10px;">
       <h3><strong>You want to update news about us ?</strong></h3><br>
       <h5>Register now here !</h5>
-      <form class="form" method="post" action="Home.php" >
-          <input type="text"  name="email" class="form-control" placeholder=" Type your email here ...">
-          
-          <button type="submit" style="color:#e2e2e2" class="btn btn-warning ">Submit</button>
+      <form class="form" method="post" action="Home.php">
+        <input type="email" class="form__field"
+          style=" width: 70%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: none;border-bottom: 2px solid red;"
+          placeholder="Enter Email" required name="email" />
 
-        
+        <br>
+        <button type="submit" id="submit" class="btn btn-warning" name="BTNsubmit">Submit</button>
       </form>
 
+      <script language="javascript">
+            var button = document.getElementById("submit");
+            button.onclick = function(){
+                alert("submitt success !");
+            }
+        </script>
   
 
 

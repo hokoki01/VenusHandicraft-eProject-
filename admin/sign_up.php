@@ -25,8 +25,9 @@
                 $password = $_POST['password'];
                 $enter_password = $_POST['enter_password'];
             }
-            if ($password != $enter_password || $password != '@[A-Z][a-z][0-9][^\w]@') {
-                echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+            if ($password != $enter_password ) {
+                echo '
+                wrong password';
 
             } else {
                 $sql = "INSERT INTO admin (Id ,email, name, password) VALUES ('1','$email', '$name', '$password')";
