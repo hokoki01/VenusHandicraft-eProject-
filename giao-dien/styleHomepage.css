@@ -153,10 +153,10 @@ nav.navbar.navbar-expand-lg.fixed-top{
 
 
 /* styling for text font,etc */
-h1{
+/* h1{
     text-decoration-color: darkgrey;
     text-decoration-line: underline;
-}
+} */
 
 h1,h2,h3,h4{
     font-family: bradley hand,cursive;

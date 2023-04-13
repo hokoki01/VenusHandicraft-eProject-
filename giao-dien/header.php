@@ -26,8 +26,8 @@
 
               /* cho phần form Search bar */
               .submitBTN {
-                border-top-right-radius: 30px;
-                border-bottom-right-radius: 30px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
                 color: white;
                 background-color: #FFD300;
                 border: none;
@@ -47,6 +47,9 @@
               textarea:focus,
               select:focus {
                 outline: none;
+              }
+              form.d-flex{
+                margin-bottom: 0px;
               }
             </style>
 
