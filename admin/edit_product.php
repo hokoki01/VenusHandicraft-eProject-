@@ -65,11 +65,6 @@ include 'connect_db.php';
 
                                 </form>
                                 <?php
-                            // }
-                            // else
-                            // {
-                            //     echo "<h4>No Such Id Found</h4>";
-                            // }
                         }
                         ?>
                     </div>

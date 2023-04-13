@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+
+require 'connect_db.php';
+include('message.php');
+$item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 6;
+$current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+$offset = ($current_page - 1) * $item_per_page;
+$total_records = mysqli_query($connect, "SELECT * FROM product");
+?>
 
 <head>
     <meta charset="utf-8" />
@@ -16,7 +25,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="admin.php">Start Bootstrap</a>
+        <a class="navbar-brand ps-3" href="admin.php">Handicrafts</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
                 class="fas fa-bars"></i></button>
@@ -37,12 +46,12 @@
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!">Settings</a></li>
-                    <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                    <li><a class="dropdown-item" href="">Settings</a></li>
+                    <li><a class="dropdown-item" href="">Activity Log</a></li>
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -57,7 +66,6 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -90,8 +98,8 @@
                                 <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                                     data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="login.html">Login</a>
-                                        <a class="nav-link" href="register.html">Register</a>
+                                        <a class="nav-link" href="Sign_in.php">Login</a>
+                                        <a class="nav-link" href="Sign_up.php">Register</a>
                                         <a class="nav-link" href="password.html">Forgot Password</a>
                                     </nav>
                                 </div>
@@ -116,14 +124,15 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Charts
                         </a>
-                        <a class="nav-link" href="tables.html">
+                        <a class="nav-link" href="product.php">
                             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Tables
+                            Tables product
                         </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
+                    Start Bootstrap
                 </div>
             </nav>
         </div>
@@ -135,6 +144,13 @@
                         <li class="breadcrumb-item"><a href="admin.php">Dashboard</a></li>
                         <li class="breadcrumb-item active">Tables</li>
                     </ol>
+
+                    <h4>Product
+                        <a href="add_new_product.php" class="btn btn-primary float-end">Add Product</a>
+                    </h4><br>
+
+                    <!-- <div class="row "> -->
+
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
@@ -166,7 +182,7 @@
                                                         <td>
                                                             <?= $row['Id']; ?>
                                                         </td>
-                                                        
+
                                                         <td>
                                                             <?= $row['Title']; ?>
                                                         </td>
@@ -197,7 +213,6 @@
                                                     <?php
                                                     $i++;
                                                 }
-
                                         }
                                     }
                                     ?>
@@ -210,128 +225,145 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
-                            Contact Example
+                            All Product
                         </div>
+
                         <div class="card-body">
-                            <table id="datatablesSimple">
+                            <!-- <table id="datatablesSimple"> -->
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+
+                                        <th>Title</th>
+                                        <th>Image</th>
+                                        <th>Description</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+
+                                    $query = "SELECT * FROM product LIMIT " . $item_per_page . " OFFSET $offset ";
+                                    $query_run = mysqli_query($connect, $query);
+
+
+                                    if (mysqli_num_rows($query_run) > 0) {
+                                        foreach ($query_run as $product) {
+                                            ?>
+                                            <tr>
+                                                <td>
+                                                    <?= $product['Id']; ?>
+                                                </td>
+
+                                                <td>
+                                                    <?= $product['Title']; ?>
+                                                </td>
+                                                <td>
+                                                    <img src='image_DTB/<?= $image = $product['Image']; ?>'
+                                                        class='img-responsive' style='width:60%' alt='Image'>
+                                                </td>
+                                                <td>
+                                                    <?= $product['Description']; ?>
+                                                </td>
+                                                <td>
+
+                                                <td>
+                                                    <a href="product_view.php?Id=<?= $product['Id']; ?>"
+                                                        class="btn btn-info btn-sm">View</a><br>
+                                                </td>
+                                                <td><a href="edit_product.php?Id=<?= $product['Id']; ?>"
+                                                        class="btn btn-success btn-sm">Edit</a><br>
+                                                </td>
+                                                <td>
+                                                    <form action="code.php" method="POST" class="d-inline">
+                                                        <button type="submit" name="delete_student"
+                                                            value="<?= $product['Id']; ?>"
+                                                            class="btn btn-danger btn-sm">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                        }
+                                    } else {
+                                        echo "<h5> No Record Found </h5>";
+                                    }
+                                    ?>
+
+                                </tbody>
+                            </table>
+                            <br><br>
+                            <div class="phan-trang" style="text-align:center;">
                                 <?php
 
-                                require 'connect_db.php';
+
+                                $total_records = $total_records->num_rows;
+                                $total_page = ceil($total_records / $item_per_page);
+
+
+
+
+                                if ($current_page >= 2) {
+
+                                    echo "<a class = 'btn btn-outline-success text-center' href='product.php?page=" . ($current_page - 1) . "'>  Prev </a>&ensp;&ensp;";
+
+                                }
+
+                                for ($num = 1; $num <= $total_page; $num++) {
+
+                                    if ($num === $current_page) {
+
+                                        $pagLink = "<a class = 'btn btn-outline-success text-center' href='product.php?page="
+
+                                            . $num . "'>" . $num . " </a>&ensp;&ensp;";
+
+                                    } else {
+
+                                        $pagLink = "<a class = 'btn btn-outline-success text-center' href='product.php?page=" . $num . "'> " . $num . " </a>&ensp;&ensp;";
+
+                                    }
+
+                                }
+                                ;
+                                echo $pagLink;
+
+
+                                if ($current_page < $total_page) {
+
+                                    echo "<a class = 'btn btn-outline-success text-center' href='product.php?page=" . ($current_page + 1) . "'>  Next </a>";
+
+                                }
                                 ?>
+                            </div>
+                            <script
+                                src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                            <!-- </div> -->
 
-                                <h4>Contact</h4><br>
-                                <?php include('message.php');
-                                $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 9;
-                                $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
-                                $offset = ($current_page - 1) * $item_per_page;
-                                $total_records = mysqli_query($connect, "SELECT * FROM contact"); ?>
-
-
-                                <div class="c">
-
-
-                                    <table class="table table-bordered table-striped" style="border : 1 solid black;">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th>Phone</th>
-                                                <th>Note</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-
-                                            $query = "SELECT * FROM contact LIMIT " . $item_per_page . " OFFSET $offset";
-                                            $query_run = mysqli_query($connect, $query);
-
-
-                                            if (mysqli_num_rows($query_run) > 0) {
-                                                foreach ($query_run as $contact) {
-                                                    ?>
-                                                    <tr>
-                                                        <td>
-                                                            <?= $contact['Name']; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $contact['Email']; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $contact['Phone']; ?>
-                                                        </td>
-                                                        <td>
-                                                            <?= $contact['Note']; ?>
-                                                        </td>
-                                                    </tr>
-                                                    <?php
-                                                }
-                                            } else {
-                                                echo "<h5> No Record Found </h5>";
-                                            }
-                                            ?>
-
-                                        </tbody>
-                                    </table>
-                                    <div class="col-md-12">
-                                        <?php
-                                        $total_records = $total_records->num_rows;
-                                        $total_page = ceil($total_records / $item_per_page);
-                                        for ($num = 1; $num <= $total_page; $num++) {
-                                            ?>
-                                            <a href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>"
-                                                class="btn btn-outline-success float-end"><?= $num ?></a>
-                                            <?php
-
-                                        }
-                                        ?>
-                                    </div>
-                                    <script
-                                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-                                </div>
-
-                                <script>
-                                    function openNav() {
-                                        document.getElementById("mySidebar").style.width = "250px";
-                                        document.getElementById("main").style.marginLeft = "250px";
-                                    }
-
-                                    function closeNav() {
-                                        document.getElementById("mySidebar").style.width = "0";
-                                        document.getElementById("main").style.marginLeft = "0";
-                                    }
-                                </script>
-
-
+                            </table>
                         </div>
                     </div>
-</body>
-
-</html>
-</table>
-</div>
-</div>
-</div>
-</main>
-<footer class="py-4 bg-light mt-auto">
-    <div class="container-fluid px-4">
-        <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-            <div>
-                <a href="#">Privacy Policy</a>
-                &middot;
-                <a href="#">Terms &amp; Conditions</a>
-            </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
-</footer>
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
-<script src="js/scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-    crossorigin="anonymous"></script>
-<script src="js/datatables-simple-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
 </body>
 
 </html>

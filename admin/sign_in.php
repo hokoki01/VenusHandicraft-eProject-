@@ -1,14 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Login - SB Admin</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
 
-<html>
 
-<head>
 
-    <title>LOGIN</title>
-
-</head>
-
-<body>
 
     <?php
     session_start();
@@ -36,96 +40,63 @@
     mysqli_close($connect);
 
     ?>
-    <style>
-        body {
 
-            background-image: url(image_DTB/nen.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding-right: 100px;
-            display: flex;
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                    <div class="card-body">
+                                        <form action="sign_in.php" method="post">
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputEmail" name = "name" type="text" placeholder="name@example.com" />
+                                                <label for="inputEmail">Name </label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputPassword" name ="password" type="password" placeholder="Password" />
+                                                <label for="inputPassword">Password</label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                                <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                <a class="small" href="password.html">Forgot Password?</a>
+                                                <button  type="submit" class="btn btn-primary ">Login</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="Sign_up.php">Need an account? Sign up!</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 
-            justify-content: center;
-
-            align-items: center;
-            color: #ccc;
-            height: 100vh;
-
-            flex-direction: column;
-            text-shadow: 2px 2px 5px red;
-            text-align: center;
-
-        }
-
-        form {
-            width: 500px;
-            border: 3px solid rgb(177, 142, 142);
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: white;
-        }
-
-        input {
-            display: block;
-            border: 2px solid #ccc;
-            padding: 10px;
-            margin: 10px auto;
-            border-radius: 5px;
-            color: pink;
-        }
-
-        label {
-            color: white;
-            font-size: 18px;
-            padding: 10px;
-        }
-
-        button {
-            background: rgb(35, 174, 202);
-            padding: 10px 15px;
-            color: white;
-            border-radius: 5px;
-            margin-right: 10px;
-            border: none;
-        }
-
-        .error {
-            background: #F2DEDE;
-            color: #0c0101;
-            padding: 10px;
-            width: 95%;
-            border-radius: 5px;
-            margin: 20px auto;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-        }
-    </style>
-
-    <form action="sign_in.php" method="post">
-        <h2>SIGN IN</h2>
-        <label>User Name</label>*
-
-        <input type="text" name="name" placeholder="User Name" id="name" required>
-        <label>Password</label>*
-
-        <input type="password" name="password" placeholder="Password" id="password" required>
-        <br>
-        <button type="submit">Login</button><br>
-        <h4>Forgot Password?</h4>
-        <h5>Login Help?</h5>
-        bạn chưa có tài khoản ?
-        <a href="sign_up.php">sign up</a>
-    </form>
-
-</body>
-
+    
 </html>
