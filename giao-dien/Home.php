@@ -43,8 +43,8 @@ include 'header.php';
     <!-- bootstrap "container" sẽ cho content ở giữa màn hình  -->
     <div class="row mt-3">
       <div class="col-md-12 fw-bold">
-        <h1>Handicrafts</h1>
-        <br>
+        <h1>Venus Handicraft</h1>
+        
       </div>
       <div class="col-md-6 col-sm-5">
         <br>
@@ -58,7 +58,7 @@ include 'header.php';
         <a href="about.php">Read more</a>
       </div>
       <div class="col-md-6 col-sm-7 " >
-        <img src="Images/company.png" style="height: 300px" class="d-block w-100" alt="alter" >
+        <img src="Images/company.png" style="height: 300px;border-radius: 10px;" class="d-block w-100" alt="alter" >
       </div>
     </div>
   </div>
@@ -67,7 +67,7 @@ include 'header.php';
 
 
 
-<section class="hidden">
+<section style="background-color: #f3f2f2; margin-top:15px; margin-bottom:15px;">
   <!-- thông tin cơ bản của cty -->
   <div class="container-fluid">
     <div class="row">
@@ -119,7 +119,7 @@ include 'header.php';
   </div>
 </section>
 
-<hr class="hr-blurry" style="width:100%">
+<!-- <hr class="hr-blurry" style="width:100%"> -->
 
 <section class="hidden">
   <div class="container">
@@ -285,7 +285,7 @@ include 'header.php';
     <div class="row">
       <div class="col-md-12 col-sm-12">
         
-        <button class="btn btn-warning"  type="button"><a href="product.php" style="color:#e2e2e2;">
+        <button class="btn btn-warning"  type="button"><a href="product.php" style="color:white;">
               View more products</a>
             </button>
         
@@ -485,7 +485,7 @@ include 'header.php';
       <form class="form" method="post" action="Home.php">
           <input type="text" required name="email" name="email" class="form-control" placeholder=" Type your email here ...">
 
-          <button type="submit" id="submit" style="color:#e2e2e2" class="btn btn-warning ">Submit</button>
+          <button type="submit" id="submit" onclick="submit()" style="color:white" class="btn btn-warning ">Submit</button>
       </form>
 
       <script language="javascript">
