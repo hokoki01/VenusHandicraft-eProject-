@@ -69,6 +69,43 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
 
         </tbody>
     </table>
+    <div class="container-fluid p-5 bg-white text-secondary text-center">
+        <h2 style="Text-decoration : none;">similar product</h2><br>
+    </div>
+    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
+
+        <?php
+
+        $count = 0;
+        $category = $product['Category_id'];
+
+        $result = mysqli_query($connect, "SELECT * FROM product where Category_id = $category and Id != $product_id ");
+        // include 'show_product.php';
+        $i = 0;
+        while ($row = mysqli_fetch_array($result)) {
+            ?>
+            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
+                <a style="display: block;color: blackite;text-align: center;padding: 16px;text-decoration: none;"
+                    href="product_detail.php?Id=<?= $row['Id']; ?>">
+                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
+                        style='width:320px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
+
+                    <h4>
+                        <?php echo $row["Title"]; ?>
+                    </h4>
+                </a>
+            </li>
+            <?php
+            $i++;
+        }
+        ?>
+    </ul>
+
+
+
+
+
+
     <div class="container-fluid p-5 bg-success text-white text-center">
         <h2 style="Text-decoration : none;">Handicrafts are traditional products in Vietnamese craft villages</h2><br>
         <p>One of the most popular and loved industries in this era. Thanks to the ingenuity and meticulousness of the
@@ -212,9 +249,9 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
         $total_page = ceil($total_records / $item_per_page);
 
         for ($num = 1; $num <= $total_page; $num++) {
-                ?>
-                <a href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>" class="btn btn-outline-success "><?= $num ?></a>
-                <?php
+            ?>
+            <a href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>" class="btn btn-outline-success "><?= $num ?></a>
+            <?php
         }
 
         ?>
