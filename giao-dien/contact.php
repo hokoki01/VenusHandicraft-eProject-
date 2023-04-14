@@ -17,12 +17,17 @@ include 'header.php';
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
-
     }
+            input:focus,
+              textarea:focus,
+              .form-control{
+                outline: red;
+                box-shadow: none;
+              }
 </style>
 
 <h1 class="text">CONTACT US</h1>
-<div class="container ">
+<div class="container mb-4 ">
     <div class="row">
         <div class="col-sm-12 col-md-6  mt-5">
             <iframe class="ratio ratio-16x9"
@@ -57,71 +62,121 @@ include 'header.php';
                 }
             }
             ?>
-<div class="row">
-            <form method="post" action="contact.php">
+<div class="row ">
+            <form method="post" action="contact.php" >
+
                 <label for="Name">Nick Name : </label></td>
-                <input type="text" Id="Name" placeholder="Name" name="Name" required
-                    style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
+                <input type="text" Id="Name" placeholder="Full Name" name="Name" required
+                class="form-control  " row="5">
+
                 <label for="Email">Email : </label>
                 <input type="text" Id="Email" placeholder="Email" name="Email" required
-                    style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
+                class="form-control " row="5">
+
                 <label for="Phone">Phone : </label>
-                <input type="text" Id="Phone" placeholder="Phone" name="Phone" required
-                    style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;">
-                <label for="Note">Note : </label>
-                <textarea name="Note" id="Note" style="width: 100%;height : 120px;" placeholder="Note"
-                    required></textarea>
-                <div class="col-md-12 mx-auto ">
-                    <button type="sunmit" values="send" class="btn btn-success">send</button>
+                <input type="text" Id="Phone" placeholder="Phone Number" name="Phone" required
+                class="form-control " row="5">
+
+                <label for="Note">Message : </label>
+                <textarea name="Note" id="Note"  class="form-control " rows="8" placeholder="What ever you need" required></textarea>
+
+                <div class="col-md-12 ">
+                    <button type="sunmit" values="send" class="btn btn-warning" style="width:300px;color:white">Send</button>
                 </div>
+
             </form>
 </div>
         </div>
     </div>  
 </div >
-<hr>
+
+
 <!-- Phần FAQs -->
-<div class="container mt-3 mb-4">
+<section style="background-color: #f3f2f2;">
+<div class="container mt-3 mb-1" >
+<div class="row">
+
+        <div class="col-md-6 col-sm-12  mb-4">
+                <h1 class="mb-4">Frequently Asked Questions</h1>
+            
+ 
             <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
+                What does your company manufacturing and exporting ?
                 </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    We manufacturing and exporting  handicrafts products.
                 </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
+                    Where do you export ?
                 </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    We export  to the <strong>global</strong> importers,wholesalers and retailers.
                 </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
+                    Where is your company based?
                 </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                     Our company headquartered is in <strong> India</strong>.
                 </div>
                 </div>
-            </div>
-            </div>
-                    <!-- kết thúc phần FAQs -->
+            </div>  
+            </div>  
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img src="Images/FAQsfinal.png" alt="" class="w-100 h-100  d-block">
+        </div>
 </div>
+</div>
+</section>
+
+<style>
+    .accordion-button:not(.collapsed) {
+       border-bottom:solid 4px #696969 ;
+       background-color: #f7b948;
+       color: white;
+}
+    .accordion-button.collapsed {
+    color: #333333;
+    background: #f3f2f2;
+    border: none;
+    
+}
+    .accordion-button{
+        border: 1px solid white;
+}
+    .accordion-button:focus {
+    box-shadow: none;
+    border-color: none;
+    
+}
+    .accordion-body{
+        border-bottom:dotted 4px #696969
+}
+   .accordion-item{
+    border: none;
+    background-color: #f3f2f2;
+    color: #696969;
+}
+</style>
+
+
 <?php
 include 'footer.php';
 ?>
