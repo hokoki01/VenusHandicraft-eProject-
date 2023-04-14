@@ -69,6 +69,47 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
 
         </tbody>
     </table>
+    <br><br>
+    <div class=" bg-white text-seruress text-left text-danger">
+        <h2 style="Text-decoration : none;">See more products here</h2>
+        <hr color="black" size="5px">
+    </div>
+    <br>
+    
+    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
+
+        <?php
+
+        $count = 0;
+        $category = $product['Category_id'];
+
+        $result = mysqli_query($connect, "SELECT * FROM product where Category_id = $category and Id != $product_id ");
+        // include 'show_product.php';
+        $i = 0;
+        while ($row = mysqli_fetch_array($result)) {
+            ?>
+            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
+                <a style="display: block;color: blackite;text-align: center;padding: 16px;text-decoration: none;"
+                    href="product_detail.php?Id=<?= $row['Id']; ?>">
+                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
+                        style='width:300px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
+
+                    <h4>
+                        <?php echo $row["Title"]; ?>
+                    </h4>
+                </a>
+            </li>
+            <?php
+            $i++;
+        }
+        ?>
+    </ul>
+
+
+
+
+
+
     <div class="container-fluid p-5 bg-success text-white text-center">
         <h2 style="Text-decoration : none;">Handicrafts are traditional products in Vietnamese craft villages</h2><br>
         <p>One of the most popular and loved industries in this era. Thanks to the ingenuity and meticulousness of the
@@ -205,65 +246,20 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
             </tbody>
         </table>
     </div>
+    
     <div class="col-md-12">
-        <h3>xem thêm các nghệ nhân khác tại đây</h3>
+        <h3>See more artists here</h3>
         <?php
         $total_records = $total_records->num_rows;
         $total_page = ceil($total_records / $item_per_page);
 
         for ($num = 1; $num <= $total_page; $num++) {
-                ?>
-                <a href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>" class="btn btn-outline-success "><?= $num ?></a>
-                <?php
+            ?>
+            <a href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>" class="btn btn-outline-success "><?= $num ?></a>
+            <?php
         }
 
         ?>
     </div>
 </div>
 </div>
-<script>
-    function magnify(imgID, zoom) {
-        var img, glass, w, h, bw;
-        img = document.getElementById(imgID);
-        glass = document.createElement("DIV");
-        glass.setAttribute("class", "img-magnifier-glass");
-        img.parentElement.insertBefore(glass, img);
-        glass.style.backgroundImage = "url('" + img.src + "')";
-        glass.style.backgroundRepeat = "no-repeat";
-        glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-        bw = 3;
-        w = glass.offsetWidth / 2;
-        h = glass.offsetHeight / 2;
-        glass.addEventListener("mousemove", moveMagnifier);
-        img.addEventListener("mousemove", moveMagnifier);
-        glass.addEventListener("touchmove", moveMagnifier);
-        img.addEventListener("touchmove", moveMagnifier);
-        function moveMagnifier(e) {
-            var pos, x, y;
-            e.preventDefault();
-            pos = getCursorPos(e);
-            x = pos.x;
-            y = pos.y;
-            if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
-            if (x < w / zoom) { x = w / zoom; }
-            if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
-            if (y < h / zoom) { y = h / zoom; }
-            glass.style.left = (x - w) + "px";
-            glass.style.top = (y - h) + "px";
-            glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-        }
-        function getCursorPos(e) {
-            var a, x = 0, y = 0;
-            e = e || window.event;
-            a = img.getBoundingClientRect();
-            x = e.pageX - a.left;
-            y = e.pageY - a.top;
-            x = x - window.pageXOffset;
-            y = y - window.pageYOffset;
-            return { x: x, y: y };
-        }
-    }
-</script>
-<script>
-    magnify("myimage", 3);
-</script>

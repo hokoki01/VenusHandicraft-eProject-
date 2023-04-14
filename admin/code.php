@@ -58,7 +58,7 @@ if(isset($_POST['save_student']))
     $Image = mysqli_real_escape_string($connect, $_POST['Image']);
     $Description = mysqli_real_escape_string($connect, $_POST['Description']);
 
-    $query = "INSERT INTO students (Category_id,Title,Image,Description) VALUES ('$Category_id','$Title','$Image','$Description')";
+    $query = "INSERT INTO product (Category_id,Title,Image,Description) VALUES ('$Category_id','$Title','$Image','$Description')";
 
     $query_run = mysqli_query($connect, $query);
     if($query_run)

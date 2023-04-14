@@ -1,14 +1,50 @@
-<?php
-include 'header.php';
+<!DOCTYPE html>
+<html lang="en">
 
-?>
-<div id="carbonads"><span><span class="carbon-wrap"><a
-                href="https://srv.carbonads.net/ads/click/x/GTND42JYC67DE53NF6YLYKQNFTYDL2JWFTSI6Z3JCYAD453LCVYD45QKC6YD523LF6ADTKJNCWBIL53ECTBDTKJKC6SDEKQLCYBDEK3EHJNCLSIZ?segment=placement:getbootstrapcom;"
-                class="carbon-img" target="_blank" rel="noopener sponsored"><img
-                    src="https://cdn4.buysellads.net/uu/1/127419/1670532337-Stock2.jpg" alt="ads via Carbon" border="0"
-                    height="100" width="130" style="max-width: 130px;"></a><a
-                href="https://srv.carbonads.net/ads/click/x/GTND42JYC67DE53NF6YLYKQNFTYDL2JWFTSI6Z3JCYAD453LCVYD45QKC6YD523LF6ADTKJNCWBIL53ECTBDTKJKC6SDEKQLCYBDEK3EHJNCLSIZ?segment=placement:getbootstrapcom;"
-                class="carbon-text" target="_blank" rel="noopener sponsored">Get 10 free Adobe Stock photos. Start
-                downloading amazing royalty-free stock photos today.</a></span><a
-            href="http://carbonads.net/?utm_source=getbootstrapcom&amp;utm_medium=ad_via_link&amp;utm_campaign=in_unit&amp;utm_term=carbon"
-            class="carbon-poweredby" target="_blank" rel="noopener sponsored">ads via Carbon</a></span></div>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript form validation - checking email</title>
+  <link rel='stylesheet' href='form-style.css' type='text/css' />
+</head>
+
+<body onload='document.form1.text1.focus()'>
+  <div class="mail">
+    <h2>Input an email and Submit</h2>
+    <form name="form1" action="#">
+      <ul>
+        <li><input type='text' name='text1' /></li>
+        <li>&nbsp;</li>
+        <li class="submit"><input type="submit" name="submit" value="Submit"
+            onclick="ValidateEmail(document.form1.text1)" /></li>
+        <li>&nbsp;</li>
+      </ul>
+    </form>
+  </div>
+  <!-- <script src="email-validation.js"></script> -->
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+<script>
+  function ValidateEmail(inputText) {
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailformat)) {
+      alert("Valid email address!");
+      document.form1.text1.focus();
+      return true;
+    }
+    else {
+      alert("You have entered an invalid email address!");
+      document.form1.text1.focus();
+      return false;
+    }
+  }
+
+</script>

@@ -4,21 +4,21 @@ include 'connect_db.php';
 ?>
 <style>
     .product-theme {
-        background: url(Images/theme3.jpg) no-repeat center center fixed;
+        background: url(Images/woodbg.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 350px;
-        color: white;
+        color: black;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
     }
 </style>
 
-<h1 class="product-theme">PRODUCT WOOD</h1>
+<h1 class="product-theme ">WOOD PRODUCT </h1>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 
@@ -35,7 +35,7 @@ include 'connect_db.php';
                 <a 
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:350px ; height :350px; border: 5px solid yellow;' alt='Image'><br><br>
+                        style='width:340px ; height :350px; border: 5px solid yellow;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>

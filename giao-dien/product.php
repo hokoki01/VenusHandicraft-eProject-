@@ -7,21 +7,21 @@ $offset = ($current_page - 1) * $item_per_page;
 $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
 <style>
     .text {
-        background: url(image_DTB/b.png) no-repeat center center fixed;
+        background: url(Images/theme3.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 300px;
-        color: white;
+        color: green;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
     }
 </style>
 
-<h1 class="text">ALL PRODUCT</h1>
+<h1 class="text">Gallery</h1>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
         <?php
 
@@ -35,7 +35,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
                 <a style="display: block;color: blackite;text-align: center;padding: 16px;text-decoration: none;"
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:420px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
+                        style='width:390px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>

@@ -1,146 +1,159 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>sign up</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Register - SB Admin</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
 
-<body>
 
+<?php
+include 'connect_db.php';
+$email = "";
+$name = "";
+$password = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["email"])) {
+        $email = $_POST['email'];
+    }
+    if (isset($_POST["name"])) {
+        $name = $_POST['name'];
+    }
+    if (isset($_POST["password"]) && isset($_POST["enter_password"])) {
+        $password = $_POST['password'];
+        $enter_password = $_POST['enter_password'];
+    }
+    if ($password != $enter_password) {
 
-    <form action="sign_up.php" method="post">
-        <?php
-        include 'connect_db.php';
-        $email = "";
-        $name = "";
-        $password = "";
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST["email"])) {
-                $email = $_POST['email'];
-            }
-            if (isset($_POST["name"])) {
-                $name = $_POST['name'];
-            }
-            if (isset($_POST["password"]) && isset($_POST["enter_password"])) {
-                $password = $_POST['password'];
-                $enter_password = $_POST['enter_password'];
-            }
-            if ($password != $enter_password ) {
-                echo '
-                wrong password';
+        echo "<script type='text/javascript'>alert('wrong password');</script>";
 
-            } else {
-                $sql = "INSERT INTO admin (Id ,email, name, password) VALUES ('1','$email', '$name', '$password')";
+    } else {
+        $sql = "INSERT INTO admin ( name,email, password) VALUES ( '$name', '$email','$password')";
 
-                if (mysqli_query($connect, $sql)) {
-                    header('location: sign_in.php');
-                }
-                
-            }
-
-        }
-        ?>
-        <table>
-         <table>
-            <h2>SIGN UP</h2>
-            <tr>
-                <th>email or phone number : </th>
-                <td><input type="text" name="email" value="" placeholder="email or phone number" required></td>
-            </tr>
-
-            <tr>
-                <th>User name :</th>
-                <td><input type="text" name="name" value="" placeholder="User name" required></td>
-            </tr>
-
-            <tr>
-                <th>password : </th>
-                <td><input type="password" name="password" value="" placeholder="password" required></td>
-            </tr>
-
-            <tr>
-                <th>Enter the password :</th>
-                <td><input type="password" placeholder="Enter the password" name="enter_password" required></td>
-            </tr>
-
-            </table>
-            <button type="submit">sign up</button><br><br>
-
-            bạn đã có tài khoản ?
-            <a href="sign_in.php">sign in</a>
-    </form>
-    <style>
-        body {
-
-            background-image: url(image_DTB/nen.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding-right: 100px;
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-            color: #ccc;
-            height: 100vh;
-
-            flex-direction: column;
-            text-shadow: 2px 2px 5px red;
-            text-align: center;
-
+        if (mysqli_query($connect, $sql)) {
+            echo "<script type='text/javascript'>alert('Congratulations, you have successfully registered');</script>";
+            header('location: sign_in.php');
         }
 
-        form {
-            width: 500px;
-            border: 3px solid rgb(177, 142, 142);
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-        }
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: white;
-        }
+}
+?>
 
-        input {
-            display: block;
-            border: 2px solid #ccc;
-            padding: 10px;
-            margin: 10px auto;
-            border-radius: 5px;
-            color: pink;
-        }
+<body class="bg-primary">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header">
+                                    <h3 class="text-center font-weight-light my-4">Create Account</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form action="sign_up.php" method="post">
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="form-floating mb-3 mb-md-0">
+                                                    <input class="form-control" id="name" name="name" type="text"
+                                                        placeholder="Enter your first name" />
+                                                    <label for="name">name</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating">
+                                                    <input class="form-control" id="email" name="email" type="email"
+                                                        placeholder="Enter your last name" />
+                                                    <label for="email">Email address</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-6">
+                                                <div class="form-floating mb-3 mb-md-0">
+                                                    <input class="form-control" id="inputPassword" name="password"
+                                                        type="password" placeholder="Create a password" />
+                                                    <label for="inputPassword">Password</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-floating mb-3 mb-md-0">
+                                                    <input class="form-control" id="inputPasswordConfirm"
+                                                        type="password" name="enter_password"
+                                                        placeholder="Confirm password" />
+                                                    <label for="inputPasswordConfirm">Confirm Password</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="address" type="text" placeholder="">
+                                            <label for="address"> address</label>
+                                        </div><br>
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <label class="form-check-label" for="radio2">Gender :</label>
+                                            </div>
+                                            <div class="col-sm">
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio1"
+                                                        name="optradio" value="option1" checked>Male
+                                                    <label class="form-check-label" for="radio1"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm">
+                                                <div class="form-check">
+                                                    <input type="radio" class="form-check-input" id="radio2"
+                                                        name="optradio" value="option2">Female
 
-        label {
-            color: white;
-            font-size: 18px;
-            padding: 10px;
-        }
-
-        button {
-            background: rgb(35, 174, 202);
-            padding: 10px 15px;
-            color: white;
-            border-radius: 5px;
-            margin-right: 10px;
-            border: none;
-        }
-
-        .error {
-            background: #F2DEDE;
-            color: #0c0101;
-            padding: 10px;
-            width: 95%;
-            border-radius: 5px;
-            margin: 20px auto;
-        }
-
-        h1 {
-            text-align: center;
-            color: white;
-        }
-    </style>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="mt-4 mb-0">
+                                            <!-- <button type="submit" class="btn btn-success btn-block" width="100%">sign up</button> -->
+                                            <div class="d-grid"><button type="submit" class="btn btn-primary btn-block"
+                                                    width="100%">sign up</button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer text-center py-3">
+                                    <div class="small"><a href="Sign_in.php">Have an account? Go to login</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div id="layoutAuthentication_footer">
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                        <div>
+                            <a href="#">Privacy Policy</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
