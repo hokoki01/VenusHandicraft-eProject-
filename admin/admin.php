@@ -101,7 +101,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                     <a class="nav-link" href="user.php">User</a>
                     <a class="nav-link" href="Contact.php">Contact</a>
                     <a class="nav-link" href="admin.php">Product list</a>
-                    <a class="nav-link" href="password.html">Forgot Password</a>
+                    <a class="nav-link" href="password.php">Forgot Password</a>
                   </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError"
@@ -219,7 +219,6 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                       if (empty($search)) {
                         echo "Yeu cau nhap du lieu vao o trong";
                       } else {
-                        include 'connect_db.php';
                         $sql = "SELECT * FROM product where Id = $search ";
                         $result = mysqli_query($connect, $sql);
                         ?>

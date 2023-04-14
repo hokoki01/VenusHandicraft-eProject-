@@ -28,11 +28,10 @@
                 $_SESSION['name'] = $_POST['name'];
                 $_SESSION['password'] = $_POST['password'];
                 if ($_SESSION['name'] == $name_check && $_SESSION['password'] == $pass_check) {
-                    $username = $_SESSION['name'];
-                    echo "Xin chào " . $username . ". Bạn đã đăng nhập thành công.";
+                    echo "<script type='text/javascript'>alert('Congratulations, you have successfully logged in');</script>";
                     header('location: admin.php');
                 } else {
-                    echo "<p>Tên Đăng Nhập Hoặc Password Không Đúng </p>";
+                    echo "<script type='text/javascript'>alert('Incorrect Username or Password');</script>";
                 }
             }
         }
@@ -65,7 +64,7 @@
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <a class="small" href="password.html">Forgot Password?</a>
+                                                <a class="small" href="password.php">Forgot Password?</a>
                                                 <button  type="submit" class="btn btn-primary ">Login</button>
                                             </div>
                                         </form>

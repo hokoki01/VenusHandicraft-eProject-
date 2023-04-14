@@ -99,7 +99,7 @@ include('message.php');
                                         <a class="nav-link" href="user.php">User</a>
                                         <a class="nav-link" href="Contact.php">Contact</a>
                                         <a class="nav-link" href="admin.php">Product list</a>
-                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                        <a class="nav-link" href="password.php">Forgot Password</a>
                                     </nav>
                                 </div>
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -131,7 +131,7 @@ include('message.php');
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-
+                   
                 </div>
             </nav>
         </div>

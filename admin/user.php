@@ -88,7 +88,7 @@
                   <nav class="sb-sidenav-menu-nested nav">
                     <a class="nav-link" href="login.html">Login</a>
                     <a class="nav-link" href="register.html">Register</a>
-                    <a class="nav-link" href="password.html">Forgot Password</a>
+                    <a class="nav-link" href="password.php">Forgot Password</a>
                   </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError"
@@ -245,7 +245,7 @@
                           <?php
                         }
                       } else {
-                        echo "<h5> No Record Found </h5>";
+                        echo "<script type='text/javascript'>alert('No Record Found');</script>";
                       }
                       ?>
                     </tbody>

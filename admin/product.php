@@ -40,7 +40,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
             </div>
         </form>
         <!-- Navbar-->
-
+        
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
@@ -100,7 +100,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                                     <nav class="sb-sidenav-menu-nested nav">
                                         <a class="nav-link" href="Sign_in.php">Login</a>
                                         <a class="nav-link" href="Sign_up.php">Register</a>
-                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                        <a class="nav-link" href="password.php">Forgot Password</a>
                                     </nav>
                                 </div>
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
@@ -166,10 +166,11 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                                     if (isset($_REQUEST['ok'])) {
                                         $search = addslashes($_GET['search']);
                                         if (empty($search)) {
+                                            echo "<script type='text/javascript'>alert('wrong password');</script>";
                                             echo "Yeu cau nhap du lieu vao o trong";
                                         } else {
                                             include 'connect_db.php';
-                                            $sql = "SELECT * FROM product where Id = $search ";
+                                            $sql = "SELECT * FROM product where Id = $search  || Title like %$search%";
                                             $result = mysqli_query($connect, $sql);
                                             ?>
                                             <ul

@@ -38,7 +38,7 @@ include 'connect_db.php';
                 <a style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none;"
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:350px ; height :350px; border: 5px solid white;' alt='Image'><br><br>
+                        style='width:390px ; height :350px; border: 5px solid white;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>

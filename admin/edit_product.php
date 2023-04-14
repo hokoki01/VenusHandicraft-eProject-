@@ -50,7 +50,7 @@ include('message.php');
                 </ul>
             </li>
         </ul>
-    </nav>
+    </nav> 
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -99,7 +99,7 @@ include('message.php');
                                         <a class="nav-link" href="user.php">User</a>
                                         <a class="nav-link" href="Contact.php">Contact</a>
                                         <a class="nav-link" href="admin.php">Product list</a>
-                                        <a class="nav-link" href="password.html">Forgot Password</a>
+                                        <a class="nav-link" href="password.php">Forgot Password</a>
                                     </nav>
                                 </div>
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"

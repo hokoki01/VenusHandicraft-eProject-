@@ -34,13 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $enter_password = $_POST['enter_password'];
     }
     if ($password != $enter_password) {
-        echo '
-                wrong password';
+
+        echo "<script type='text/javascript'>alert('wrong password');</script>";
 
     } else {
-        $sql = "INSERT INTO admin (email, name, password) VALUES ('$email', '$name', '$password')";
+        $sql = "INSERT INTO admin ( name,email, password) VALUES ( '$name', '$email','$password')";
 
         if (mysqli_query($connect, $sql)) {
+            echo "<script type='text/javascript'>alert('Congratulations, you have successfully registered');</script>";
             header('location: sign_in.php');
         }
 
@@ -65,15 +66,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
-                                                    <input class="form-control" id="name" name="name"
-                                                        type="text" placeholder="Enter your first name" />
+                                                    <input class="form-control" id="name" name="name" type="text"
+                                                        placeholder="Enter your first name" />
                                                     <label for="name">name</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
-                                                    <input class="form-control" id="email" name="email"
-                                                        type="email" placeholder="Enter your last name" />
+                                                    <input class="form-control" id="email" name="email" type="email"
+                                                        placeholder="Enter your last name" />
                                                     <label for="email">Email address</label>
                                                 </div>
                                             </div>
@@ -89,7 +90,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPasswordConfirm"
-                                                        type="password" name="enter_password" placeholder="Confirm password" />
+                                                        type="password" name="enter_password"
+                                                        placeholder="Confirm password" />
                                                     <label for="inputPasswordConfirm">Confirm Password</label>
                                                 </div>
                                             </div>
@@ -120,7 +122,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <br>
                                         <div class="mt-4 mb-0">
                                             <!-- <button type="submit" class="btn btn-success btn-block" width="100%">sign up</button> -->
-                                            <div class="d-grid"><button type="submit" class="btn btn-primary btn-block" width="100%">sign up</button></div>
+                                            <div class="d-grid"><button type="submit" class="btn btn-primary btn-block"
+                                                    width="100%">sign up</button></div>
                                         </div>
                                     </form>
                                 </div>

@@ -18,7 +18,7 @@ include 'connect_db.php';
     }
 </style>
 
-<h1 class="product-theme">PRODUCT WOOD</h1>
+<h1 class="product-theme text-success">PRODUCT WOOD</h1>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 
@@ -35,7 +35,7 @@ include 'connect_db.php';
                 <a 
                     href="product_detail.php?Id=<?= $row['Id']; ?>">
                     <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:350px ; height :350px; border: 5px solid yellow;' alt='Image'><br><br>
+                        style='width:340px ; height :350px; border: 5px solid yellow;' alt='Image'><br><br>
 
                     <h4>
                         <?php echo $row["Title"]; ?>
