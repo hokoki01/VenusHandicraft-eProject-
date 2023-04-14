@@ -219,6 +219,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                       if (empty($search)) {
                         echo "Yeu cau nhap du lieu vao o trong";
                       } else {
+                        include 'connect_db.php';
                         $sql = "SELECT * FROM product where Id = $search ";
                         $result = mysqli_query($connect, $sql);
                         ?>
