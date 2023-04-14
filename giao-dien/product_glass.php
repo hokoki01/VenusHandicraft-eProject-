@@ -4,21 +4,21 @@ include 'connect_db.php';
 ?>
 <style>
     .product-theme2 {
-        background: url(Images/theme3.jpg) no-repeat center center fixed;
+        background: url(Images/glassbg.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 350px;
-        color: white;
+        color: black;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
     }
 </style>
 
-<h1 class="product-theme2">PRODUCT GLASS</h1>
+<h1 class="product-theme2">GLASS PRODUCT </h1>
 <!-- <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; "> -->
     <!-- <h2> Glass products</h2> -->
 <!-- </div> -->

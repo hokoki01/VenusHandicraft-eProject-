@@ -4,21 +4,21 @@ include 'connect_db.php';
 ?>
 <style>
     .product-theme {
-        background: url(Images/theme3.jpg) no-repeat center center fixed;
+        background: url(Images/woodbg.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 350px;
-        color: white;
+        color: black;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
     }
 </style>
 
-<h1 class="product-theme text-success">PRODUCT WOOD</h1>
+<h1 class="product-theme ">WOOD PRODUCT </h1>
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 

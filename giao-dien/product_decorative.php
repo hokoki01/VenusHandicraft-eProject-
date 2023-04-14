@@ -11,14 +11,14 @@ include 'connect_db.php';
         background-size: cover;
         width: 100%;
         height: 350px;
-        color: white;
+        color: black;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
     }
 </style>
 
-<h1 class="product-theme4">PRODUCT DECORATIVE</h1>
+<h1 class="product-theme4">DECORATIVE PRODUCT </h1>
 <!-- <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; "> -->
     <!-- <h2> Decorative products</h2> -->
 <!-- </div> -->

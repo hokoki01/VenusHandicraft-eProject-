@@ -4,14 +4,14 @@ require 'connect_db.php';
 ?>
 <style>
     .theme {
-        background: url(Images/theme2.jpg) no-repeat center center fixed;
+        background: url(Images/aboutus.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 300px;
-        color:#FFD300;
+        color:black;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;

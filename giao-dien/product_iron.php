@@ -5,21 +5,21 @@ include 'connect_db.php';
 <!-- <br><br><br> -->
 <style>
     .product-theme3 {
-        background: url(Images/theme3.jpg) no-repeat center center fixed;
+        background: url(Images/ironbg.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 350px;
-        color: white;
+        color: black;
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
     }
 </style>
 
-<h1 class="product-theme3">PRODUCT IRON</h1>
+<h1 class="product-theme3">IRON PRODUCT </h1>
 <!-- <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; "> -->
     <!-- <h2> Iron products</h2> -->
 <!-- </div> -->
