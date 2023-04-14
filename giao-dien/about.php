@@ -4,7 +4,7 @@ require 'connect_db.php';
 ?>
 <style>
     .theme {
-        background: url(Images/aboutus.jpg) no-repeat center center fixed;
+        background: url(Images/brown.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -122,6 +122,124 @@ require 'connect_db.php';
     </table>
 </div>
 
+<section style="color: #000; background-color: #f3f2f2;margin-top: 20px;" >
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10 col-xl-8 text-center">
+        <h3 class="fw-bold mb-4">Reviews From My Clients</h3>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card">
+          <div class="card-body py-4 mt-2">
+            <h5 class="font-weight-bold">Tomy Ngoc</h5>
+            <div class="rating">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star-half-alt fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2 fst-italic">
+              <i class="fas fa-quote-left pe-2"></i>"The Website Venus Handicraft is truly one of a kind. He has showed nothing but courtesy, and professionalism
+                        throughout the entire process. He took the time to walk me through all the different products that they built.
+                        I would highly recommended this website to anyone who is seeking for handicraft products."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card">
+          <div class="card-body py-4 mt-2"> 
+            <h5 class="font-weight-bold">Sienna Guo</h5>
+            <div class="rating">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2 fst-italic">
+              <i class="fas fa-quote-left pe-2"></i>"The website created our organization's website in a timely and efficient manner, and they are always willing
+                        to help update our website when we need to. They are very responsive and great to work with! Highly recommend to anyone in need of a beautiful 
+                        website."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-0">
+        <div class="card">
+          <div class="card-body py-4 mt-2">
+            <h5 class="font-weight-bold">Daniela Glaser</h5>
+            <div class="rating">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="far fa-star fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2 fst-italic">
+              <i class="fas fa-quote-left pe-2"></i>"Venus handicraft brought us alive. We recived great service, fast response, and completed within a more than reasonable
+                        amount of time. Working with Venus handicraft allow us to come up with great ideas and have a better view of handicraft products."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <?php
 include 'footer.php';
 ?>
