@@ -4,10 +4,6 @@
 
 require 'connect_db.php';
 include('message.php');
-$item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 6;
-$current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
-$offset = ($current_page - 1) * $item_per_page;
-$total_records = mysqli_query($connect, "SELECT * FROM product");
 ?>
 
 <head>
@@ -111,9 +107,13 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                                 <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
                                     data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="401.html">401 Page</a>
-                                        <a class="nav-link" href="404.html">404 Page</a>
-                                        <a class="nav-link" href="500.html">500 Page</a>
+                                        <a class="nav-link" href="Sign_up.php">Register</a>
+                                        <a class="nav-link" href="Sign_in.php">Login</a>
+                                        <a class="nav-link" href="logout.php">Logout</a>
+                                        <a class="nav-link" href="user.php">User</a>
+                                        <a class="nav-link" href="Contact.php">Contact</a>
+                                        <a class="nav-link" href="admin.php">Product list</a>
+                                        <a class="nav-link" href="password.html">Forgot Password</a>
                                     </nav>
                                 </div>
                             </nav>
@@ -192,52 +192,6 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                     </div>
 
                     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-                    <br><br>
-                    <div class="phan-trang" style="text-align:center;">
-                        <?php
-
-
-                        $total_records = $total_records->num_rows;
-                        $total_page = ceil($total_records / $item_per_page);
-
-
-
-
-                        if ($current_page >= 2) {
-
-                            echo "<a class = 'btn btn-outline-success text-center' href='product.php?page=" . ($current_page - 1) . "'>  Prev </a>&ensp;&ensp;";
-
-                        }
-
-                        for ($num = 1; $num <= $total_page; $num++) {
-
-                            if ($num == $current_page) {
-
-                                $pagLink = "<a class = 'btn btn-outline-success text-center' href='product.php?page="
-
-                                    . $num . "'>" . $num . " </a>&ensp;&ensp;";
-
-                            } else {
-
-                                $pagLink = "<a class = 'btn btn-outline-success text-center' href='product.php?current_page=" . $num . "'> " . $num . " </a>&ensp;&ensp;";
-
-                            }
-
-                        }
-                        ;
-
-                        echo $pagLink;
-
-                        if ($current_page < $total_page) {
-
-                            echo "<a class = 'btn btn-outline-success text-center' href='product.php?current_page=" . ($current_page + 1) . "'>  Next </a>";
-
-                        }
-                        ?>
-                    </div>
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-                    <!-- </div> -->
-
                     </table>
                 </div>
         </div>
@@ -255,8 +209,6 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
             </div>
         </div>
     </footer>
-    </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
