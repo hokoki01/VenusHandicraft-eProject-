@@ -17,6 +17,8 @@ include 'header.php';
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
+        opacity: 0.5;
+        background-color: black;
     }
             input:focus,
               textarea:focus,

@@ -6,148 +6,123 @@ $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
 $offset = ($current_page - 1) * $item_per_page;
 $total_records = mysqli_query($connect, "SELECT * FROM artist");
 ?>
-<br><br><br>
-<div class="container-fluid p-5  text-center text-success">
-    <h2 style="Text-decoration : none;">Product Detail</h2><br>
+
+
+<!-- phần show sản phẩm đc clicked  -->
+<br><br>
+<div class="container-fluid p-5 mb-4  text-center " style="background-color:#f7f7f7">
+    <h2>Product Detail</h2><br>
 </div>
-<div class="container">
-    <table class="table table-hover table-bordered">
-        <tbody>
-            <?php
-            if (isset($_GET['Id'])) {
-                $product_id = mysqli_real_escape_string($connect, $_GET['Id']);
-                $query = "SELECT * FROM product WHERE Id='$product_id' ";
-                $query_run = mysqli_query($connect, $query);
 
-                if (mysqli_num_rows($query_run) > 0) {
-                    $product = mysqli_fetch_array($query_run);
-                    ?>
-                    <div class="card-header">
-                        <h4>
-                            <a href="Home.php" class="btn btn-danger float-end">BACK</a>
-                        </h4>
-                    </div>
+<?php
+    if (isset($_GET['Id'])){
+        $product_id = mysqli_real_escape_string($connect, $_GET['Id']);
+        $query = "SELECT * FROM product WHERE Id='$product_id' ";
+        $query_run = mysqli_query($connect, $query);
 
-                    <div class="row g-3">
-
-                        <div class="col">
-                            <div class="img-magnifier-container">
-                                <img id="myimage" src='image_DTB/<?= $product['Image']; ?>' class='img-responsive'
-                                    style='width:100%;border: 5px solid green;' alt='Image'>
-                            </div>
-
+    if (mysqli_num_rows($query_run) > 0) {
+        $product = mysqli_fetch_array($query_run);
+?>
+                <div class="container border border-3 border-warning-subtle p-3">  
+                <div class="row g-3">
+                        <div class="col-6 border-end border-warning-subtle">                            
+                            <img id="myimage" src='image_DTB/<?= $product['Image']; ?>' class="d-block w-100" alt='Image'>                            
                         </div>
-                        <div class="col">
-                            <h5 class="card-title">
-
-
-                                <div class="container">
-                                    <div class="jumbotron">
-                                        <!-- for page header -->
-                                        <h4 style="color: green">PRODUCT NAME</h4><br>
-                                        <h4 style="color: blue ;">
-                                            <?= $product['Title']; ?>
-
-                                        </h4><br><br>
-
-                                        <h4 style="color: green">PRODUCT ATTRIBUTES</h4><br>
-                                        <p style="color: #000">
-                                            <?= $product['Description']; ?>
-                                        </p>
-                                        <br>
-                                    </div>
-                                </div>
-
+                        <div class="col-6 p-3">                            
+                                                              
+                            <h4 class="border-bottom border-black" >Product Name:</h4>                                       
+           
+                            <p style="text-align:justify;font-size:25px">
+                                <?= $product['Title'];?>
+                            </p>
+            
+            <br>
+                            <h4 class="border-bottom border-black" >Product Attributes:</h4>
+            <br>
+                            <p style="text-align:justify">
+                                <?= $product['Description']; ?>
+                            </p>
+            <br>                                    
                         </div>
-                        <?php
-                } else {
-                    echo "<h4>No Such Id Found</h4>";
-                }
-            }
-            ?>
-            </div>
+                </div>
+                </div>
+<?php
+    } else {
+        echo "<h4>No Such Id Found</h4>";
+    }
+    }
+?> 
 
-        </tbody>
-    </table>
-    <br><br>
-    <div class=" bg-white text-seruress text-left text-danger">
-        <h2 style="Text-decoration : none;">See more products here</h2>
-        <hr color="black" size="5px">
+
+<br><br>
+
+
+<!-- phần gợi ý sản phẩm  -->
+    <div class=" bg-white  text-center ">
+        <h2>See more products here</h2>
+        <hr color="black" style="margin-bottom: 0px;" size="5px">
     </div>
-    <br>
-    
-    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
-        <?php
-
-        $count = 0;
-        $category = $product['Category_id'];
-
-        $result = mysqli_query($connect, "SELECT * FROM product where Category_id = $category and Id != $product_id ");
+<section class="pb-5">
+    <div class="container">
+        <div class="row">       
+<?php
+    $count = 0;
+    $category = $product['Category_id'];
+    $result = mysqli_query($connect, "SELECT * FROM product where Category_id = $category ");
         // include 'show_product.php';
-        $i = 0;
-        while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
-                <a style="display: block;color: blackite;text-align: center;padding: 16px;text-decoration: none;"
-                    href="product_detail.php?Id=<?= $row['Id']; ?>">
-                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:300px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
+    $i = 0;
+    while ($row = mysqli_fetch_array($result)) {
+?>
 
-                    <h4>
+<div class="col-4 gy-5 text-center">
+<div class="border border-warning-subtle border-3" style="display: inline-block;text-align: center">          
+      <a style="display: block;padding: 16px;" href="product_detail.php?Id=<?= $row['Id']; ?>">
+    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive d-block w-100' style='height :300px;' alt='Image'>
+    
+                    <h4 class="text-black pt-2 border-top border-warning-subtle border-2 ">
                         <?php echo $row["Title"]; ?>
                     </h4>
-                </a>
-            </li>
-            <?php
-            $i++;
-        }
-        ?>
-    </ul>
+      </a>
+    </div>
+</div>   
+<?php
+     $i++;
+                                                }
+?>
+        </div>
+    </div>
+</section>
 
 
 
-
-
-
-    <div class="container-fluid p-5 bg-success text-white text-center">
-        <h2 style="Text-decoration : none;">Handicrafts are traditional products in Vietnamese craft villages</h2><br>
+<!-- phần bắt đầu thông tin tác giả -->
+    <div class="container-fluid p-5 text-black text-center" style="background-color:#f7f7f7">
+        <h2 style="Text-decoration : none;">Famous artisans are currently working for us</h2><br>
         <p>One of the most popular and loved industries in this era. Thanks to the ingenuity and meticulousness of the
             artisans, they have made very eye-catching finished products. Moreover, this is a very successful branch of
             the crafting industry. You know, the handicrafts are made 100% by hand and with the whole heart of the
             artisan.</p>
     </div>
-    <?php
+<!-- phần thông tin tác giả -->
+<?php
     $count = 0;
     $result = mysqli_query($connect, "SELECT * FROM artist LIMIT " . $item_per_page . " OFFSET $offset");
     $i = 0;
     while ($row = mysqli_fetch_array($result)) {
-        ?>
-        <div class="container">
-            <table class="table table-hover table-bordered">
-                <tbody>
+ ?>
+        <div class="container pt-4">
+                    <div class="row">
 
-
-                    <div class="row g-3">
-
-                        <div class="col">
-                            <br><br>
-                            <a
-                                href="https://www.google.com/search?q=Artist+<?php echo $row['name'] ?>&sourceid=chrome&ie=UTF-8">
-                                <img src='image_DTB/<?php echo $row['image'] ?>' class='img-responsive' alt='Image'
-                                    width="100%"><br><br>
-                                <h1 class="text-success" style="Text-decoration : none; text-align:center;">Artist
-                                    <?php echo $row['name'] ?>
+                        <div class="col-5">                                                      
+                                <img src='image_DTB/<?php echo $row['image'] ?>' class='d-block w-100' alt='Image' >
+                                <h1 class="text-black" style="Text-decoration : none; text-align:center;">
+                                Artist <?php echo $row['name'] ?>
                                 </h1>
-                            </a>
                         </div>
-                        <div class="col">
-                            <h5 class="card-title">
-                                <div class="container">
-                                    <div class="jumbotron">
-                                        <div class="accordion" id="accordionExample">
-                                            <div class="container mt-5">
-                                                <div class="row">
+
+                        <div class="col-7">                        
+                                        <div class="accordion" id="accordionExample">                                           
                                                     <div class="accordion" id="accordionExample">
                                                         <div class="accordion-item">
                                                             <h2 class="accordion-header">
@@ -228,38 +203,65 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <?php
-                                                    $i++;
-    }
-    ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-
-                            </div>
-                            <!-- </div> -->
-                    </div>
-
-                </div>
-            </tbody>
-        </table>
-    </div>
+<?php
+    $i++;
+                                                                    }
+?>
+   
+   
     
-    <div class="col-md-12">
-        <h3>See more artists here</h3>
-        <?php
+<!-- phần phân trang -->
+<div class="col-md-12 mb-3">
+    <p style="font-size:x-large">See more artists here
+    </p>
+
+<?php
         $total_records = $total_records->num_rows;
         $total_page = ceil($total_records / $item_per_page);
 
         for ($num = 1; $num <= $total_page; $num++) {
             ?>
-            <a href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>" class="btn btn-outline-success "><?= $num ?></a>
+            <a href=" ?per_page=<?= $item_per_page ?>&page=<?= $num ?>" class="btn btn-outline-success "><?= $num ?></a>
             <?php
         }
+?>
+</div>
 
-        ?>
-    </div>
-</div>
-</div>
+
+
+<!-- style cho phần accordion của artists -->
+<style>
+            .accordion-button:not(.collapsed) {
+            border-bottom:solid 4px #696969 ;
+            background-color: #f7b948;
+            color: white;
+        }
+            .accordion-button.collapsed {
+            color: #333333;
+            background: #f3f2f2;
+            border: none;
+            
+        }
+            .accordion-button{
+                border: 1px solid white;
+        }
+            .accordion-button:focus {
+            box-shadow: none;
+            border-color: none;
+            
+        }
+            .accordion-body{
+                border-bottom:dotted 4px #696969
+        }
+        .accordion-item{
+            border: none;
+            background-color: #f3f2f2;
+            color: #696969;
+        }
+</style>
+    
+<?php include "footer.php"?>
