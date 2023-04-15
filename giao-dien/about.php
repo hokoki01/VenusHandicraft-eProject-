@@ -4,7 +4,7 @@ require 'connect_db.php';
 ?>
 <style>
   .theme {
-    background: url(Images/brown.jpg) no-repeat center center fixed;
+    background: url(Images/aboutus.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -17,30 +17,22 @@ require 'connect_db.php';
     text-decoration: none;
 
   }
+  
 </style>
 <h1 class="theme">About Us</h1>
-<div class="container">
-  <table class="table table-hover table-bordered">
-    <tbody>
-
-
-      <div class="row g-3">
-
-        <div class="col">
-
-          <img src='image_DTB/CEO.jpg' class='img-responsive' alt='Image' width="100%">
+<div class="container border p-3 mt-3">
+      <div class="row">
+        
+      <div class="col-md-6 col-sm-12">
+      <img src='image_DTB/CEO.jpg' class='d-block w-100' style="height: 100%;" alt='Image'>
         </div>
-        <div class="col">
-          <h5 class="card-title">
-            <div class="container">
-              <div class="jumbotron">
-                <!-- <h4 style="color: black;">ABOUT US</h4><br> -->
-                <!-- <p > -->
+
+        <div class="col-md-6 col-sm-12">
                 <div class="accordion" id="accordionExample">
+
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Venus Handicrafts
                       </button>
                     </h2>
@@ -63,10 +55,11 @@ require 'connect_db.php';
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                      data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Why Us?
                       </button>
                     </h2>
@@ -82,6 +75,7 @@ require 'connect_db.php';
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -90,31 +84,25 @@ require 'connect_db.php';
                       </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body">
-                        Owing to our fair business dealings and client-centric approach, we have
-                        expanded our customer base all across
-                        the nation. Our customized product option, on time delivery, economical
-                        prices and wide distribution network
-                        also assist us to achieve maximum satisfaction of our prominent patrons.
-                        In addition to this, we are also open
-                        to the queries and feedbacks given by our customers to enhance our
-                        offered variety. For our client’s
-                        convenience, we provide various easy payment modes.
-                      </div>
+                        <div class="accordion-body">
+                          Owing to our fair business dealings and client-centric approach, we have
+                          expanded our customer base all across
+                          the nation. Our customized product option, on time delivery, economical
+                          prices and wide distribution network
+                          also assist us to achieve maximum satisfaction of our prominent patrons.
+                          In addition to this, we are also open
+                          to the queries and feedbacks given by our customers to enhance our
+                          offered variety. For our client’s
+                          convenience, we provide various easy payment modes.
+                        </div>
                     </div>
                   </div>
+
                 </div>
-
-              </div>
-            </div>
-
-        </div>
+          </div>
 
       </div>
-
-    </tbody>
-  </table>
-</div>
+    </div>
 
 <section style="color: #000; background-color: #f3f2f2;margin-top: 20px;">
   <div class="container py-5">
@@ -241,6 +229,11 @@ require 'connect_db.php';
   </div>
 </section>
 
+<div class="container-fluid mt-3">
+  <h2 class="fw-bold text-center">Famous handicraft artist are currently working for us</h2>
+  <!-- <p class="text-center" style="text-align: justify;">One of the most popular and loved industries in this era. Thanks to the ingrenuity and meticulousness of the artist, they have made very eye-catching finished products. Moreover, this is a very successful branch of the crafting industry. You know, the handicrafts are made 100% by hand and with the whole heart of the artist</p> -->
+</div>
+
 <?php
 $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 1;
 $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
@@ -254,20 +247,20 @@ $result = mysqli_query($connect, "SELECT * FROM artist LIMIT " . $item_per_page 
 $i = 0;
 while ($row = mysqli_fetch_array($result)) {
   ?>
-  <div class="container pt-4">
+  <div class="container pt-4 mb-4">
     <div class="row">
 
-      <div class="col-5">
+      <div class="col-md-6 col-sm-12">
         <img src='image_DTB/<?php echo $row['image'] ?>' class='d-block w-100' alt='Image'>
-        <h1 class="text-black" style="Text-decoration : none; text-align:center;">
+        <h1 class="text-black mt-3 text-center">
           Artist
           <?php echo $row['name'] ?>
         </h1>
       </div>
 
-      <div class="col-7">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion" id="accordionExample">
+      <div class="col-md-6 col-sm-12">
+      <div class="accordion" id="accordionExample">
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -278,10 +271,10 @@ while ($row = mysqli_fetch_array($result)) {
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <?php echo $row['Biography'] ?>
-
                 </div>
               </div>
             </div>
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -292,10 +285,10 @@ while ($row = mysqli_fetch_array($result)) {
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <?php echo $row['Career'] ?>
-
                 </div>
               </div>
             </div>
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -309,6 +302,7 @@ while ($row = mysqli_fetch_array($result)) {
                 </div>
               </div>
             </div>
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -322,6 +316,7 @@ while ($row = mysqli_fetch_array($result)) {
                 </div>
               </div>
             </div>
+
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -335,22 +330,52 @@ while ($row = mysqli_fetch_array($result)) {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+
+      </div> 
       </div>
-    </div>
+
   </div>
+</div>
   <?php
   $i++;
 }
 ?>
 
 
+<!-- CSS cho phần accordion -->
+<style>
+    .accordion-button:not(.collapsed) {
+       border-bottom:solid 4px #696969 ;
+       background-color: #f7b948;
+       color: white;
+}
+    .accordion-button.collapsed {
+    color: #333333;
+    background: #f3f2f2;
+    border: none;
+    
+}
+    .accordion-button{
+        border: 1px solid white;
+}
+    .accordion-button:focus {
+    box-shadow: none;
+    border-color: none;
+    
+}
+    .accordion-body{
+        border-bottom:dotted 4px #696969
+}
+   .accordion-item{
+    border: none;
+    background-color: #f3f2f2;
+    color: #696969;
+}
+</style>
 
 <!-- phần phân trang -->
 <div class="col-md-12 mb-3">
-  <p style="font-size:x-large">See more artists here
-  </p>
+  <p style="font-size:x-large">See more artists here</p>
 
   <?php
 
@@ -363,7 +388,7 @@ while ($row = mysqli_fetch_array($result)) {
 
   if ($current_page >= 2) {
 
-    echo "<a class = 'btn btn-outline-success text-center' href='about.php?page=" . ($current_page - 1) . "'>  Prev </a>&ensp;&ensp;";
+    echo "<a class='btn btn btn-outline-warning' style='color:black' href='about.php?page=" . ($current_page - 1) . "'>  Prev </a>&ensp;&ensp;";
 
   }
 
@@ -371,13 +396,13 @@ while ($row = mysqli_fetch_array($result)) {
 
     if ($num === $current_page) {
 
-      $pagLink = "<a class = 'btn btn-outline-success text-center' href='about.php?page="
+      $pagLink = "<a class='btn btn btn-outline-warning' style='color:black' href='about.php?page="
 
         . $num . "'>" . $num . " </a>&ensp;&ensp;";
 
     } else {
 
-      $pagLink = "<a class = 'btn btn-outline-success text-center' href='about.php?page=" . $current_page . "'> " . $current_page . " </a>&ensp;&ensp;";
+      $pagLink = "<a class='btn btn btn-outline-warning' style='color:black' href='about.php?page=" . $current_page . "'> " . $current_page . " </a>&ensp;&ensp;";
 
     }
 
@@ -388,7 +413,7 @@ while ($row = mysqli_fetch_array($result)) {
 
   if ($current_page < $total_page) {
 
-    echo "<a class = 'btn btn-outline-success text-center' href='about.php?page=" . ($current_page + 1) . "'>  Next </a>";
+    echo "<a class='btn btn btn-outline-warning' style='color:black'  href='about.php?page=" . ($current_page + 1) . "'>  Next </a>";
 
   }
   ?>
