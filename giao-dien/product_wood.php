@@ -4,7 +4,7 @@ include 'connect_db.php';
 ?>
 <style>
     .product-theme {
-        background: url(Images/woodbg.jpg) no-repeat center center fixed;
+        background: url(Images/wood4.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
