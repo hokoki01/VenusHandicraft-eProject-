@@ -148,6 +148,7 @@ include 'header.php';
 </div>
 </section>
 
+<!-- CSS cho phần accordion -->
 <style>
     .accordion-button:not(.collapsed) {
        border-bottom:solid 4px #696969 ;
