@@ -47,20 +47,19 @@ $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
         }
         ?>
     </ul>
-    <div class="col-md-12">
-        <?php
+    <div class="col-md-12 ms-auto mb-4">
+<?php
         $total_records = $total_records->num_rows;
-        $total_page = ceil($total_records / $item_per_page);
+        $total_page = ceil($total_records / $item_per_page);    
         for ($num = 1; $num <= $total_page; $num++) {
             ?>
-            <a class="btn btn-outline-success float-end" href="?per_page=<?= $item_per_page ?>&page=<?= $num ?>"
-                class="btn btn-outline-success float-end"><?= $num ?></a>
+            <a class="btn btn btn-outline-warning " style="color:black" href=" ?per_page=<?= $item_per_page ?>&page=<?= $num ?> ">
+                <?= $num ?>
+            </a>
             <?php
-
         }
-
-        ?>
-    </div><br><br>
+?>
+    </div>
     <?php
     include 'footer.php';
     ?>
