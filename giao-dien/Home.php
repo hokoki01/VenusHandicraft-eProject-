@@ -11,17 +11,29 @@ include 'header.php';
       aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+  </div>  
 
   <div class="carousel-inner">
     <div class="carousel-item c-item" data-bs-interval="10000">
       <img src="Images/carousel1.jpg" class="d-block w-100 c-img" alt="img1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
     </div>
     <div class="carousel-item active c-item" data-bs-interval="2000">
       <img src="Images/pottery-souvenir-traditional-art.jpg" class="d-block w-100 c-img" alt="img2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
     </div>
     <div class="carousel-item c-item">
       <img src="Images/indian-handicrafts.jpg" class="d-block w-100 c-img" alt="img3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
     </div>
   </div>
 
@@ -128,18 +140,17 @@ include 'header.php';
       <div class="col-md-12 col-sm-12">
         <h3 class="mb-3 fw-bold">Handicraft villages</h3>
       </div>
-      <!-- <div class="col-6 text-right">
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
-          data-bs-slide="prev">
+    
+    <!-- <div class="col-6 text-right">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
           <i class="bi bi-arrow-left-square" aria-hidden="true"></i>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
-          data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
           <i class="bi bi-arrow-right-square" aria-hidden="true"></i>
           <span class="visually-hidden">Next</span>
-        </button> -->
-      </div>
+        </button>
+    </div> -->
       <div class="col-12" style="margin:0;padding:0;">
         <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
 
@@ -186,7 +197,7 @@ include 'header.php';
 
               </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item ">
               <div class="row">
 
                 <div class="col-md-4 mb-4 h-100 mt-3">

@@ -79,9 +79,9 @@
               <a class="nav-link active" aria-current="page" href="Home.php">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="D:\VenusHandicraft(eProject)\giao-dien\product.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="product.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Our Products
-              </a>
+              </a>  
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="product_iron.php">Iron</a></li>
                 <li><a class="dropdown-item" href="product_glass.php">Glass</a></li>

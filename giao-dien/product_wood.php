@@ -22,14 +22,13 @@ include 'connect_db.php';
     <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
 
 
-        <?php
-
+<?php
         $count = 0;
         $result = mysqli_query($connect, "SELECT * FROM product where Category_id = 1 ");
         // include 'show_product.php';
         $i = 0;
         while ($row = mysqli_fetch_array($result)) {
-            ?>
+?>
             <div class="container">
             <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float:left;">
                 <a 
@@ -43,10 +42,11 @@ include 'connect_db.php';
                 </a>
             </li>
             </div>
-            <?php
+<?php
             $i++;
-        }
-        ?>
+                                                    }
+?>
+
     </ul>
     <?php
     include 'footer.php';
