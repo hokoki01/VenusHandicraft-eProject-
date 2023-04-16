@@ -26,12 +26,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["email"])) {
         $email = $_POST['email'];
     }
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script type='text/javascript'>alert('Invalid email format');</script>";
+    }
     if (isset($_POST["name"])) {
         $name = $_POST['name'];
     }
+    if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+        echo "<script type='text/javascript'>alert('name cannot contain special characters');</script>";
+    }
+
     if (isset($_POST["password"]) && isset($_POST["enter_password"])) {
         $password = $_POST['password'];
         $enter_password = $_POST['enter_password'];
+    }
+    if (!'@[A-Z]@' || !'@[a-z]@' || !'@[0-9]@' || !'@[^\w]@' || strlen($password) < 8) {
+        echo "<script type='text/javascript'>alert('Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.');</script>";
     }
     if ($password != $enter_password) {
 
@@ -41,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO admin ( name,email, password) VALUES ( '$name', '$email','$password')";
 
         if (mysqli_query($connect, $sql)) {
-            echo "<script type='text/javascript'>alert('Congratulations, you have successfully registered');</script>";
             header('location: sign_in.php');
         }
 
@@ -67,14 +76,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="name" name="name" type="text"
-                                                        placeholder="Enter your first name" />
+                                                        placeholder="Enter your first name" required  />
                                                     <label for="name">name</label>
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
                                                     <input class="form-control" id="email" name="email" type="email"
-                                                        placeholder="Enter your last name" />
+                                                        placeholder="Enter your last name" required />
                                                     <label for="email">Email address</label>
                                                 </div>
                                             </div>
@@ -83,23 +93,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPassword" name="password"
-                                                        type="password" placeholder="Create a password" />
-                                                    <label for="inputPassword">Password</label>
+                                                        type="password" placeholder="Create a password" min="80000000" />
+                                                    <label for="inputPassword" required>Password</label>
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPasswordConfirm"
                                                         type="password" name="enter_password"
-                                                        placeholder="Confirm password" />
-                                                    <label for="inputPasswordConfirm">Confirm Password</label>
+                                                        placeholder="Confirm password" min="80000000"/>
+                                                    <label for="inputPasswordConfirm" required>Confirm Password</label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="address" type="text" placeholder="">
-                                            <label for="address"> address</label>
-                                        </div><br>
+                                            <label for="address" required> address</label>
+                                        </div>
                                         <div class="row">
                                             <div class="col-sm">
                                                 <label class="form-check-label" for="radio2">Gender :</label>
@@ -108,13 +119,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                 <div class="form-check">
                                                     <input type="radio" class="form-check-input" id="radio1"
                                                         name="optradio" value="option1" checked>Male
-                                                    <label class="form-check-label" for="radio1"></label>
+                                                    <label class="form-check-label" for="radio1" required></label>
                                                 </div>
                                             </div>
                                             <div class="col-sm">
                                                 <div class="form-check">
                                                     <input type="radio" class="form-check-input" id="radio2"
-                                                        name="optradio" value="option2">Female
+                                                        name="optradio" value="option2" required>Female
 
                                                 </div>
                                             </div>
