@@ -39,7 +39,7 @@
                                         <input type="text" name="Description" class="form-control" required>
                                     </div>
                                     <div class="mb-3">
-                                        <button type="submit" name="save_student" onclick="submit()"
+                                        <button type="submit" name="save_product" onclick="submit()"
                                             class="btn btn-primary">Save Product</button>
                                         <script>
                                             function submit() {

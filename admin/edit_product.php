@@ -51,7 +51,7 @@
                                                         value="<?= $product['Description']; ?>" class="form-control">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <button type="submit" name="update_student" class="btn btn-primary">
+                                                    <button type="submit" name="update_product" class="btn btn-primary">
                                                         Update Product
                                                     </button>
                                                 </div>

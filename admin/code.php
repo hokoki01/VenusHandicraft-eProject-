@@ -2,9 +2,9 @@
 session_start();
 require 'connect_db.php';
 
-if(isset($_POST['delete_student']))
+if(isset($_POST['delete_product']))
 {
-    $product_id = mysqli_real_escape_string($connect, $_POST['delete_student']);
+    $product_id = mysqli_real_escape_string($connect, $_POST['delete_product']);
 
     $query = "DELETE FROM product WHERE id='$product_id' ";
     $query_run = mysqli_query($connect, $query);
@@ -12,18 +12,18 @@ if(isset($_POST['delete_student']))
     if($query_run)
     {
         $_SESSION['message'] = "Student Deleted Successfully";
-        header("Location: admin.php");
+        header("Location: product.php");
         exit(0);
     }
     else
     {
         $_SESSION['message'] = "Student Not Deleted";
-        header("Location: admin.php");
+        header("Location: product.php");
         exit(0);
     }
 }
 
-if(isset($_POST['update_student']))
+if(isset($_POST['update_product']))
 {
     $product_id = mysqli_real_escape_string($connect, $_POST['product_id']);
 
@@ -38,20 +38,20 @@ if(isset($_POST['update_student']))
     if($query_run)
     {
         $_SESSION['message'] = "Student Updated Successfully";
-        header("Location: admin.php");
+        header("Location: product.php");
         exit(0);
     }
     else
     {
         $_SESSION['message'] = "Student Not Updated";
-        header("Location: admin.php");
+        header("Location: product.php");
         exit(0);
     }
 
 }
 
 
-if(isset($_POST['save_student']))
+if(isset($_POST['save_product']))
 {
     $Category_id = mysqli_real_escape_string($connect, $_POST['Category_id']);
     $Title = mysqli_real_escape_string($connect, $_POST['Title']);
@@ -64,13 +64,13 @@ if(isset($_POST['save_student']))
     if($query_run)
     {
         $_SESSION['message'] = "Student Created Successfully";
-        header("Location: add_new_product.php");
+        header("Location: product.php");
         exit(0);
     }
     else
     {
         $_SESSION['message'] = "Student Not Created";
-        header("Location: add_new_product.php");
+        header("Location: product.php");
         exit(0);
     }
 }
@@ -93,14 +93,14 @@ if(isset($_POST['save_artist']))
     if($query_run)
     {
         $_SESSION['message'] = "artist Created Successfully";
-        header("Location: add_new_artist.php");
-        exit(0);
+        header("Location: artist.php");
+        // exit(0);
     }
     else
     {
         $_SESSION['message'] = "artist Not Created";
-        header("Location: add_new_artist.php");
-        exit(0);
+        header("Location: artist.php");
+        // exit(0);
     }
 }
 
@@ -114,14 +114,14 @@ if(isset($_POST['delete_artist']))
     if($query_run)
     {
         $_SESSION['message'] = "artist Deleted Successfully";
-        header("Location: admin.php");
-        exit(0);
+        header("Location: artist.php");
+        // exit(0);
     }
     else
     {
         $_SESSION['message'] = "artist Not Deleted";
-        header("Location: admin.php");
-        exit(0);
+        header("Location: artist.php");
+        // exit(0);
     }
 }
 
@@ -142,14 +142,14 @@ if(isset($_POST['update_artist']))
     if($query_run)
     {
         $_SESSION['message'] = "Student Updated Successfully";
-        header("Location: admin.php");
-        exit(0);
+        header("Location: artist.php");
+        // exit(0);
     }
     else
     {
         $_SESSION['message'] = "Student Not Updated";
-        header("Location: admin.php");
-        exit(0);
+        header("Location: artist.php");
+        // exit(0);
     }
 
 }
@@ -164,16 +164,36 @@ if(isset($_POST['save_category']))
     if($query_run)
     {
         $_SESSION['message'] = "artist Created Successfully";
-        header("Location: add_new_category.php");
-        exit(0);
+        header("Location: category.php");
+        // exit(0);
     }
     else
     {
         $_SESSION['message'] = "artist Not Created";
-        header("Location: add_new_category.php");
-        exit(0);
+        header("Location: category.php");
+        // exit(0);
     }
 }
 
+if(isset($_POST['delete_category']))
+{
+    $category_id = mysqli_real_escape_string($connect, $_POST['delete_category']);
+
+    $query = "DELETE FROM category WHERE id='$category_id' ";
+    $query_run = mysqli_query($connect, $query);
+
+    if($query_run)
+    {
+        $_SESSION['message'] = "Student Deleted Successfully";
+        header("Location: category.php");
+        exit(0);
+    }
+    else
+    {
+        $_SESSION['message'] = "Student Not Deleted";
+        header("Location: category.php");
+        exit(0);
+    }
+}
 
 ?>

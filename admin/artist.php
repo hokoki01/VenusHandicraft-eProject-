@@ -47,7 +47,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
                                     echo "Yeu cau nhap du lieu vao o trong";
                                 } else {
                                     include 'connect_db.php';
-                                    $sql = "SELECT * FROM artist where name like '%$search%'";
+                                    $sql = "SELECT * FROM artist where name like '%$search%' || id = $search ";
                                     $result = mysqli_query($connect, $sql);
                                     ?>
                                     <ul

@@ -120,7 +120,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                               </td>
                               <td>
                                 <form action="code.php" method="POST" class="d-inline">
-                                  <button type="submit" name="delete_student" value="<?= $row['Id']; ?>"
+                                  <button type="submit" name="delete_product" value="<?= $row['Id']; ?>"
                                     class="btn btn-danger btn-sm">Delete</button>
                                 </form>
                               </td>

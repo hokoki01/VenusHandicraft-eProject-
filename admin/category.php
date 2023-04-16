@@ -106,6 +106,12 @@ $total_records = mysqli_query($connect, "SELECT * FROM category");
                                         <td>
                                             <?= $category['category_name']; ?>
                                         </td>
+                                        <td>
+                                            <form action="code.php" method="POST" class="d-inline">
+                                                <button type="submit" name="delete_category" value="<?= $category['Id']; ?>"
+                                                    class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     <?php
                                 }
