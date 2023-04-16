@@ -17,8 +17,8 @@ include 'header.php';
         padding-top: 150px;
         text-align: center;
         text-decoration: none;
-        opacity: 0.5;
-        background-color: black;
+        /* opacity: 0.5;
+        background-color: black; */
     }
             input:focus,
               textarea:focus,
@@ -148,6 +148,7 @@ include 'header.php';
 </div>
 </section>
 
+<!-- CSS cho phần accordion -->
 <style>
     .accordion-button:not(.collapsed) {
        border-bottom:solid 4px #696969 ;
