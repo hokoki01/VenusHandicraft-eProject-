@@ -34,7 +34,6 @@ if (isset($_GET['Id'])) {
 
                     <br>
                     <h4 class="border-bottom border-black">Product Attributes:</h4>
-                    <br>
                     <p style="text-align:justify">
                         <?= $product['Description']; ?>
                     </p>
@@ -54,10 +53,8 @@ if (isset($_GET['Id'])) {
 
 
 <!-- phần gợi ý sản phẩm  -->
-<div class=" bg-white  text-left ">
-    &ensp;&ensp;&ensp;<h2>See more products here</h2>
-    <hr color="black" style="margin-bottom: 0px;" size="5px">
-</div>
+    &ensp;&ensp;&ensp;<h2 class="ms-3">See more products here :</h2>
+    <hr  style="margin-bottom: 0px;" size="10px" >
 
 <section class="pb-5">
     <div class="container">
@@ -78,7 +75,7 @@ if (isset($_GET['Id'])) {
                             <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive d-block w-100'
                                 style='height :300px;' alt='Image'>
 
-                            <h4 class="text-black pt-2 border-top border-warning-subtle border-2 ">
+                            <h4 class="text-black pt-2 border-top border-dark-subtle border-2 ">
                                 <?php echo $row["Title"]; ?>
                             </h4>
                         </a>

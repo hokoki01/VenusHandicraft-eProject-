@@ -20,12 +20,10 @@ include 'header.php';
         /* opacity: 0.5;
         background-color: black; */
     }
-            input:focus,
-              textarea:focus,
-              .form-control{
-                outline: red;
-                box-shadow: none;
-              }
+    .form-control:focus {
+  border-color: none;
+  box-shadow: 6px 5px 5px #FFFF2E, 0 0 10px #FFFF2E;
+}
 </style>
 
 <h1 class="text">CONTACT US</h1>
@@ -69,15 +67,15 @@ include 'header.php';
 
                 <label for="Name">Nick Name : </label></td>
                 <input type="text" Id="Name" placeholder="Full Name" name="Name" required
-                class="form-control  " row="5">
+                class="form-control p-3">
 
                 <label for="Email">Email : </label>
-                <input type="text" Id="Email" placeholder="Email" name="Email" required
-                class="form-control " row="5">
+                <input type="email" Id="Email" placeholder="Email" name="Email" required
+                class="form-control p-3">
 
                 <label for="Phone">Phone : </label>
-                <input type="text" Id="Phone" placeholder="Phone Number" name="Phone" required
-                class="form-control " row="5">
+                <input type="tel" Id="Phone" placeholder="Phone Number" name="Phone" required
+                class="form-control p-3">
 
                 <label for="Note">Message : </label>
                 <textarea name="Note" id="Note"  class="form-control " rows="8" placeholder="What ever you need" required></textarea>
@@ -110,9 +108,9 @@ include 'header.php';
                 </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    We manufacturing and exporting  handicrafts products.
-                </div>
+                    <div class="accordion-body">
+                        We manufacturing and exporting  handicrafts products.
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -122,9 +120,9 @@ include 'header.php';
                 </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    We export  to the <strong>global</strong> importers,wholesalers and retailers.
-                </div>
+                    <div class="accordion-body">
+                        We export  to the <strong>global</strong> importers,wholesalers and retailers.
+                    </div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -134,9 +132,9 @@ include 'header.php';
                 </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                     Our company headquartered is in <strong> India</strong>.
-                </div>
+                    <div class="accordion-body">
+                        Our company headquartered is in <strong> India</strong>.
+                    </div>
                 </div>
             </div>  
             </div>  

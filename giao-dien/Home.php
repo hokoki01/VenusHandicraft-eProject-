@@ -16,22 +16,22 @@ include 'header.php';
   <div class="carousel-inner">
     <div class="carousel-item c-item" data-bs-interval="10000">
       <img src="Images/carousel1.jpg" class="d-block w-100 c-img" alt="img1">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+      <div class="carousel-caption top-0 mt-5">
+        <h5 class="mt-5 fs-2 text-warning text-uppercase text-xl-start">Venus Handicraft</h5>
+        <p class="text-start text-black fs-4">We are proud to be one of the leading units in providing handicraft products that contribute to bringing handmade products closer to users.</p>
       </div>
     </div>
     <div class="carousel-item active c-item" data-bs-interval="2000">
       <img src="Images/pottery-souvenir-traditional-art.jpg" class="d-block w-100 c-img" alt="img2">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
+      <div class="carousel-caption top-0 mt-5 ">
+        <h5 class="mt-5 fs-3 text-uppercase">First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
     <div class="carousel-item c-item">
       <img src="Images/indian-handicrafts.jpg" class="d-block w-100 c-img" alt="img3">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
+      <div class="carousel-caption top-0 mt-5 ">
+        <h5 class="mt-5 fs-3 text-uppercase">First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
     </div>
@@ -70,7 +70,7 @@ include 'header.php';
         <a href="about.php">Read more</a>
       </div>
       <div class="col-md-6 col-sm-7 " >
-        <img src="Images/company.png" style="height: 300px;border-radius: 10px;" class="d-block w-100" alt="alter" >
+        <img src="Images/company.jpg" style="height: 300px;border-radius: 10px;" class="d-block w-100" alt="alter" >
       </div>
     </div>
   </div>
@@ -496,15 +496,33 @@ include 'header.php';
       <form class="form" method="post" action="Home.php">
           <input type="text" required name="email" name="email" class="form-control" placeholder=" Type your email here ...">
 
-          <button type="submit" id="submit" onclick="submit()" style="color:white" class="btn btn-warning ">Submit</button>
+          <button type="submit" id="submit" onclick="submit()" style="color:white" class="btnAni btn btn-warning ">Submit</button>
       </form>
-
-      <script language="javascript">
-            var button = document.getElementById("submit");
-            button.onclick = function(){
-                alert("submitt success !");
-            }
-        </script>
+<script language="javascript">
+    var button = document.getElementById("submit");
+    button.onclick = function()
+{
+    alert("submitt success !");
+}
+</script>
+<style>
+    .form-control:focus {
+  border-color: none;
+  box-shadow: 6px 5px 5px #FFFF2E, 0 0 10px #FFFF2E;
+} 
+/* Animation left to right cho button */
+.btnAni {
+    background: #ffd300; /* default color */
+    border-color: #ffd300;
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(to left, #ffd300 50%, #D1D100 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+.btnAni:hover {
+    background-position: left;
+}
+</style>
   
 
 

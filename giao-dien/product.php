@@ -7,7 +7,7 @@ $offset = ($current_page - 1) * $item_per_page;
 $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
 <style>
     .text {
-        background: url(Images/theme3.jpg) no-repeat center center fixed;
+        background: url(Images/HDC.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -22,31 +22,35 @@ $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
 </style>
 
 <h1 class="text">Gallery</h1>
-    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
-        <?php
-
+    <div class="container">
+        <div class="row">
+<?php
         $count = 0;
         $result = mysqli_query($connect, "SELECT * FROM product LIMIT " . $item_per_page . " OFFSET $offset");
         // include 'show_product.php';
         $i = 0;
         while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
-                <a style="display: block;color: blackite;text-align: center;padding: 16px;text-decoration: none;"
-                    href="product_detail.php?Id=<?= $row['Id']; ?>">
-                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:390px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
-
-                    <h4>
+?>
+            <div class="col-md-4 h-100">
+             <div class="border border-5" style="border-color:#525252">
+                <a href="product_detail.php?Id=<?= $row['Id']; ?>">
+                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive d-block w-100 p-1' style='height :350px' alt='Image'>
+                    
+                    <h4 class="mt-3 pt-2 text-black text-center border-top border-dark-subtle border-2">
                         <?php echo $row["Title"]; ?>
                     </h4>
                 </a>
-            </li>
-            <?php
-            $i++;
-        }
-        ?>
-    </ul>
+             </div>
+            </div>
+<?php
+        $i++;
+                                                    }
+?>
+        </div>
+    </div>
+
+    
+<!-- phân trang -->
     <div class="col-md-12 ms-auto mb-4">
 <?php
         $total_records = $total_records->num_rows;
@@ -60,6 +64,8 @@ $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
         }
 ?>
     </div>
-    <?php
+
+
+<?php
     include 'footer.php';
-    ?>
+?>

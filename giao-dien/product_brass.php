@@ -4,17 +4,18 @@ include 'connect_db.php';
 ?>
 <style>
     .product-theme5 {
-        background: url(Images/brass22.jpg) no-repeat center center fixed;
+        background: url(Images/Brass.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
         width: 100%;
         height: 350px;
-        color: black;
-        padding-top: 150px;
+        color: 	#CD7F32;
+        padding-top: 100px;
         text-align: center;
         text-decoration: none;
+        
     }
 </style>
 
@@ -22,33 +23,34 @@ include 'connect_db.php';
 <!-- <div class="container" style="text-align:center;border: 5px solid grey;width:fit-content; "> -->
     <!-- <h2> Brass products</h2> -->
 <!-- </div> -->
-    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
-
-        <?php
-
-        $count = 0;
-        $result = mysqli_query($connect, "SELECT * FROM product where Category_id = 5 ");
-        // include 'show_product.php';
-        $i = 0;
-        while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
-                <a style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none;"
-                    href="product_detail.php?Id=<?= $row['Id']; ?>">
-
-                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:390px ; height :390px; border: 5px solid orange;' alt='Image'><br><br>
-
-                    <h4>
+<section class="pb-5">
+    <div class="container">
+            <div class="row">
+<?php
+            $count = 0;
+            $result = mysqli_query($connect, "SELECT * FROM product where Category_id = 5 ");
+            // include 'show_product.php';
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {    
+?>
+            <div class="col-md-4 h-100">
+             <div class="border border-5" style="border-color:#525252">
+                <a href="product_detail.php?Id=<?= $row['Id']; ?>">
+                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive d-block w-100 p-1' style='height :350px' alt='Image'>
+                    
+                    <h4 class="mt-3 pt-2 text-black text-center border-top border-dark-subtle border-2">
                         <?php echo $row["Title"]; ?>
                     </h4>
                 </a>
-            </li>
-            <?php
+             </div>
+            </div>
+<?php
             $i++;
-        }
-        ?>
-    </ul>
+                                                        }
+?>  
+        </div>
+    </div>
+</section>    
     <?php
     include 'footer.php';
     ?>

@@ -364,6 +364,7 @@ while ($row = mysqli_fetch_array($result)) {
     
 }
     .accordion-body{
+      border-top: dotted 4px #696969;
         border-bottom:dotted 4px #696969
 }
    .accordion-item{

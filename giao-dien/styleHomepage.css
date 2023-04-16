@@ -1,7 +1,8 @@
 body{
     /* background-image: url("https://previews.123rf.com/images/alekseynikolayew/alekseynikolayew1702/alekseynikolayew170200126/72611546-textura-de-mimbre-tejida-simple-fondo-marr%C3%B3n-claro-tejido-imitaci%C3%B3n-de-mimbre-o-de-sauce.jpg"); */
     margin: 0;
-}
+    padding-top: 70px;
+}   
 
 
 
@@ -11,8 +12,6 @@ body{
     background-color: #010101;
     
 }
-
-
 nav .navbar-nav li a{
     color: white !important;
     font-family: bradley hand,cursive;
@@ -34,6 +33,7 @@ nav.navbar.navbar-expand-lg.fixed-top{
  /* add underline animation for navbar link */
     .nav-link{
         position: relative;
+        
     }
     .nav-link:hover,
     .nav-link:focus{
@@ -150,11 +150,18 @@ nav.navbar.navbar-expand-lg.fixed-top{
     background: linear-gradient( 263deg, rgba(252,74,74,1) 0%, rgba(0,212,255,1) 100% );
 }
 /* ======================================================== */
+/* tính làm cái vị trí của caption mà mệt */
+/* .carousel-caption{ 
+    width:200px; 
+    z-index:10; 
+    color:#fff; 
+    text-align:center; 
+    top:50%; left:65%; 
+    bottom:auto; 
+    -webkit-transform:translate(0, -50%);} */
 
 
 /* styling for text font,etc */
-
-
 h1,h2,h3,h4{
     font-family: bradley hand,cursive;
 }
@@ -164,8 +171,6 @@ h1,h2,h3,h4{
     text-align: center;
 }
 /* ============================= */
-
-
 
 
 
@@ -319,7 +324,6 @@ section{
         padding: 40px;
     }
 } */
-
 
 
 

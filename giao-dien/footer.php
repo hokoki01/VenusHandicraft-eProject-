@@ -21,10 +21,10 @@
     <div class="noi-dung links">
       <h2>Site Map</h2>
       <ul class="Olist">
-        <li><a href="#">Home</a></li>
+        <li><a href="Home.php">Home</a></li>
         <li><a href="about.php">About Us</a></li>
         <li><a href="contact.php">Contact Us</a></li>
-        <li><a href="product.php">Our Products</a></li>
+        <li><a href="product.php">Gallery</a></li>
       </ul>
     </div>
     <!--Kết Thúc Nội Dung Đường Dẫn-->

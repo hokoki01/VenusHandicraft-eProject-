@@ -117,12 +117,11 @@
     <script language="javascript">
       var button = document.getElementById("submit");
       button.onclick = function () {
-        alert("submitt success !");
+       
       }
     </script>
     </div>
-
-    <?php
+<?php
     if (isset($_REQUEST['ok'])) {
       $search = addslashes($_GET['search']);
       if (empty($search)) {
@@ -134,29 +133,42 @@
         $sql = "SELECT * FROM product where Title like '%$search%'";
         $result = mysqli_query($connect, $sql);
         if(mysqli_num_rows($result) > 0){
-          echo "&ensp;&ensp;<h3>Are you looking for this product?</h3>";
+
+          echo "<h3 class = 'mt-3 ms-3'>Are you looking for this product?</h3>";
+          echo "<hr  style='margin-bottom: 0px;' size='10px' >";
+          echo "
+              <section class='pb-5'>
+                <div class='container'>
+                  <div class='row'>          
+               ";
           while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;"> <a
-                style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none;"
-                href="product_detail.php?Id=<?= $row['Id']; ?>">
-                <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                  style='width:430px ; height :300px; border: 5px solid blue;' alt='Image'><br><br>
-                <h4>
-                  <?php echo $row["Title"]; ?>
-                </h4>
-              </a></li>
-            <?php
-          }
-        
-        }else {echo '&ensp;&ensp;<h3>Not found what you looking for</h3>';}
+?>
+      <div class="col-md-4 h-100">
+        <div class="border border-5" style="border-color:#525252">
+              <a href="product_detail.php?Id=<?= $row['Id']; ?>">
+              <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive d-block w-100' style='height :300px;' alt='Image'>
+                  <h4 class="mt-3 pt-2 text-black text-center border-top border-dark-subtle border-2">
+                    <?php echo $row["Title"]; ?>
+                  </h4>
+              </a>
+        </div>
+      </div>
+<?php
+                                                      }
+          echo "
+                  </div>
+              </div>
+            </section>  
+               ";
+                                        }else{echo "<h3 class = 'mt-3 ms-3'>Not found what you looking for</h3>";}
+              }
+              include 'footer.php';
+              
+                                }
+?>
 
-      }
-    }
-    ?>
 
 
 
 
-
-    </div>
+    
