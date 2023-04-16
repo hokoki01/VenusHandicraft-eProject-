@@ -46,7 +46,7 @@
                                                         <label>Product Image</label>
                                                         <td>
 
-                                                            <img src='image_DTB/<?= $image = $product['Image']; ?>'
+                                                            <img src='giao-dien/image_DTB/<?= $image = $product['Image']; ?>'
                                                                 class='img-responsive' style='width:20%' alt='Image'>
                                                         </td>
                                                     </div>

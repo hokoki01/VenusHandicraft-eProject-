@@ -18,16 +18,31 @@ include 'connect_db.php';
         text-decoration: none;
     }
 </style>
+<?php
+if (isset($_GET['Id'])) {
+    $Id = mysqli_real_escape_string($connect, $_GET['Id']);
+    $query = "SELECT * FROM category where Id = $Id";
+    $query_run = mysqli_query($connect, $query);
+    if (mysqli_num_rows($query_run) > 0) {
+        foreach ($query_run as $category) {
+            ?>
+            <h1 class="product-theme6">
+                <?= $category['category_name']; ?>
+            </h1>
+            <?php
+        }
+    } else {
+        echo "<h5> No Record Found </h5>";
+    }
+}
+?>
 
-<h1 class="product-theme6">ALUMNIUM PRODUCT </h1>
-    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
-
-
-        <?php
-
+<ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
+    <?php
+    if (isset($_GET['Id'])) {
+        $Id = mysqli_real_escape_string($connect, $_GET['Id']);
         $count = 0;
-        $result = mysqli_query($connect, "SELECT * FROM product where Category_id = 4 ");
-        // include 'show_product.php';
+        $result = mysqli_query($connect, "SELECT * FROM product WHERE Category_id ='$Id'");
         $i = 0;
         while ($row = mysqli_fetch_array($result)) {
             ?>
@@ -45,11 +60,15 @@ include 'connect_db.php';
             <?php
             $i++;
         }
+
         ?>
-    </ul>
-    <?php
-    include 'footer.php';
+        <?php
+    }
     ?>
+</ul>
+<?php
+include 'footer.php';
+?>
 </body>
 
 </html>

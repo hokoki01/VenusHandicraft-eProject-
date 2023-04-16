@@ -67,7 +67,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
                                                 </td>
                                                 <td>
 
-                                                    <img src='image_DTB/<?= $image = $row['Image']; ?>' class='img-responsive'
+                                                    <img src='giao-dien/image_DTB/<?= $image = $row['Image']; ?>' class='img-responsive'
                                                         style='width:60%' alt='Image'>
                                                 </td>
                                                 <td>
