@@ -1,0 +1,579 @@
+body{
+    /* background-image: url("https://previews.123rf.com/images/alekseynikolayew/alekseynikolayew1702/alekseynikolayew170200126/72611546-textura-de-mimbre-tejida-simple-fondo-marr%C3%B3n-claro-tejido-imitaci%C3%B3n-de-mimbre-o-de-sauce.jpg"); */
+    margin: 0;
+    padding-top: 70px;
+}   
+
+
+
+/* Styling for navbar */
+.navbar{
+    
+    background-color: #010101;
+    
+}
+nav .navbar-nav li a{
+    color: white !important;
+    font-family: bradley hand,cursive;
+}
+
+ul.dropdown-menu > li > a {
+    color:#ffffff !important;
+    background-color: black;
+}
+
+.dropdown-menu a:hover{
+    background-color: #FFD300;
+    color: #010101 !important;
+}
+nav.navbar.navbar-expand-lg.fixed-top{
+    padding: 15px;
+}
+
+ /* add underline animation for navbar link */
+    .nav-link{
+        position: relative;
+        
+    }
+    .nav-link:hover,
+    .nav-link:focus{
+        color:#f7b948 !important;
+
+    }
+    .nav-link::after{
+        content: ''; /*dùng để add thêm nội dung của cái muốn thêm*/
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 2px;
+        background-color: #f7b948 !important;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s;
+        pointer-events: none;
+    }
+    .nav-link:hover::after,
+    .nav-link:focus::after{
+        transform-origin: left;
+        transform: scaleX(1);
+
+    }
+/* ================================== */
+
+
+
+
+/* customize for collapse navbar */
+.navbar-toggler {
+    width: 15px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    position: relative;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+
+/* State when the navbar is collapsed */
+
+.navbar-toggler.collapsed .top-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    position: absolute;
+    top: 10px;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    position: absolute;
+    top: 20px;
+    transform: rotate(0deg);
+}
+
+/* when navigation is clicked */
+
+.navbar-toggler .top-bar {
+    top: inherit;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    top: inherit;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    top: inherit;
+    transform: rotate(-135deg);
+}
+
+/* Color of 3 lines */
+
+.navbar-toggler.collapsed .toggler-icon {
+    background: linear-gradient( 263deg, rgba(252,74,74,1) 0%, rgba(0,212,255,1) 100% );
+}
+/* ======================================================== */
+/* tính làm cái vị trí của caption mà mệt */
+/* .carousel-caption{ 
+    width:200px; 
+    z-index:10; 
+    color:#fff; 
+    text-align:center; 
+    top:50%; left:65%; 
+    bottom:auto; 
+    -webkit-transform:translate(0, -50%);} */
+
+
+/* styling for text font,etc */
+h1,h2,h3,h4{
+    font-family: bradley hand,cursive;
+}
+
+
+.col-md-12{
+    text-align: center;
+}
+/* ============================= */
+
+
+
+/* styling for carousel cards arrow */
+.hidden .carousel-control-prev {
+    margin-left: -40px;
+    /* left: -110; */
+    border-bottom: 0;
+    font-size: 40px;
+    color: blue;
+}
+.hidden .carousel-control-next {
+    margin-right: -40px;
+    /* right: -110px; */
+    border-bottom: 0;
+    font-size: 40px;
+    color: blue;
+}
+/* .card:hover{
+    transform: scale(1,15);
+} */
+/* .card{
+    transition: all 0.3s;
+} */
+
+/* ============================= */
+
+
+
+
+
+/* modify của ảnh "About Us" */
+.c-item{
+    height: 480px;
+}
+.c-img{
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+/* nền cho phần "About Us" */
+
+.col-md-4{
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+/* cho desktop + di chuột hiện ra bảng dropdowm */
+  @media screen and (min-width: 1024px){
+    .dropdown:hover > .dropdown-menu{
+        display: block;
+        /* border-radius:0; */
+        margin-top: 0;
+        padding: 0;
+     }
+  }
+
+
+
+/* cho màn hình Table(Ipad) */
+ @media screen and (max-width: 768px) {
+   
+ }
+
+
+
+
+ /* edit cho ICON */
+.ICON{
+  color: rgb(237, 5, 5);  
+}
+.DICON{
+    color: blue;
+}
+.bi-briefcase,.bi-buildings,.bi-person-vcard-fill,.bi-globe2,.bi-send-check-fill{
+    font-size: 40px;
+    color: #1d1d19;
+}
+
+
+
+/* hiệu ứng của các đg link */
+a:link{
+    text-decoration: none;
+}
+/* a:visited{
+    text-decoration: none;
+    text-decoration-color: blueviolet;
+} */
+a:hover{
+    text-decoration: none;
+}
+a:active{
+    /* text-decoration: underline; */
+    text-decoration-color: red;
+    
+}
+.btn{
+    border:none;
+}
+
+
+  
+
+/* setup for Animation*/
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 40vh;
+    
+}
+/* Scroll down Animation */
+.hidden{
+    opacity: 50%;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+    
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .hidden {
+      transition: all 1s;
+    }
+  }
+  /* nút có hiệu ứng Back to the top */
+  #btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+
+
+/* phần css của footer */
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer .wrapper .noi-dung{
+    margin-right: 30px;
+}
+
+footer  .wrapper .noi-dung.about{
+    width:35%;
+    text-align: justify;
+}
+footer .wrapper .noi-dung.about h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/* underline for text */
+footer .wrapper .noi-dung.about h2:before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 140px;
+    height: 2px;
+    background: #e6cc00;
+}
+
+footer .wrapper .noi-dung.about p{
+    color: #999;
+}
+
+.social-icon{
+    margin-top: 20px;
+    display: flex;
+}
+ul.social-icon{
+    padding-left: 0px;
+}
+
+.social-icon li {
+    list-style: none;
+}
+/* style for icon */
+.social-icon li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    
+}
+/* hover cho icon */
+.social-icon li a:hover{
+    background: #e6cc00;
+}
+
+.social-icon li a .fa{
+    color: #fff;
+    font-size: 20px;
+}
+
+.links h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.links h2{
+     position: relative;
+     color: #fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+.links h2::before{
+     content: '';
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 135px;
+     height: 2px;
+     background: #e6cc00;
+ }
+ 
+.links{
+    position: relative;
+    width: 25%;
+ }
+ /* stylling bullet của ul */
+ .links ul li{
+     list-style:lower-greek; 
+     color:#dfff00;  
+ }
+ .links ul li a{
+     color: #999;
+     text-decoration: none;
+     margin-bottom: 10px;
+     display: inline-block;
+     
+ }
+ /* màu khi di chuyển chuột cho link sitemap */
+.links ul li a:hover{
+     color: #f2f213;
+ }
+
+.contact h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+/* style for contact form */
+.contact h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 300px;
+    height: 2px;
+    background: #e6cc00;
+    margin:0;
+}
+
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+
+.contact .info{
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+ul.info{
+    padding-left: 0px;
+}
+.contact .info li span{
+    color: #999;
+}
+
+.contact .info li a{
+    color: #999;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin-top:16px;
+    transition: all 200ms ease-in;
+    cursor: pointer;
+}
+.btn--primary {
+    background: #222;
+    color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    padding: 8px 24px;
+}
+.btn--primary:hover {
+    background: #f00;
+}
+.btn--primary:active {
+    background: #f00;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+
+/* .form__field {
+    width: 90%;
+    background: #fff;
+    color: #a3a3a3;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+    border: 0;
+    outline: 0;
+    padding: 8px 4px;
+} */
+
+@media  (max-width: 768px){
+    footer{
+        padding: 40px;
+        
+    }
+    footer .wrapper{
+        /* flex-direction: column; */
+        font-size: x-large;
+    }
+    footer .wrapper .noi-dung{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    footer .wrapper, .noi-dung.about, .links, .contact{
+        width: 100%;
+    }
+}
+
+/* phần copyright cho footer */
+.main{
+    padding: 20px;
+    
+    background-color: #1d1d19;
+    color: #999;
+}
+
+.policy p{
+    color: #999;
+    text-align:justify;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: larger;
+}
+
+.policy2 a :hover{
+    text-decoration-line: underline;
+    text-decoration-color: #e6cc00;
+    font-size:300px;
+}
+
+
