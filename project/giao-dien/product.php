@@ -22,44 +22,60 @@ $total_records = mysqli_query($connect, "SELECT * FROM product"); ?>
 </style>
 
 <h1 class="text">Gallery</h1>
-    <ul style="list-style-type: none;margin: 0;padding: 0;overflow: hidden;background-color: #fff;">
-        <?php
+<hr style='margin-bottom: 0px;' size='10px'>
 
-        $count = 0;
-        $result = mysqli_query($connect, "SELECT * FROM product LIMIT " . $item_per_page . " OFFSET $offset");
-        // include 'show_product.php';
-        $i = 0;
-        while ($row = mysqli_fetch_array($result)) {
-            ?>
-            <li style="display: block;color: black;text-align: center;padding: 16px;text-decoration: none; float: left;">
-                <a style="display: block;color: blackite;text-align: center;padding: 16px;text-decoration: none;"
-                    href="product_detail.php?Id=<?= $row['Id']; ?>">
-                    <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive'
-                        style='width:390px ; height :300px; border: 5px solid Violet;' alt='Image'><br><br>
+<section class='pb-5'>
+    <div class='container'>
+        <div class='row'>
+            <?php
 
-                    <h4>
-                        <?php echo $row["Title"]; ?>
-                    </h4>
-                </a>
-            </li>
-            <?php
-            $i++;
-        }
-        ?>
-    </ul>
-    <div class="col-md-12 ms-auto mb-4">
-<?php
-        $total_records = $total_records->num_rows;
-        $total_page = ceil($total_records / $item_per_page);    
-        for ($num = 1; $num <= $total_page; $num++) {
+            $count = 0;
+            $result = mysqli_query($connect, "SELECT * FROM product LIMIT " . $item_per_page . " OFFSET $offset");
+            // include 'show_product.php';
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {
+                ?>
+                <div class="col-md-4 h-100">
+                    <div class="border border-5" style="border-color:#525252">
+                        <a href="product_detail.php?Id=<?= $row['Id']; ?>">
+                            <img src='image_DTB/<?= $row["Image"]; ?>' class='img-responsive d-block w-100'
+                                style='height :300px;' alt='Image'>
+                            <h4 class="mt-3 pt-2 text-black text-center border-top border-dark-subtle border-2">
+                                <?php echo $row["Title"]; ?>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+                <?php
+                $i++;
+            }
             ?>
-            <a class="btn btn btn-outline-warning " style="color:black" href=" ?per_page=<?= $item_per_page ?>&page=<?= $num ?> ">
-                <?= $num ?>
-            </a>
-            <?php
-        }
-?>
+            </ul>
+            <div class="col-md-12 ms-auto mb-4">
+                <?php
+                $total_records = $total_records->num_rows;
+                $total_page = ceil($total_records / $item_per_page);
+                if ($current_page >= 2) {
+                    echo "<a class='btn btn btn-outline-warning' style='color:black' href='product.php?page=" . ($current_page - 1) . "'>  Prev </a>&ensp;&ensp;";
+                }
+                for ($num = 1; $num <= $total_page; $num++) {
+                    if ($num === $current_page) {
+                        $pagLink = "<a class='btn btn btn-outline-warning' style='color:black' href='product.php?page="
+                            . $num . "'>" . $num . " </a>&ensp;&ensp;";
+                    } else {
+                        $pagLink = "<a class='btn btn btn-outline-warning' style='color:black' href='product.php?page=" . $current_page . "'> " . $current_page . " </a>&ensp;&ensp;";
+                    }
+                }
+                echo $pagLink;
+                if ($current_page < $total_page) {
+                    echo "<a class='btn btn btn-outline-warning' style='color:black'  href='product.php?page=" . ($current_page + 1) . "'>  Next </a>";
+                }
+                ?>
+            </div>
+
+        </div>
     </div>
-    <?php
-    include 'footer.php';
-    ?>
+</section>
+<?php
+include 'footer.php';
+?>
