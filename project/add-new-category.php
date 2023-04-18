@@ -2,7 +2,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Add new Artist</h1>
+                    <h1 class="mt-4">Add new Product</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="admin.php">Dashboard</a></li>
                         <li class="breadcrumb-item active">Tables</li>
@@ -15,20 +15,20 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Artist Add
+                                        <h4>Product Add
                                             <a href="admin.php" class="btn btn-danger float-end">BACK</a>
                                         </h4>
                                     </div>
                                     <div class="card-body">
                                         <form action="code.php" method="POST">
                                             <div class="mb-3">
-                                                <label>Artist Name</label>
+                                                <label>Product Name</label>
                                                 <input type="text" name="category_name" class="form-control" required>
                                             </div>
                                             
                                             <div class="mb-3">
                                                 <button type="submit" name="save_category" class="btn btn-primary">Save
-                                                    Artist</button>
+                                                    Product</button>
                                             </div>
                                         </form>
                                     </div>
