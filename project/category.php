@@ -86,7 +86,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM category");
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>category_name</th>
+                                <th>category name</th>
                             </tr>
                         </thead>
                         <tbody>

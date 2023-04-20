@@ -60,6 +60,11 @@ include('message.php');
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
+                        <a class="nav-link" href="giao-dien/Home.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            User Page
+                        </a>
+                        <!-- <a href="giao-dien/Home.php" class="nav-link">user page</a> -->
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

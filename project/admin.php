@@ -51,6 +51,8 @@ $total_records = mysqli_query($connect, "SELECT * FROM product");
         </div>
       </div>
       <div class="row">
+       
+
         <div class="card-body">
           <table class="table table-bordered">
 

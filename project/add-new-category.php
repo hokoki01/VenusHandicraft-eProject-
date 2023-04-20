@@ -2,7 +2,7 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                    <h1 class="mt-4">Add new Product</h1>
+                    <h1 class="mt-4">Add new category</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="admin.php">Dashboard</a></li>
                         <li class="breadcrumb-item active">Tables</li>
@@ -22,13 +22,13 @@
                                     <div class="card-body">
                                         <form action="code.php" method="POST">
                                             <div class="mb-3">
-                                                <label>Product Name</label>
+                                                <label>category Name</label>
                                                 <input type="text" name="category_name" class="form-control" required>
                                             </div>
                                             
                                             <div class="mb-3">
                                                 <button type="submit" name="save_category" class="btn btn-primary">Save
-                                                    Product</button>
+                                                category</button>
                                             </div>
                                         </form>
                                     </div>
