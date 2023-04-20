@@ -64,7 +64,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
                                                     <?= $row['name']; ?>
                                                 </td>
                                                 <td>
-                                                    <img src='image_DTB/<?= $row['image']; ?>' class='img-responsive'
+                                                    <img src='giao-dien/image_DTB/<?= $row['image']; ?>' class='img-responsive'
                                                         style='width:60%' alt='Image'>
                                                 </td>
                                                 <td>
@@ -144,7 +144,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
                                             <?= $artist['name']; ?>
                                         </td>
                                         <td>
-                                            <img src='image_DTB/<?= $artist['image']; ?>' class='img-responsive'
+                                            <img src='giao-dien/image_DTB/<?= $artist['image']; ?>' class='img-responsive'
                                                 style='width:60%' alt='Image'>
                                         </td>
                                         <td>
