@@ -60,6 +60,11 @@ include('message.php');
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
+                        <a class="nav-link" href="giao-dien/Home.php">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                            User Page
+                        </a>
+                        <!-- <a href="giao-dien/Home.php" class="nav-link">user page</a> -->
                         <div class="sb-sidenav-menu-heading">Interface</div>
                         <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -92,21 +97,7 @@ include('message.php');
                                 <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
                                     data-bs-parent="#sidenavAccordionPages">
                                     <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="Sign_in.php">Login</a>
-                                        <a class="nav-link" href="Sign_up.php">Register</a>
-                                        <a class="nav-link" href="password.html">Forgot Password</a>
-                                    </nav>
-                                </div>
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
-                                    aria-controls="pagesCollapseError">
-                                    Error
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
-                                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne"
-                                    data-bs-parent="#sidenavAccordionPages">
-                                    <nav class="sb-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="Sign_up.php">Register</a>
+                                    <a class="nav-link" href="Sign_up.php">Register</a>
                                         <a class="nav-link" href="Sign_in.php">Login</a>
                                         <a class="nav-link" href="logout.php">Logout</a>
                                         <a class="nav-link" href="user.php">User</a>

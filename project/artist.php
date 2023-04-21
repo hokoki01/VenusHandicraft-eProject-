@@ -47,7 +47,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
                                     echo "Yeu cau nhap du lieu vao o trong";
                                 } else {
                                     include 'connect_db.php';
-                                    $sql = "SELECT * FROM artist where name like '%$search%' || id = $search ";
+                                    $sql = "SELECT * FROM artist where id = $search ";
                                     $result = mysqli_query($connect, $sql);
                                     ?>
                                     <ul
@@ -64,7 +64,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
                                                     <?= $row['name']; ?>
                                                 </td>
                                                 <td>
-                                                    <img src='image_DTB/<?= $row['image']; ?>' class='img-responsive'
+                                                    <img src='giao-dien/image_DTB/<?= $row['image']; ?>' class='img-responsive'
                                                         style='width:60%' alt='Image'>
                                                 </td>
                                                 <td>
@@ -144,7 +144,7 @@ $total_records = mysqli_query($connect, "SELECT * FROM artist");
                                             <?= $artist['name']; ?>
                                         </td>
                                         <td>
-                                            <img src='image_DTB/<?= $artist['image']; ?>' class='img-responsive'
+                                            <img src='giao-dien/image_DTB/<?= $artist['image']; ?>' class='img-responsive'
                                                 style='width:60%' alt='Image'>
                                         </td>
                                         <td>

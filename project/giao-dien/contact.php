@@ -76,7 +76,7 @@ include 'header.php';
                 class="form-control " row="5">
 
                 <label for="Phone">Phone : </label>
-                <input type="text" Id="Phone" placeholder="Phone Number" name="Phone" required
+                <input type="number" Id="Phone" min = "10" max = "10"  placeholder="Phone Number" name="Phone" required
                 class="form-control " row="5">
 
                 <label for="Note">Message : </label>
