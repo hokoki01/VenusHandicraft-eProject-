@@ -313,12 +313,15 @@ section{
       transition: all 1s;
     }
   }
+  
+/* Animation Zoom in out cho phần Gallery */
 .imgEffects{
     transition: all 0.3s;
 }
 .imgEffects:hover{
     transform: scale(1.15);
 }
+
   /* nút có hiệu ứng Back to the top */
   #btn-back-to-top {
     position: fixed;
