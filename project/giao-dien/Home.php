@@ -17,7 +17,7 @@ include 'header.php';
     <div class="carousel-item c-item" data-bs-interval="10000">
       <img src="Images/carousel1.jpg" class="d-block w-100 c-img" alt="img1">
       <div class="carousel-caption d-none d-md-block">
-        <h5>venus Handicrafts </h5>
+        <h5>Venus Handicrafts </h5>
         <p>
           We are proud to be one of the leading units in providing handicraft products</p>
       </div>
@@ -25,14 +25,14 @@ include 'header.php';
     <div class="carousel-item active c-item" data-bs-interval="2000">
       <img src="Images/pottery-souvenir-traditional-art.jpg" class="d-block w-100 c-img" alt="img2">
       <div class="carousel-caption d-none d-md-block">
-        <h5>venus Handicrafts </h5>
+        <h5>Venus Handicrafts </h5>
         <p>We always try to give you the best experience when you come to us</p>
       </div>
     </div>
     <div class="carousel-item c-item">
       <img src="Images/indian-handicrafts.jpg" class="d-block w-100 c-img" alt="img3">
       <div class="carousel-caption d-none d-md-block">
-        <h5>venus Handicrafts </h5>
+        <h5>Venus Handicrafts </h5>
         <p>Thank you for choosing us we wish you a great experience</p>
       </div>
     </div>
@@ -487,7 +487,7 @@ include 'header.php';
 
 <section class="hidden">
   <!-- phần kho ảnh -->
-  <div class="row mt-3">
+  <div class="row mt-3 g-5">
     <div class="col-md-12">
       <h1 class=" text-center mb-4 fw-bold">
         Gallaries
@@ -495,22 +495,22 @@ include 'header.php';
 
       <div class="container mt-4">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 imgEffects">
             <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/1.png" alt="Error 404">
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 imgEffects">
             <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/2.jpg" alt="Error 404">
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 imgEffects">
             <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/3.jpg" alt="Error 404">
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 imgEffects">
             <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/4.jpg" alt="Error 404">
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 imgEffects">
             <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/14.jpg" alt="Error 404">
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 imgEffects">
             <img class="img-thumbnail shadow rounded mb-4" src="Image_DTB/15.jpg" alt="Error 404">
           </div>
         </div>
