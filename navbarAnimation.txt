@@ -1,0 +1,27 @@
+.nav-link{
+        position: relative;
+    }
+    .nav-link:hover,
+    .nav-link:focus{
+        color:#f7b948 !important;
+
+    }
+    .nav-link::after{
+        content: ''; /*dùng để add thêm nội dung của cái muốn thêm*/
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 2px;
+        background-color: #f7b948 !important;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .3s;
+        pointer-events: none;
+    }
+    .nav-link:hover::after,
+    .nav-link:focus::after{
+        transform-origin: left;
+        transform: scaleX(1);
+
+    }

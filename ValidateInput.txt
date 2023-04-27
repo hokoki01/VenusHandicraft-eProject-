@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+                <?php
+                include 'connect_db.php';
+                $fname = "";
+                $Email = "";
+                $Phone = "";
+                $comments = "";
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    if (isset($_POST["fname"])){
+                        $fname = $_POST['fname'];
+                    }
+                    if (isset($_POST["Email"])) {
+                        $Email = $_POST['Email'];
+                    }
+                    if (isset($_POST["phoneNUM"])) {
+                        $Phone = $_POST['phoneNUM'];
+                    }
+                    if (isset($_POST["comments"])) {
+                        $comments = $_POST['comments'];
+                    }
+                    $sql = "INSERT INTO contact (Email,Phone) VALUES ('$Email','$Phone','$comments')";
+
+                    if (mysqli_query($connect, $sql)) {
+                        echo "thêm dữ liệu thành công";
+                    }
+                }
+                ?>
+<!-- XỬ LÝ DỮ LIỆU NHẬP INPUT -->
+<?php
+
+function test_input($data) {
+    $data = trim($data);//Xóa những ký tự có tên trong danh sách ký tự do bạn chỉ định ra khỏi vị trí đầu tiên và cuối cùng của chuỗi
+    $data = stripslashes($data);// loại bỏ dấu "/"
+    $data = htmlspecialchars($data);
+    return $data;
+  }
+
+//định nghĩa biến và đặt về giá trị chung là trống
+        $nameErr = $emailErr = $NumErr = "";
+        $name = $email = $phoneNUM = "";
+//check Name:
+      if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["FULLname"])) {
+          $nameErr = "tên ko đc bỏ trống";
+        } else {
+          $name = test_input($_POST["FULLname"]);
+          // check xem name có chứa chữ vs dấu cách ko
+          if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+            $nameErr = "chỉ chữ cái và dấu cách đc sử dụng";
+          }
+        }
+    
+//check Email:
+        if (empty($_POST["Email"])) {
+          $emailErr = "Email ko đc bỏ trống";
+        } else {
+          $email = test_input($_POST["Email"]);
+// check xem email có đúng định dạng hay ko:
+          if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "lỗi định dạng Email";
+          }
+        }
+//check PhoneNumber:
+	if (empty($_POST["phoneNUM"])) {
+		$NumErr = "Phone không đc bỏ trống";
+	}else{
+		$phoneNUM = test_input($_POST["phoneNUM"]);
+		if (!preg_match("^\+(?:[0-9]●?){6,14}[0-9]$",$phoneNUM)){
+			$NumErr = "only number";
+	     }
+	    }
+
+}
+?>
+
+
+<div class="container">
+    <div class="text-center">
+        <h1>Contact With Us</h1>
+    </div>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <div class="row">
+                <div class="mb-3 col-md-4 ">
+                    <label for="FULLname" class="form-label">Full Name:</label>
+                    <input name="FULLname" type="text" class="form-control" id="FULLname">
+                    <span class="error">* <?php echo $nameErr;?></span>
+                </div>
+                <div class="mb-3 col-md-4 ">
+                    <label for="Email" class="form-label">Email address:</label>
+                    <input name="Email" type="email" class="form-control" id="Email" aria-describedby="emailHelp" >
+                    <span class="error">* <?php echo $emailErr;?></span>
+                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3 col-md-4 ">
+                    <label for="phoneNUM" class="form-label">Phone Number:</label>
+                    <input name="phoneNUM" type="text" class="form-control" id="phoneNUM" >
+                    <span class="error">* <?php echo $phoneNUM;?></span>
+                </div>
+    </div>
+    <div class="row">
+            <div class="mb-3 col-md-12  ">
+                <label for="comments" class="form-label" >Comments:</label>
+                <textarea class="form-control REsize" id="comments" name="comments"  rows="10">Nội dung của comments</textarea>
+            </div>
+    </div>
+    <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+</div>
+
+
+
+<!-- CDN bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- CDN JS của bootstrap  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CDN Icon bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+<style>
+    .form-label{
+        color: goldenrod;
+    }
+    .error{
+        color: red;
+    }
+    .REsize{
+        resize: none;
+    }
+    .form-control:focus {
+       margin: 0px !important;
+        border: 1px solid green !important;
+        box-shadow: none !important;
+    }
+</style>
+
+
+</body>
+</html>

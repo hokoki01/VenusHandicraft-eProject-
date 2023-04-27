@@ -1,0 +1,36 @@
+
+làm messenger contact vs admin
+làm UI Home page 
+
+làm nhận xét(comments) về sản phẩm + cty
+làm về login vs register(cho user để user đăng bài)
+
+
+
+
+
+
+
+Editing:
+card hover = zoom in out img or full cards
+Gallery Img hover = zoom in out images
+
+
+
+todo:
+(-)
+các sản phẩm liên quan 
+list các sản phẩm tương tự (bên trái phải hoặc dưới ở trong trang products detail)
+(cho phần products)
+(-)
+phân trang cho trang product và cho cả trang kết quả của search sản phẩm 
+sửa lại thanh search bar
+hoàn thành docs
+gửi video intro hướng dẫn cách sử dụng cho người dùng 
+template cho trang admin
+validation dữ liệu cho phần login register trang admin
+
+
+17/4/2023:
+làm cái animation cho gallery kiểu từng ảnh chuyển sang 1
+
